@@ -1,0 +1,28 @@
+﻿类型,HTS编码,开始日期,结束日期,附加税率,DataWeb文本,说明
+芬太尼,99030120,2025-02-04,2025-03-03,0.1,The duty provided in the applicable subheading + 10%,"Articles the product of China and Hong Kong, as provided for in U.S. note 2(s) to this subchapter"
+芬太尼,99030124,2025-03-04,2025-05-01,0.2,The duty provided in the applicable subheading + 20%,Except for products described in 9903.01.21-9903.01.23 articles the product of China as provided for in US note 2(u) to this subch
+芬太尼,99030124,2025-05-02,2025-11-09,0.2,The duty provided in the applicable subheading + 20%,"Except for products described in 9903.01.21-9903.01.23, or US note 2(w) to this subchapter articles the product of China as prov. in note 2(u)"
+芬太尼,99030124,2025-11-10,2050-12-31,0.1,The duty provided in the applicable subheading + 10%,"Except for products described in 9903.01.21, 9903.01.22, 9903.01.23, articles the product of China, as provided for in note 2(u) to this subch"
+对等,99030125,2025-04-10,2025-05-13,0.1,The duty provided in the applicable subheading + 10%,"Except for 9903.01.26-9903.01.33 and 9903.01.34, articles the product of any country, except for enumerated in US note 2(v)(xiii) to this subch"
+对等,99030125,2025-05-14,2025-06-29,0.1,The duty provided in the applicable subheading + 10%,"Articles the product of any country, except as described in 9903.01.26�9903.01.33, and except 9903.01.34, as provided for in note 2(v) to this subch"
+对等,99030125,2025-06-30,2025-08-06,0.1,The duty provided in the applicable subheading + 10%,"Articles the product of any country, except described in 9903.01.26�9903.01.33, 9903.01.34 and 9903.96.01, as prov'd in Note 2(v) to this subch"
+对等,99030125,2025-08-07,2025-08-31,0.1,The duty provided in the applicable subheading + 10%,"Articles of any country, except in 9903.01.26�9903.01.33, 9903.02.02�9903.02.71, 9903.96.01, 9903.01.34, 9903.02.01, as in note 2 to this subch"
+对等,99030125,2025-09-01,2025-11-12,0.1,The duty provided in the applicable subheading + 10%,"Articles the product of any country, except 9903.02.02-9903.02.77, 9903.96.01-9903.96.02, 9903.01.34 and 9903.02.01 as in note 2(v) to this subch"
+对等,99030125,2025-11-13,2025-11-13,0.1,The duty provided in the applicable subheading + 10%,"Articles product of any country, except 9903.01.26�9903.01.34, 9903.02.01�9903.02.78, 9903.96.01�9903.96.02, as provided in note 2(v) to this subch"
+对等,99030125,2025-11-14,2050-12-31,0.1,The duty provided in the applicable subheading + 10%,"Articles product of any country, except for products and headings, as provided in note 2(v) to this subchapter"
+对等,99030163,2025-04-09,2025-04-09,0.84,The duty provided in the applicable subheading + 84%,"Except for 9903.01.28-9903.01.33 and 9903.01.34, articles the product of China, incl. Hong Kong and Macau, as provided in US note 2(v) to this subch"
+对等,99030163,2025-04-10,2025-05-01,1.25,The duty provided in the applicable subheading + 125%,"Except for 9903.01.28-9903.01.33 and 9903.01.34, articles the product of China, incl. Hong Kong and Macau, as provided in US note 2(v) to this subch"
+对等,99030163,2025-05-02,2025-05-13,1.25,The duty provided in the applicable subheading + 125%,"Except for 9903.01.28-9903.01.33 and 9903.01.34, and except as prov in US note 2(w), articles the prod of China as prov. In note 2(v) to this subch"
+对等,99030163,2026-11-10,2050-12-31,0.34,The duty provided in the applicable subheading + 34%,"Except for 9903.01.28-9903.01.33 and 9903.01.34, and except as prov in US note 2(w), articles the prod of China as prov in note 2(v) to this subch"
+
+年度日加权,年份,芬太尼年均,对等年均,合计年均,口径
+年度日加权,2016,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2017,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2018,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2019,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2020,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2021,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2022,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2023,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2024,0.0,0.0,0.0,中国原产默认；全球99030125与中国99030163按优先级替代
+年度日加权,2025,0.15945205479452135,0.1823013698630141,0.34175342465753544,中国原产默认；全球99030125与中国99030163按优先级替代
