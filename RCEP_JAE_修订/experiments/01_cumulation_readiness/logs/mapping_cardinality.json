@@ -1,0 +1,21 @@
+{
+  "valid_cn_id_ticker_pairs": 16634,
+  "unique_cn_ids": 16634,
+  "unique_tickers": 4432,
+  "cn_ids_linked_to_one_ticker": 16634,
+  "cn_ids_linked_to_multiple_tickers": 0,
+  "tickers_linked_to_one_cn_id": 4341,
+  "tickers_linked_to_multiple_cn_ids": 91,
+  "valid_tickers_found_in_firm_panel": 4080,
+  "cn_ids_per_ticker_quantiles": {
+    "0.0": 1.0,
+    "0.25": 1.0,
+    "0.5": 1.0,
+    "0.75": 1.0,
+    "0.9": 1.0,
+    "0.95": 1.0,
+    "0.99": 2.0,
+    "1.0": 12113.0
+  },
+  "interpretation": "Multiple FactSet cn_ids sharing one listed ticker can be aggregated at ticker level; cn_ids linked to multiple listed tickers are genuinely ambiguous for this design."
+}

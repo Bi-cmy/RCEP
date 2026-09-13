@@ -1,0 +1,59 @@
+{
+  "experiment_id": "01_cumulation_readiness",
+  "build_status": "PASSED",
+  "python": "3.12.7",
+  "source_hashes": {
+    "pair_year_sha256": "7717eab45f6d31257d246a937e5aeab8f79ae567919d58f40f534efb81464e28",
+    "firm_year_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+  },
+  "pair_year_rows": 630280,
+  "pair_roles": 78785,
+  "pair_year_validation": {
+    "duplicate_pair_year_keys": 0,
+    "invalid_year_rows": 0,
+    "invalid_active_rows": 0,
+    "invalid_supplier_rows": 0,
+    "invalid_rcep_rows": 0,
+    "invalid_partner_country_rows": 0
+  },
+  "mapping": {
+    "pair_year_unique_cn_ids": 16651,
+    "cn_ids_with_valid_six_digit_ticker": 16634,
+    "one_to_one_cn_id_ticker_mappings": 4341,
+    "mappings_found_in_firm_panel": 3991,
+    "invalid_firm_year_ticker_rows": 0,
+    "duplicate_firm_year_keys": 0
+  },
+  "derived_rows": 25550,
+  "derived_firms": 3991,
+  "years": [
+    2017,
+    2024
+  ],
+  "readiness": {
+    "zero_firms": 3695,
+    "one_firms": 237,
+    "two_plus_firms": 59,
+    "maximum": 7
+  },
+  "pre_policy_characteristics": {
+    "industry_field": "Indcat",
+    "industry_groups": 19,
+    "size_tercile_cutoffs": [
+      21.590006313221025,
+      22.617330076900256
+    ],
+    "permutation_strata": 51,
+    "firms_in_singleton_strata": 4
+  },
+  "missingness": {
+    "exit_rate": 0.936320939334638,
+    "supplier_country_hhi": 0.9210567514677104
+  },
+  "outputs": [
+    "data/firm_year.parquet",
+    "data/exposure_distribution.csv",
+    "data/outcome_support_by_year_group.csv",
+    "data/mapping_audit.csv"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "status": "COMPLETED",
+  "created_on": "2026-07-23",
+  "steps": [
+    "Validate the verified pair-year source.",
+    "Normalize six-digit listed tickers and exclude 000000 or non-listed tickers with counts.",
+    "Restrict to supplier links in the 21 frozen Asian countries.",
+    "Collapse multiple FactSet cn_ids to listed ticker-partner-country-year.",
+    "Freeze relationships active in 2017 as the cohort.",
+    "Construct 2018-2024 absorbing survival and secondary outcome definitions.",
+    "Write the cohort only after all assertions pass."
+  ],
+  "counts": {
+    "experiment_id": "02_relationship_survival",
+    "build_status": "PASSED",
+    "python": "3.12.7",
+    "source_hashes": {
+      "pair_year_sha256": "7717eab45f6d31257d246a937e5aeab8f79ae567919d58f40f534efb81464e28",
+      "firm_year_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+    },
+    "source_pair_year_rows": 630280,
+    "invalid_or_zero_ticker_rows": 195816,
+    "nonlisted_ticker_rows": 35672,
+    "eligible_asian_supplier_pair_year_rows": 31192,
+    "collapsed_ticker_partner_country_year_rows": 31192,
+    "cohort_relationships": 550,
+    "cohort_listed_firms": 272,
+    "follow_up_rows": 3850,
+    "observed_rcep_countries": [
+      "AU",
+      "ID",
+      "JP",
+      "KR",
+      "MY",
+      "NZ",
+      "PH",
+      "SG",
+      "TH",
+      "VN"
+    ],
+    "observed_control_countries": [
+      "BD",
+      "HK",
+      "IN",
+      "LK",
+      "TW"
+    ],
+    "absent_rcep_countries": [
+      "BN",
+      "KH",
+      "LA",
+      "MM"
+    ],
+    "absent_control_countries": [
+      "MN",
+      "PK"
+    ],
+    "country_relationship_count": {
+      "AU": 25,
+      "BD": 2,
+      "HK": 65,
+      "ID": 7,
+      "IN": 14,
+      "JP": 142,
+      "KR": 133,
+      "LK": 3,
+      "MY": 11,
+      "NZ": 3,
+      "PH": 1,
+      "SG": 53,
+      "TH": 11,
+      "TW": 79,
+      "VN": 1
+    },
+    "countries_with_fewer_than_10_relationships": [
+      "BD",
+      "ID",
+      "LK",
+      "NZ",
+      "PH",
+      "VN"
+    ],
+    "within_firm_overlap": {
+      "both": 46,
+      "control_only": 72,
+      "rcep_only": 154
+    },
+    "outputs": [
+      "data/survival_cohort.parquet",
+      "data/country_year_support.csv",
+      "data/group_year_support.csv",
+      "data/within_firm_overlap.csv"
+    ]
+  },
+  "execution_log": "logs/cohort_build.json",
+  "exclusion_policy": "No exclusion may depend on an estimate, standard error, p-value, or desired sign."
+}

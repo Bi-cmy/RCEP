@@ -1,0 +1,31 @@
+{
+  "experiment_id": "10_cross_architecture_detrended",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "design_status": "Post-result trend sensitivity, not independent confirmation.",
+  "known_before_freeze": {
+    "experiment_09_static_estimate": -0.05417427499728139,
+    "experiment_09_cluster_p": 0.018981406695528908,
+    "experiment_09_randomization_p": 0.001,
+    "experiment_09_2020_lead": 0.026776896557033317,
+    "experiment_09_2020_lead_p": 0.25959942708698
+  },
+  "research_question": "Does the negative cross-architecture post interaction remain after allowing a linear exposure-specific trajectory?",
+  "sample": "Exact 12,780-row, 2,556-firm panel from Experiment 09; no row, firm, industry, or variable change.",
+  "primary_model": "Y_it = alpha_i + lambda_industry-year + delta(ArchitectureCount_i x (year-2021)) + beta(ArchitectureCount_i x Post2022_t) + error_it",
+  "primary_parameter": "beta, an RCEP-period level break beyond the exposure-specific linear trend.",
+  "inference": "Firm-clustered standard errors and 999 architecture-count permutations within the frozen industry-by-size-tercile strata, seed 20260723.",
+  "robustness_gate": {
+    "survives": "beta remains negative and stratified-randomization p < 0.05.",
+    "fails": "beta changes sign or stratified-randomization p >= 0.05; Experiment 09 cannot be described as robust to trend continuation.",
+    "interpretation": "Even survival does not solve the two-pre-period limitation; failure materially weakens the causal route."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["all permutation estimates", "source hashes", "decision"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended before execution."
+}

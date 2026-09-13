@@ -1,0 +1,10 @@
+{
+  "source": "../../data/derived/pair_year.parquet",
+  "required_columns": ["partner_id", "partner_country", "supplier_link", "pair_id", "year", "active", "ticker_key"],
+  "source_key": ["pair_id", "year"],
+  "source_years": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "cohort_year": 2019,
+  "analysis_years": [2020, 2021, 2022, 2023, 2024],
+  "final_key": ["listed_ticker", "partner_id", "partner_country", "year"],
+  "missing_policy": "Exclude unmapped or zero listed tickers and non-registered partner countries; report every exclusion. No imputation."
+}

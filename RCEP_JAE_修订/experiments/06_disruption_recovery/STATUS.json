@@ -1,0 +1,12 @@
+{
+  "experiment_id": "06_disruption_recovery",
+  "status": "FAILED",
+  "phase": "ARCHIVED",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": true,
+  "closed_at": "2026-07-23",
+  "next_gate": null,
+  "support_gate_pass": false,
+  "decision": "Only 48 firms had both RCEP and control cohort links; the frozen support threshold was 50."
+}

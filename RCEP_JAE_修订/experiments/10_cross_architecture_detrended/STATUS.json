@@ -1,0 +1,13 @@
+{
+  "experiment_id": "10_cross_architecture_detrended",
+  "status": "FAILED_SENSITIVITY",
+  "phase": "ARCHIVED",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "experiment_09_results_known": true,
+  "detrended_coefficient_inspected_at_freeze": false,
+  "closed_at": "2026-07-23",
+  "next_gate": null,
+  "detrended_result_survives": false,
+  "decision": "The detrended post break is -0.0212 with clustered p=0.4694 and stratified-randomization p=0.247."
+}

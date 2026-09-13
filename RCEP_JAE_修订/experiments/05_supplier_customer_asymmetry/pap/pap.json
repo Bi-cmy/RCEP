@@ -1,0 +1,62 @@
+{
+  "experiment_id": "05_supplier_customer_asymmetry",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "Did RCEP entry change foreign-supplier link intensity differently from foreign-customer link intensity?",
+  "population": {
+    "firm_universe": "Valid listed tickers with at least one foreign customer or supplier relationship active at year-end 2017.",
+    "panel": "Balanced firm by 21 Asian countries by relationship role by years 2018-2024.",
+    "roles": {
+      "supplier": "Foreign partner supplies the Chinese listed firm.",
+      "customer": "Foreign partner is a customer of the Chinese listed firm."
+    },
+    "rcep": ["JP", "KR", "AU", "NZ", "ID", "MY", "PH", "SG", "TH", "VN", "BN", "KH", "LA", "MM"],
+    "asian_non_rcep": ["HK", "TW", "IN", "PK", "BD", "LK", "MN"]
+  },
+  "treatment": {
+    "preferred": "SupplierRole times country-specific RCEP timing; 2022 except Indonesia and the Philippines in 2023.",
+    "uniform_2022": "Pre-specified robustness only.",
+    "assignment_level": "Partner-country-role-year",
+    "main_effect_note": "Country-year fixed effects absorb the average country treatment."
+  },
+  "outcomes": {
+    "primary": "asinh count of unique active foreign partner relationships in the firm-country-role-year cell.",
+    "secondary": ["Any active relationship indicator", "Raw active-link count with fixed-effect Poisson"],
+    "interpretation": "A positive coefficient means a more positive RCEP-period change for supplier than customer links. It is a formal asymmetry test, not mediation or certificate utilization."
+  },
+  "estimating_equations": {
+    "static": "asinh(Links_fcrt) = alpha_fcr + lambda_ftr + mu_ct + beta(Supplier_r x Treated_ct) + error_fcrt",
+    "dynamic": "Supplier-role interactions with cohort-by-event indicators, event time -1 omitted, with the same three fixed-effect families.",
+    "fixed_effects": ["firm-country-role", "firm-year-role", "country-year"],
+    "primary_inference": "Partner-country clustered standard errors.",
+    "few_cluster_inference": "9,999-draw wild cluster bootstrap-t, seed 20260723.",
+    "randomization_inference": "Exact or 9,999 assignments preserving 14 RCEP and 7 control country labels."
+  },
+  "identifying_assumption": "Absent RCEP, supplier-versus-customer link differences within the same firm and country-year would not change differentially for RCEP countries after the three fixed-effect families are removed.",
+  "data_gate": {
+    "link_support": "At least 100 active links in every role by RCEP/control by pre/post cell.",
+    "country_support": "At least five countries in each role-group-period cell must have a positive link.",
+    "firm_support": "At least 50 firms must have positive supplier and customer links during the pre period and at least 50 during the post period.",
+    "balanced_panel": "Every firm-country-role cell must have seven annual rows.",
+    "failure_rule": "Failure of any requirement stops before coefficient estimation."
+  },
+  "identification_gate": {
+    "pretrend": "Joint supplier-role cohort-lead test p >= 0.10.",
+    "economic_threshold": "Maximum absolute aggregated supplier-role lead <= 0.05 on the asinh count scale.",
+    "stop_rule": "Failure stops before the static triple-difference, bootstrap, randomization, robustness, or mechanisms."
+  },
+  "evidence_gate": {
+    "positive_result": "Static triple difference has randomization-inference p < 0.05, consistent sign under uniform timing and secondary outcomes, and no single-country dependence.",
+    "inconclusive": "Identification passes but the coefficient is ordinary under country-label assignments or too imprecise for a 0.05 effect.",
+    "integrity": "Supplier and customer results are reported together; no subgroup-star pattern is selected."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["sample construction", "support", "pretrend", "permutations if reached"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended to pap/amendments.md before execution."
+}

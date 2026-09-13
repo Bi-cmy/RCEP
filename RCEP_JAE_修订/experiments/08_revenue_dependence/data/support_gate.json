@@ -1,0 +1,22 @@
+{
+  "experiment_id": "08_revenue_dependence",
+  "gate": "DATA_SUPPORT",
+  "gate_pass": true,
+  "pair_support_gate": true,
+  "country_support_gate": true,
+  "within_firm_support_gate": true,
+  "outcome_variation_gate": true,
+  "exposure_support_gate": true,
+  "balanced_panel_gate": true,
+  "quantified_pair_roles": 958,
+  "control_pair_roles": 446,
+  "rcep_pair_roles": 512,
+  "countries": 19,
+  "control_countries": 7,
+  "rcep_countries": 12,
+  "firms_with_both_groups": 96,
+  "control_pairs_with_active_variation": 242,
+  "rcep_pairs_with_active_variation": 286,
+  "median_revenue_percent": 4.325,
+  "minimum_group_by_median_cell": 215
+}

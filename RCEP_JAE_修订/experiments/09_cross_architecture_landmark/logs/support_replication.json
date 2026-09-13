@@ -1,0 +1,13 @@
+{
+  "experiment_id": "09_cross_architecture_landmark",
+  "gate": "SUPPORT_REPLICATION",
+  "gate_pass": true,
+  "source_sha256": "fa5c83c89743a522cb37e886ecb07b7c7ec8421243940d03da3dd891669d4558",
+  "output_sha256": "fa5c83c89743a522cb37e886ecb07b7c7ec8421243940d03da3dd891669d4558",
+  "rows": 12780,
+  "firms": 2556,
+  "firms_with_one_or_more_architectures": 261,
+  "firms_with_two_or_more_architectures": 52,
+  "minimum_annual_positive_primary_outcome": 213,
+  "exact_known_count_replication": true
+}

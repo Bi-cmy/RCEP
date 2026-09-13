@@ -1,0 +1,20 @@
+{
+  "experiment_id": "05_supplier_customer_asymmetry",
+  "gate": "TRIPLE_DIFFERENCE_PRETREND",
+  "gate_pass": true,
+  "joint_pretrend_wald_stat": 11.12591149840701,
+  "joint_pretrend_df": 7,
+  "joint_pretrend_p_value": 0.13322034194276533,
+  "maximum_absolute_aggregated_pre_coefficient": 0.005572442882300253,
+  "economic_threshold": 0.05,
+  "observations": 335454,
+  "firm_country_role_fixed_effects": 47922,
+  "firm_year_role_fixed_effects": 15974,
+  "country_year_fixed_effects": 147,
+  "partner_country_clusters": 21,
+  "cohort_sizes_supplier_cells": {
+    "2022": 13692,
+    "2023": 2282
+  },
+  "estimator": "OLS after pyhdfe residualization on firm-country-role, firm-year-role, and country-year fixed effects"
+}

@@ -1,0 +1,13 @@
+\begin{table}
+\caption{Static Supplier-Customer Triple Difference}
+\label{tab:table3_static_ddd}
+\begin{tabular}{lllrrrrrrrrlrr}
+\toprule
+specification & outcome & timing & estimate & std_error & t_stat & p_value_t20 & ci_low & ci_high & observations & clusters & fixed_effects & wild_cluster_bootstrap_p & country_label_randomization_p \\
+\midrule
+Preferred staged timing & asinh_active_links & triple_staged & 0.006008 & 0.004012 & 1.497417 & 0.149901 & -0.002361 & 0.014376 & 335454 & 21 & firm-country-role; firm-year-role; country-year & 0.097100 & 0.097600 \\
+Uniform 2022 timing & asinh_active_links & triple_uniform & 0.005995 & 0.004545 & 1.319139 & 0.202027 & -0.003485 & 0.015475 & 335454 & 21 & firm-country-role; firm-year-role; country-year & NaN & NaN \\
+Any active relationship & any_active_link & triple_staged & 0.004995 & 0.003003 & 1.663449 & 0.111814 & -0.001269 & 0.011260 & 335454 & 21 & firm-country-role; firm-year-role; country-year & NaN & NaN \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,13 @@
+{
+  "experiment_id": "08_revenue_dependence",
+  "status": "FAILED",
+  "phase": "ARCHIVED",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": true,
+  "closed_at": "2026-07-23",
+  "next_gate": null,
+  "support_gate_pass": true,
+  "pretrend_gate_pass": false,
+  "decision": "Revenue-moderation leads reject jointly at p=3.65e-48 and the maximum aggregated lead is 0.2685 versus the 0.02 threshold."
+}

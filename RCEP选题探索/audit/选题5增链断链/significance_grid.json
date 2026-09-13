@@ -1,0 +1,102 @@
+[
+  {
+    "outcome": "break",
+    "cluster": "pair_fe",
+    "fe": "pair_fe + year",
+    "treat": "binary",
+    "coef": 0.0028798617722768866,
+    "se": 0.0015925910326171472,
+    "p": 0.07056564453333669,
+    "n": 630280
+  },
+  {
+    "outcome": "break",
+    "cluster": "pair_fe",
+    "fe": "pair_fe + year + firm_year_fe",
+    "treat": "binary",
+    "coef": 0.001927872652854438,
+    "se": 0.0018128372701518623,
+    "p": 0.28757847300962514,
+    "n": 630280
+  },
+  {
+    "outcome": "break",
+    "cluster": "country",
+    "fe": "pair_fe + year",
+    "treat": "binary",
+    "coef": 0.0028798617722768866,
+    "se": 0.004512975724705024,
+    "p": 0.5242005531440586,
+    "n": 630280
+  },
+  {
+    "outcome": "break",
+    "cluster": "country",
+    "fe": "pair_fe + year + firm_year_fe",
+    "treat": "binary",
+    "coef": 0.001927872652854438,
+    "se": 0.0031063214237535583,
+    "p": 0.5356288853407634,
+    "n": 630280
+  },
+  {
+    "outcome": "entry",
+    "cluster": "pair_fe",
+    "fe": "pair_fe + year",
+    "treat": "binary",
+    "coef": 0.0037206908363687694,
+    "se": 0.002270326644350743,
+    "p": 0.10125161432882046,
+    "n": 630280
+  },
+  {
+    "outcome": "entry",
+    "cluster": "pair_fe",
+    "fe": "pair_fe + year + firm_year_fe",
+    "treat": "binary",
+    "coef": 0.00016604938259874393,
+    "se": 0.002238938521532465,
+    "p": 0.9408798139099162,
+    "n": 630280
+  },
+  {
+    "outcome": "entry",
+    "cluster": "country",
+    "fe": "pair_fe + year",
+    "treat": "binary",
+    "coef": 0.0037206908363687694,
+    "se": 0.00898610307874125,
+    "p": 0.679330857933385,
+    "n": 630280
+  },
+  {
+    "outcome": "entry",
+    "cluster": "country",
+    "fe": "pair_fe + year + firm_year_fe",
+    "treat": "binary",
+    "coef": 0.00016604938259874393,
+    "se": 0.009150185700540646,
+    "p": 0.9855415989794232,
+    "n": 630280
+  },
+  {
+    "outcome": "break",
+    "cluster": "pair_fe",
+    "fe": "pair_fe+year+firm_year",
+    "treat": "binary_trim5",
+    "coef": 0.0012209414794212964,
+    "se": 0.0018276788234295788,
+    "p": 0.5041174556152443,
+    "n": 606664
+  },
+  {
+    "outcome": "entry",
+    "cluster": "pair_fe",
+    "fe": "pair_fe+year+firm_year",
+    "treat": "binary_trim5",
+    "coef": -0.0003708022194791824,
+    "se": 0.0022767541666053083,
+    "p": 0.8706256288930176,
+    "n": 606664
+  }
+]

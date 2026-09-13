@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\caption{Policy-linked mechanism evidence}
+\label{tab:mechanisms}
+\small
+\begin{minipage}{\textwidth}
+\centering
+\smallskip
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Mechanism measure & $a$ & $b$ & $c$ & $c'$ & \shortstack{Indirect\\effect ($ab$)} & \shortstack{Bootstrap\\95\% CI} \\
+\midrule
+Incremental tariff relief & 0.2186*** & 0.0688*** & 0.0133*** & -0.0017 & 0.0150*** & [0.0087, 0.0209] \\
+ & (0.0021) & (0.0148) & (0.0040) & (0.0050) & & \\
+Intermediate-goods import share & 0.0176*** & 0.0181*** & 0.0151*** & 0.0148*** & 0.0003*** & [0.0002, 0.0004] \\
+ & (0.0006) & (0.0035) & (0.0041) & (0.0041) & & \\
+Partner-country import share & -0.0127*** & -2.1607*** & 0.0133*** & -0.0141*** & 0.0274*** & [0.0240, 0.0307] \\
+ & (0.0001) & (0.1394) & (0.0040) & (0.0043) & & \\
+\bottomrule
+\end{tabular}
+}
+\vspace{2pt}
+\parbox[t]{\textwidth}{%
+\footnotesize \textit{Notes}: Each row uses its mechanism-specific complete-case sample. The percentile interval for $ab$ is based on 2,000 relationship-pair bootstrap draws. All models include pair and year fixed effects; standard errors in parentheses are clustered by pair. *, **, and *** denote 10\%, 5\%, and 1\% significance, using the corresponding bootstrap intervals for $ab$. All mechanism measures vary at the partner-country--year level.}
+\end{minipage}
+\end{table}

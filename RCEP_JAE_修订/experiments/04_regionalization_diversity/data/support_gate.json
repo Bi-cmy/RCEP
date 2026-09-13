@@ -1,0 +1,24 @@
+{
+  "experiment_id": "04_regionalization_diversity",
+  "gate": "DATA_SUPPORT",
+  "gate_pass": true,
+  "active_link_gate": true,
+  "positive_country_gate": true,
+  "positive_firm_both_groups_gate": true,
+  "active_links": {
+    "rcep_0_pre": 575,
+    "rcep_1_pre": 1436,
+    "rcep_0_post": 617,
+    "rcep_1_post": 1386
+  },
+  "positive_countries": {
+    "rcep_0_pre": 5,
+    "rcep_1_pre": 10,
+    "rcep_0_post": 5,
+    "rcep_1_post": 10
+  },
+  "firms_positive_in_both_groups": {
+    "pre": 86,
+    "post": 87
+  }
+}

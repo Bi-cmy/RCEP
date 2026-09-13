@@ -1,0 +1,12 @@
+{
+  "experiment_id": "02_relationship_survival",
+  "status": "FAILED",
+  "phase": "CLOSED_AT_PRETREND_GATE",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": true,
+  "next_gate": null,
+  "pretrend_gate_pass": false,
+  "closed_at": "2026-07-23",
+  "failure_code": "JOINT_PRETREND_REJECTION"
+}

@@ -1,0 +1,5 @@
+lead_years,false_date,annual_cutoff_year,coefficient,identifiable_at_annual_resolution,resolution_note
+1.0,2021-01-01,2021,0.005149423463450771,True,Fractional leads within 2021 use the 2021 year-end observation.
+0.6666666666666666,2021-05-02,2021,0.005149423463450771,False,Fractional leads within 2021 use the 2021 year-end observation.
+0.5,2021-07-02,2021,0.005149423463450771,False,Fractional leads within 2021 use the 2021 year-end observation.
+0.3333333333333333,2021-09-01,2021,0.005149423463450771,False,Fractional leads within 2021 use the 2021 year-end observation.

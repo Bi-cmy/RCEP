@@ -1,0 +1,28 @@
+{
+  "contract_version": "1.0.0",
+  "created_on": "2026-07-23",
+  "sources": [
+    {
+      "path": "RCEP_JAE_修订/data/derived/pair_year.parquet",
+      "required_fields": ["cn_id", "partner_id", "partner_country", "supplier_link", "year", "active", "first_start", "ticker_key"]
+    },
+    {
+      "path": "../关税冲击对供应链的影响/data/cleaned/ddd_panel.parquet",
+      "required_fields": ["Stkcd", "year"]
+    }
+  ],
+  "derived_dataset": {
+    "path": "data/country_entry_risk_set.parquet",
+    "key": ["listed_ticker", "partner_country", "year"],
+    "unique_key_required": true
+  },
+  "validation": [
+    "Firm universe uses 2017 active foreign supplier coverage only.",
+    "All 21 frozen candidate countries are crossed with every eligible firm before risk restrictions.",
+    "Preexisting country dyads with first_start on or before 2017-12-31 are excluded and counted.",
+    "Entry occurs at most once per firm-country dyad.",
+    "No rows remain after entry.",
+    "Treatment varies only by candidate country-year.",
+    "All exclusions and support counts are written before estimation."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "experiment_id": "10_cross_architecture_detrended",
+  "gate": "DETREND_AND_RANDOMIZATION",
+  "source_sha256": "fa5c83c89743a522cb37e886ecb07b7c7ec8421243940d03da3dd891669d4558",
+  "cloned_sha256": "fa5c83c89743a522cb37e886ecb07b7c7ec8421243940d03da3dd891669d4558",
+  "linear_trend_estimate": -0.013193424302670736,
+  "linear_trend_std_error": 0.011840693643141274,
+  "detrended_post_break": -0.021190714240603786,
+  "detrended_post_break_std_error": 0.02928582052031218,
+  "detrended_post_break_p_value": 0.4693881804247493,
+  "stratified_randomization_p": 0.247,
+  "draws": 999,
+  "seed": 20260723,
+  "assignment_sha256": "84bb933ab4862222b92b95eede89b8d9ab88314c9532863f7a0414689b3b73cb",
+  "experiment_09_result_survives_detrending": false
+}

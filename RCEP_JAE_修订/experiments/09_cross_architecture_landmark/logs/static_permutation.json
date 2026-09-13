@@ -1,0 +1,31 @@
+{
+  "experiment_id": "09_cross_architecture_landmark",
+  "gate": "STATIC_AND_STRATIFIED_RANDOMIZATION",
+  "primary_result": {
+    "specification": "Primary: active links",
+    "outcome": "asinh_active_rcep_supplier_links",
+    "exposure": "architecture_count",
+    "estimate": -0.05417427499728139,
+    "std_error": 0.023078518943635804,
+    "t_stat": -2.3473895846431962,
+    "p_value": 0.018981406695528908,
+    "ci_low": -0.0994287789121456,
+    "ci_high": -0.008919771082417177,
+    "observations": 12780,
+    "firm_clusters": 2556,
+    "stratified_randomization_p": 0.001
+  },
+  "permutations": {
+    "draws": 999,
+    "seed": 20260723,
+    "strata": "frozen industry by size tercile",
+    "two_sided_p_value": 0.001,
+    "assignment_file": "data/stratified_permutation_assignments.parquet",
+    "assignment_file_sha256": "84bb933ab4862222b92b95eede89b8d9ab88314c9532863f7a0414689b3b73cb"
+  },
+  "same_binary_exposure_sign": true,
+  "same_active_country_outcome_sign": true,
+  "leave_one_industry_out_no_sign_reversal": true,
+  "positive_exploratory_result": true,
+  "interpretation_limit": "Support-informed exploratory result with only one clean pre-policy lead."
+}

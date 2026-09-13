@@ -1,0 +1,11 @@
+{
+  "experiment_id": "01_cumulation_readiness",
+  "status": "FAILED",
+  "phase": "CLOSED_AT_IDENTIFICATION_FEASIBILITY_GATE",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": false,
+  "closed_at": "2026-07-23",
+  "failure_code": "MECHANICAL_EXPOSURE_OUTCOME_OVERLAP",
+  "next_gate": null
+}

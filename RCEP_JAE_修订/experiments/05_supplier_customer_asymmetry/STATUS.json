@@ -1,0 +1,15 @@
+{
+  "experiment_id": "05_supplier_customer_asymmetry",
+  "status": "INCONCLUSIVE",
+  "phase": "ARCHIVED",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": true,
+  "closed_at": "2026-07-23",
+  "next_gate": null,
+  "support_gate_pass": true,
+  "pretrend_gate_pass": true,
+  "static_inference_run": true,
+  "randomization_gate_pass": false,
+  "decision": "Identification gates passed, but the frozen country-label randomization p-value was 0.0976 rather than below 0.05."
+}

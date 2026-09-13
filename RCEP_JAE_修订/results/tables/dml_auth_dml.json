@@ -1,0 +1,60 @@
+{
+  "estimator": "Authentic DML (Neyman orthogonal, econml-style, gradient boosting)",
+  "method_reference": "Chernozhukov, Chetverikov, Demirer, Duflo, Hansen, Newey, Robins (2018)",
+  "feature_count": 15,
+  "theta_att": 0.0076804704811618855,
+  "cluster_bootstrap_se": 0.0021147817846818,
+  "cluster_bootstrap_ci_low": 0.003372740192321104,
+  "cluster_bootstrap_ci_high": 0.01164326746679209,
+  "cluster_bootstrap_p_value": 0.002,
+  "country_cluster_bootstrap_se": 0.008066867092167095,
+  "country_cluster_bootstrap_ci_low": -0.012104029136303126,
+  "country_cluster_bootstrap_ci_high": 0.019862142914577302,
+  "country_cluster_bootstrap_p_value": 0.38,
+  "bootstrap_draws": 999,
+  "observations": 78785,
+  "treated_pairs": 14385,
+  "partner_countries": 181,
+  "folds": [
+    {
+      "fold": 1,
+      "test_rows": 15757,
+      "test_countries": 29,
+      "theta": 0.028010133689768322,
+      "den": 837.708431904139
+    },
+    {
+      "fold": 2,
+      "test_rows": 15757,
+      "test_countries": 31,
+      "theta": -0.05382410839858093,
+      "den": 881.2497854733078
+    },
+    {
+      "fold": 3,
+      "test_rows": 15757,
+      "test_countries": 41,
+      "theta": 0.010585523426521002,
+      "den": 5367.863768270236
+    },
+    {
+      "fold": 4,
+      "test_rows": 15757,
+      "test_countries": 40,
+      "theta": 0.001422542229727125,
+      "den": 1127.8396834446942
+    },
+    {
+      "fold": 5,
+      "test_rows": 15757,
+      "test_countries": 40,
+      "theta": 0.01290018987980179,
+      "den": 5485.846237454391
+    }
+  ],
+  "cross_fitting": "5 folds grouped by partner country",
+  "nuisance_models": "HistGradientBoostingRegressor for Y; HistGradientBoostingClassifier for binary T",
+  "orthogonal_moment": "E[(Y - m0(X) - theta*(T - p(X))) * (T - p(X))] = 0",
+  "relationship_to_dr_did": "Distinct from 03_dml_dr_did.py DR-DID. This uses Neyman orthogonal moment + cross-fitting, not doubly-robust propensity weighting.",
+  "status": "pair-cluster primary; country-cluster sensitivity also reported"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment_id": "06_disruption_recovery",
+  "gate": "DATA_SUPPORT",
+  "gate_pass": false,
+  "cohort_size_gate": true,
+  "country_support_gate": true,
+  "within_firm_support_gate": false,
+  "balanced_panel_gate": true,
+  "total_relationships": 636,
+  "control_relationships": 168,
+  "rcep_relationships": 468,
+  "control_countries": 6,
+  "rcep_countries": 10,
+  "country_clusters": 16,
+  "firms_with_both_groups": 48
+}

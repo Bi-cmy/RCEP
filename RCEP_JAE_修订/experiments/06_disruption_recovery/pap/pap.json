@@ -1,0 +1,59 @@
+{
+  "experiment_id": "06_disruption_recovery",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "Did RCEP entry improve continuity or reactivation of supplier relationships active immediately before the COVID-19 disruption?",
+  "population": {
+    "unit": "Listed Chinese ticker-foreign supplier relationship by year",
+    "cohort_rule": "Relationship must be active on 2019-12-31, involve a registered RCEP or Asian non-RCEP partner country, and map to a verified listed ticker.",
+    "follow_up_years": [2020, 2021, 2022, 2023, 2024],
+    "rcep": ["JP", "KR", "AU", "NZ", "ID", "MY", "PH", "SG", "TH", "VN", "BN", "KH", "LA", "MM"],
+    "asian_non_rcep": ["HK", "TW", "IN", "PK", "BD", "LK", "MN"],
+    "anti_selection_rule": "Do not condition cohort membership on a 2020-2024 disappearance, recovery, duration, or coefficient."
+  },
+  "treatment": {
+    "preferred": "Country-specific timing: 2022 except Indonesia and the Philippines in 2023; never for controls.",
+    "uniform_2022": "Pre-specified sign robustness only.",
+    "assignment_level": "Partner-country-year"
+  },
+  "outcomes": {
+    "primary": "Current FactSet active indicator, which permits disappearance and later reactivation.",
+    "secondary": ["Absorbing survival from the fixed 2019 cohort", "Reactivation indicator after a prior observed absence"],
+    "interpretation": "The primary outcome is pre-pandemic relationship resilience, encompassing both continuity and reactivation; it is not a pure recovery hazard."
+  },
+  "estimating_equations": {
+    "static": "Active_pt = alpha_p + lambda_ft + beta TreatedCountryTime_ct + error_pt",
+    "dynamic": "Cohort-by-event terms with event time -1 omitted and the same fixed effects.",
+    "fixed_effects": ["relationship", "listed-firm-by-year"],
+    "primary_inference": "Partner-country clustered standard errors.",
+    "few_cluster_inference": "9,999-draw wild cluster bootstrap-t, seed 20260723.",
+    "randomization_inference": "9,999 unique assignments preserving 12 countries in the 2022 cohort, two in the 2023 cohort, and seven controls."
+  },
+  "identifying_assumption": "Absent RCEP, within the same listed firm and year, active-status changes of its fixed 2019 RCEP and Asian-control supplier relationships would have evolved in parallel.",
+  "data_gate": {
+    "cohort_size": "At least 500 relationships, with at least 150 RCEP and 150 control relationships.",
+    "country_support": "At least five positive cohort countries in each treatment group and at least 12 partner-country clusters overall.",
+    "within_firm_support": "At least 50 listed firms must hold both RCEP and control cohort relationships; failure stops rather than dropping firm-year fixed effects.",
+    "balanced_panel": "Each cohort relationship must have five annual observations.",
+    "failure_rule": "Failure of any support condition stops before coefficient estimation."
+  },
+  "identification_gate": {
+    "pretrend": "Joint cohort-specific lead test p >= 0.10.",
+    "economic_threshold": "Maximum absolute aggregated lead <= 0.05 probability points.",
+    "stop_rule": "Failure stops before the static effect, bootstrap, randomization, recovery decomposition, robustness, or mechanisms."
+  },
+  "evidence_gate": {
+    "positive_result": "Country-label randomization p < 0.05, consistent sign under uniform timing and absorbing survival, and no single-country sign reversal.",
+    "inconclusive": "Identification passes but the preferred estimate is ordinary under country assignments or too imprecise for 0.05 probability points.",
+    "integrity": "No disruption-defined subsample, country deletion, seed change, or subgroup significance comparison may replace the frozen result."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["sample construction", "support", "pretrend", "all bootstrap and randomization draws if reached"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended to pap/amendments.md before execution."
+}

@@ -1,0 +1,957 @@
+[
+  {
+    "order": 1,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2021.101419",
+    "title": "The COVID-19 pandemic and the world trade network",
+    "authors": [
+      "Kiyota, Kozo"
+    ],
+    "year": 2022,
+    "journal": "Journal of Asian Economics",
+    "volume": "78",
+    "issue": "",
+    "locator": "101419",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2021.101419",
+    "semantic_url": "https://www.semanticscholar.org/paper/dcf0c07316832db3eacbccb9808bf2978bb330aa",
+    "abstract": "Global trade suffered a significant contraction in 2020 as a result of the COVID-19 pandemic, and its growth is expected to remain below the pre-pandemic trend. Did the relative importance of countries in the world trade network change as a result of the pandemic? The answer to this question is particularly important for the Association of Southeast Asian Nations (ASEAN) countries because of their relative importance in world trade as well as their strong trade linkages with China, where the COVID-19 virus originated. This paper examines how the world trade network has changed since the COVID-19 pandemic, with a particular focus on ASEAN countries. Tracking the changes in centrality from January 2000 to March 2021, we find no evidence for most ASEAN and major trading countries that centrality changed significantly after the pandemic began. Our results suggest the resilience of the trade pattern for these countries.",
+    "abstract_source": "Semantic Scholar"
+  },
+  {
+    "order": 2,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2022.101456",
+    "title": "The impact of regional trade agreements on the quality of export products in China’s manufacturing industry",
+    "authors": [
+      "Sun, Jin",
+      "Luo, Yitong",
+      "Zhou, Yuan"
+    ],
+    "year": 2022,
+    "journal": "Journal of Asian Economics",
+    "volume": "80",
+    "issue": "",
+    "locator": "101456",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2022.101456",
+    "semantic_url": "https://www.semanticscholar.org/paper/bbc364dfc77943cf0b5db6f1eebe14e8365c7382",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 3,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2022.101513",
+    "title": "Behind the heterogeneous trade effects of standards: Multi-sector evidence from China",
+    "authors": [
+      "Ni, Shiying",
+      "Bai, Xiwen",
+      "Li, Lefei"
+    ],
+    "year": 2022,
+    "journal": "Journal of Asian Economics",
+    "volume": "82",
+    "issue": "",
+    "locator": "101513",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2022.101513",
+    "semantic_url": "https://www.semanticscholar.org/paper/9d8f1b5a30621627bd8eb1e6b482cc72772e1efe",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 4,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2022.101514",
+    "title": "Rules of origin and exports in developing economies: The case of garment products",
+    "authors": [
+      "Tanaka, Kiyoyasu",
+      "Fukunishi, Takahiro"
+    ],
+    "year": 2022,
+    "journal": "Journal of Asian Economics",
+    "volume": "82",
+    "issue": "",
+    "locator": "101514",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2022.101514",
+    "semantic_url": "https://www.semanticscholar.org/paper/3c48b692de1ec5f9acbb7eb46e3bd50c58f6f2bf",
+    "abstract": "Rules of origin (ROO) can be highly restrictive for developing economies to obtain preferential access, but it remains unclear whether the impacts are heterogeneous. We estimate the effect of ROO on exports in developing economies by examining European Union’s trade preferences, where origin requirements for garment products were relaxed for beneficiaries in the Interim Economic Partnership Agreements (IEPA) after 2008 and for those in the Everything But Arms (EBA) scheme after 2011, respectively. The results show that ROO liberalization has little overall effect on exports in IEPA beneficiaries, but a positive impact on those in EBA beneficiaries. Only some African and Asian beneficiaries increased their exports significantly. To explain heterogeneous responses, we discuss the initial production base, investment climate, structural transformation, and economic shocks.",
+    "abstract_source": "Semantic Scholar"
+  },
+  {
+    "order": 5,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2022.101528",
+    "title": "Trade policy uncertainty, development strategy, and export behavior: Evidence from listed industrial companies in China",
+    "authors": [
+      "Zhou, Fengxiu",
+      "Wen, Huwei"
+    ],
+    "year": 2022,
+    "journal": "Journal of Asian Economics",
+    "volume": "82",
+    "issue": "",
+    "locator": "101528",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2022.101528",
+    "semantic_url": "https://www.semanticscholar.org/paper/c9124fe91d8e5bb7890e6c85d0fa173e22ad554a",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 6,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2022.101532",
+    "title": "Understanding the role of trade agreements in Indonesia’s FDI",
+    "authors": [
+      "Narayan, Paresh Kumar",
+      "Rath, Badri Narayan",
+      "Syarifuddin, Ferry"
+    ],
+    "year": 2022,
+    "journal": "Journal of Asian Economics",
+    "volume": "82",
+    "issue": "",
+    "locator": "101532",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2022.101532",
+    "semantic_url": "https://www.semanticscholar.org/paper/3529146aed4753af306ae9143042088c5abd2b16",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 7,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2021.101369",
+    "title": "Can trade liberalization promote green production? Evidence from China's manufacturing enterprises",
+    "authors": [
+      "Liu, Mengdi",
+      "Zhang, Bing",
+      "Liao, Xianchun"
+    ],
+    "year": 2022,
+    "journal": "Journal of Asian Economics",
+    "volume": "79",
+    "issue": "",
+    "locator": "101369",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2021.101369",
+    "semantic_url": "https://www.semanticscholar.org/paper/5c8b8c426d7bd560361889f4c1a110601fb726b4",
+    "abstract": "Abstract Whether international trade causes environmental damage to developing countries has caused widespread concern. We estimate trade liberalization's impact on environmental performance using unique firm-level pollution data in China. By using maximum tariff rates from China's accession agreement as instrumental variables for actual tariff rates, we find that cuts in import tariffs enhance the average SO2 emission. Changes in the composition of products in the polluting and non-polluting industries can explain the substantial increase in the average SO2 emission. However, using multiple firm-level indicators, we demonstrate the existence of the trade-induced technique effect that trade liberalization can promote cleaner production.",
+    "abstract_source": "Semantic Scholar"
+  },
+  {
+    "order": 8,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2022.101572",
+    "title": "Impact of the Internet on the exports in ocean-based manufacturing: Firm-level evidence from China",
+    "authors": [
+      "Feng, Kuo",
+      "Guo, Yue",
+      "Ji, Yujun",
+      "Wang, Yuping"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "84",
+    "issue": "",
+    "locator": "101572",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2022.101572",
+    "semantic_url": "https://www.semanticscholar.org/paper/a3f7625310c15d58095a3a90e755267f49ab6147",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 9,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101591",
+    "title": "Tracing the regional dual value chains: Measurement on the production position and evidence from China",
+    "authors": [
+      "He, Yaxing",
+      "Huo, Weidong",
+      "Yu, Jie"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "85",
+    "issue": "",
+    "locator": "101591",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101591",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 10,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101610",
+    "title": "Firm-level Utilization Rates of Regional Trade Agreements: Importers’ Perspective",
+    "authors": [
+      "Hayakawa, Kazunobu",
+      "Laksanapanyakul, Nuttawut",
+      "Yoshimi, Taiyo"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "86",
+    "issue": "",
+    "locator": "101610",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101610",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 11,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101621",
+    "title": "Higher education expansion and domestic value added in exports: Theory and evidence from China",
+    "authors": [
+      "Du, Yan",
+      "Yan, Jie",
+      "Cao, Fangzhou",
+      "Li, Yifei",
+      "Zhou, Mao"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "87",
+    "issue": "",
+    "locator": "101621",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101621",
+    "semantic_url": "https://www.semanticscholar.org/paper/329b3a18a7b735abdd08b5856ef7e3fe1a586087",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 12,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101636",
+    "title": "Tariff cost and cross-border M&A affiliate sales: Evidence from China",
+    "authors": [
+      "Xie, Dan"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "87",
+    "issue": "",
+    "locator": "101636",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101636",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 13,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101647",
+    "title": "Estimating the effects of regional value chains of the RCEP in a GVC-CGE model",
+    "authors": [
+      "Sun, Kejuan",
+      "Xiao, Hao",
+      "Jia, Zhen",
+      "Tang, Bin"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "88",
+    "issue": "",
+    "locator": "101647",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101647",
+    "semantic_url": "https://www.semanticscholar.org/paper/fd399d5c2729b55e5b851febd53b7b7de1e87a3d",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 14,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101664",
+    "title": "Trade with innovation benefits: A re-appraisal using micro data from China",
+    "authors": [
+      "Cai, Meng",
+      "Cui, Riming",
+      "Li, Dan"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "89",
+    "issue": "",
+    "locator": "101664",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101664",
+    "semantic_url": "https://www.semanticscholar.org/paper/446d9bff176562a1a373d62473368577d0d137cd",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 15,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101672",
+    "title": "Global value chain upgrading effect of foreign capital withdrawal: Evidence from Chinese firms",
+    "authors": [
+      "Wu, Jinlong",
+      "Bian, Yuanchao",
+      "Bai, Junhong"
+    ],
+    "year": 2023,
+    "journal": "Journal of Asian Economics",
+    "volume": "89",
+    "issue": "",
+    "locator": "101672",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101672",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 16,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101676",
+    "title": "Trade and employment in the formal and informal sectors: A natural experiment from Cambodia",
+    "authors": [
+      "Tanaka, Kiyoyasu",
+      "Greaney, Theresa M."
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "90",
+    "issue": "",
+    "locator": "101676",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101676",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 17,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2023.101690",
+    "title": "Do export tax rebates promote firm upgrading? Evidences from labor-intensive firms in China",
+    "authors": [
+      "Liang, Yue",
+      "Lu, Wencong"
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "90",
+    "issue": "",
+    "locator": "101690",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2023.101690",
+    "semantic_url": "https://www.semanticscholar.org/paper/750aa51df376648fe7d01b94dec7f038fc75b41f",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 18,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101708",
+    "title": "The impact of global value chain restructuring on the product structure of China-EU exports",
+    "authors": [
+      "Zhang, Hongyuan",
+      "Ding, Yibing"
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "91",
+    "issue": "",
+    "locator": "101708",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101708",
+    "semantic_url": "https://www.semanticscholar.org/paper/2a32e0202cc29d4fbd0f566e1d9fd51a3813d0bf",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 19,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101718",
+    "title": "Processing export and firms’ social security contributions in China: The role of supply chain pressure",
+    "authors": [
+      "Zhang, Yanzhe",
+      "Xu, Helian"
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "92",
+    "issue": "",
+    "locator": "101718",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101718",
+    "semantic_url": "https://www.semanticscholar.org/paper/fcb06e64f01a0bfd9ce77c339e15a6e732c08040",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 20,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101737",
+    "title": "Can export trade drive green transformation development of Chinese enterprises? based on the dual perspectives of export density and export domestic value-added rate",
+    "authors": [
+      "Chen, Ming",
+      "Wang, Hongbo"
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "92",
+    "issue": "",
+    "locator": "101737",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101737",
+    "semantic_url": "https://www.semanticscholar.org/paper/c7de97699b178932eb1515a4d0935cfc15694b24",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 21,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101742",
+    "title": "Impact of financial development on the position in global value chain: An analysis from the perspective of R&D intensity",
+    "authors": [
+      "Xu, Lu",
+      "Jing, Jing",
+      "Wu, Chenyu"
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "92",
+    "issue": "",
+    "locator": "101742",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101742",
+    "semantic_url": "https://www.semanticscholar.org/paper/18e6faff9856d4c33f419aaa4cce65b83501a28b",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 22,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101826",
+    "title": "Data policy restrictions and cross-border E-commerce: Evidence from China",
+    "authors": [
+      "Ma, Shuzhong",
+      "Huang, Sishi",
+      "Wu, Peng"
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "95",
+    "issue": "",
+    "locator": "101826",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101826",
+    "semantic_url": "https://www.semanticscholar.org/paper/c8d90ba98d73809745e11ce849b32b2651725cd8",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 23,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101844",
+    "title": "Cross-border personnel mobility and bilateral value chain linkages: Evidence from visa liberalization in China",
+    "authors": [
+      "Ma, Shuqin",
+      "Ren, Fuyao",
+      "Feng, Fan",
+      "Feng, Kuo"
+    ],
+    "year": 2024,
+    "journal": "Journal of Asian Economics",
+    "volume": "95",
+    "issue": "",
+    "locator": "101844",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101844",
+    "semantic_url": "https://www.semanticscholar.org/paper/628f27ceb1379802d5690c204803300a936c1f91",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 24,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101849",
+    "title": "The Belt and Road Initiative and China's diversifying food imports: A perspective on the \"Five-pronged approach\"",
+    "authors": [
+      "Zhu, Jing",
+      "Liu, Xingyu",
+      "Cao, Lijuan"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "96",
+    "issue": "",
+    "locator": "101849",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101849",
+    "semantic_url": "https://www.semanticscholar.org/paper/1bca46698d79a695ace55916f40f9357984cab54",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 25,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101870",
+    "title": "Financing constraints and the export partnerships with RCEP: Evidence from manufacturing firms in China",
+    "authors": [
+      "Peng, Qing",
+      "Chen, Zhenhao",
+      "Li, Jie"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "97",
+    "issue": "",
+    "locator": "101870",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101870",
+    "semantic_url": "https://www.semanticscholar.org/paper/3e865627866ebcbb21a2ffa32bd7a470ebde96d4",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 26,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2024.101872",
+    "title": "Rules of Origin, Import of Inputs and Firm Innovation",
+    "authors": [
+      "Zhou, Hua",
+      "Wu, Lingyu"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "96",
+    "issue": "",
+    "locator": "101872",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2024.101872",
+    "semantic_url": "https://www.semanticscholar.org/paper/35b2dc6a8532a56e0253ec38ac4855b4922c03db",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 27,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2025.101903",
+    "title": "Import demand, digital empowerment and firm innovation",
+    "authors": [
+      "Liu, Kai",
+      "Chen, Jiayi",
+      "Tian, Yuan",
+      "Qu, Baobo",
+      "Iqbal, Badar Alam"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "98",
+    "issue": "",
+    "locator": "101903",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2025.101903",
+    "semantic_url": "https://www.semanticscholar.org/paper/5bbcf2ca8ba081375525fe830e9ae2bbc9066648",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 28,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2025.101980",
+    "title": "Understanding the product structure of exporters: The role of intellectual property protection in export origins",
+    "authors": [
+      "Hu, Xiaotian",
+      "Yin, Xiaopeng"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "100",
+    "issue": "",
+    "locator": "101980",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2025.101980",
+    "semantic_url": "https://www.semanticscholar.org/paper/a3e07b8b199d9e4c17155ab47adc2a28ce020d5d",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 29,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2025.102010",
+    "title": "Ordinary exports or processing exports? The role of industrial robots on the choice of export modes",
+    "authors": [
+      "Mao, Qilin",
+      "Shi, Buchao"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "100",
+    "issue": "",
+    "locator": "102010",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2025.102010",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 30,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2025.102014",
+    "title": "The direct and indirect effects of trade policy uncertainty on the volatility of world agricultural prices",
+    "authors": [
+      "Cai, Yan",
+      "Li, Yanyun",
+      "Lin, Faqin",
+      "Yan, Wenshou"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "100",
+    "issue": "",
+    "locator": "102014",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2025.102014",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 31,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2025.102048",
+    "title": "Environmental provisions in preferential trade agreements and export product quality of Chinese firms",
+    "authors": [
+      "Zhu, Yajun",
+      "Sun, Churen"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "101",
+    "issue": "",
+    "locator": "102048",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2025.102048",
+    "semantic_url": "https://www.semanticscholar.org/paper/1c7369ae7b90d010c98943684f76be8fff263dc6",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 32,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2025.102053",
+    "title": "The employment effects of regional market integration: Evidence from China",
+    "authors": [
+      "Li, Yanjun",
+      "Wan, Yuanyuan",
+      "Xie, Shenxiang"
+    ],
+    "year": 2025,
+    "journal": "Journal of Asian Economics",
+    "volume": "101",
+    "issue": "",
+    "locator": "102053",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2025.102053",
+    "semantic_url": "https://www.semanticscholar.org/paper/e87947b8871b758faea284d11c8aa0b82160f888",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 33,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2025.102108",
+    "title": "Institutional governance and energy security: Unveiling the drivers of global value chain participation in Asian economies",
+    "authors": [
+      "Ali, Wajid",
+      "Saini, Seema",
+      "Dash, Devi Prasad"
+    ],
+    "year": 2026,
+    "journal": "Journal of Asian Economics",
+    "volume": "103",
+    "issue": "",
+    "locator": "102108",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2025.102108",
+    "semantic_url": "https://www.semanticscholar.org/paper/91840e85f5f06b01e65b05defef63ca09ae51247",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 34,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2026.102128",
+    "title": "Multidimensional Risks and the cleaner production-oriented trade transformation in the China–ASEAN",
+    "authors": [
+      "Liu, Yuhan",
+      "Deng, Xiangzheng",
+      "Min, JI Hong",
+      "Wang, Jing",
+      "Liu, Yijie"
+    ],
+    "year": 2026,
+    "journal": "Journal of Asian Economics",
+    "volume": "103",
+    "issue": "",
+    "locator": "102128",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2026.102128",
+    "semantic_url": "https://www.semanticscholar.org/paper/ea770dd0bde027934f5145eb01284585a5bf8ab3",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 35,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2026.102131",
+    "title": "Cross-Border E-Commerce Comprehensive Pilot Zones and urban entrepreneurial activity: Causal evidence from double-debiased machine learning",
+    "authors": [
+      "Sun, Kai",
+      "Zhong, Xin",
+      "Xiong, Ding",
+      "Han, Zheng"
+    ],
+    "year": 2026,
+    "journal": "Journal of Asian Economics",
+    "volume": "103",
+    "issue": "",
+    "locator": "102131",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2026.102131",
+    "semantic_url": "https://www.semanticscholar.org/paper/b947b67aa360da1469975deb8d1143062c2f6571",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 36,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2026.102144",
+    "title": "A study on the impact of Regional Trade Agreement digital trade rules on global innovation network",
+    "authors": [
+      "Li, Na",
+      "Li, Ruobing"
+    ],
+    "year": 2026,
+    "journal": "Journal of Asian Economics",
+    "volume": "103",
+    "issue": "",
+    "locator": "102144",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2026.102144",
+    "semantic_url": "https://www.semanticscholar.org/paper/da0ab75a68c5142d7b7c2477b5b0d6e3dd78d3c6",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 37,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2026.102175",
+    "title": "Digital finance, supply chain spillovers and corporate innovation: Evidence from Chinese listed firms 2011–22",
+    "authors": [
+      "Ou, Jinghua",
+      "Yang, Ting",
+      "Yao, Shujie",
+      "Hu, Mengmeng"
+    ],
+    "year": 2026,
+    "journal": "Journal of Asian Economics",
+    "volume": "104",
+    "issue": "",
+    "locator": "102175",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2026.102175",
+    "semantic_url": "https://www.semanticscholar.org/paper/e9f740970d193cd32442610e0e6bea1a870dcc90",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 38,
+    "group": "JAE",
+    "doi": "10.1016/j.asieco.2026.102218",
+    "title": "Digital economy development and repositioning in the global intermediate goods trade network",
+    "authors": [
+      "Huang, Fei",
+      "Li, Jinxing",
+      "Shen, Jingyi",
+      "Wang, Han"
+    ],
+    "year": 2026,
+    "journal": "Journal of Asian Economics",
+    "volume": "105",
+    "issue": "",
+    "locator": "102218",
+    "doi_url": "https://doi.org/10.1016/j.asieco.2026.102218",
+    "semantic_url": "https://www.semanticscholar.org/paper/6140ab8763373c9be3b0eedf976fe2e420b986d9",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 39,
+    "group": "Broader",
+    "doi": "10.1007/s10290-022-00479-w",
+    "title": "Multiple preference regimes and rules of origin",
+    "authors": [
+      "Hayakawa, Kazunobu"
+    ],
+    "year": 2022,
+    "journal": "Review of World Economics",
+    "volume": "159",
+    "issue": "3",
+    "locator": "673-696",
+    "doi_url": "https://doi.org/10.1007/s10290-022-00479-w",
+    "semantic_url": "https://www.semanticscholar.org/paper/078318d5fb9a499d75df7e98defe2ca7f766ec69",
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 40,
+    "group": "Broader",
+    "doi": "10.1016/j.jinteco.2022.103688",
+    "title": "Third-country effects of regional trade agreements: A firm-level analysis",
+    "authors": [
+      "Lee, Woori",
+      "Mulabdic, Alen",
+      "Ruta, Michele"
+    ],
+    "year": 2023,
+    "journal": "Journal of International Economics",
+    "volume": "140",
+    "issue": "",
+    "locator": "103688",
+    "doi_url": "https://doi.org/10.1016/j.jinteco.2022.103688",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 41,
+    "group": "Broader",
+    "doi": "10.1016/j.jinteco.2023.103793",
+    "title": "Within firm supply chains: Evidence from India",
+    "authors": [
+      "Garg, Shresth",
+      "Ghosh, Pulak",
+      "Tan, Brandon Joel"
+    ],
+    "year": 2023,
+    "journal": "Journal of International Economics",
+    "volume": "144",
+    "issue": "",
+    "locator": "103793",
+    "doi_url": "https://doi.org/10.1016/j.jinteco.2023.103793",
+    "semantic_url": "https://www.semanticscholar.org/paper/633e90ec3043842ace7e6e86fd9f8f064c8f7258",
+    "abstract": "Vertical integration is central to understanding patterns of economic activity, but there has been limited empirical work measuring the extent to which firms own and utilize direct upstream and downstream production links for sourcing physical inputs. We use administrative data from Karnataka, India on the universe of good shipments between any two establishments to answer this question. We can identify if two establishments are under joint ownership allowing us to map the flow of goods both within and across firms. We calculate that 11% of input value can be potentially sourced from vertically integrated upstream establishments. We find that 38% of products are sourced by establishments exclusively from within the firm when a vertically integrated supplier exists, while the rest are almost entirely sourced exclusively from outside the firm. This suggests that the supply of physical goods along the production chain is an important rationale for vertical integration in India. Our data allows us to improve upon the methodology employed in the literature so far to measure within-firm trade. We highlight two sources of measurement and aggregation bias in previous studies, and show that there is a large impact on the results. Next, we quantify the extent to which firm boundaries serve as barriers to trade in our context by estimating a gravity specification. Finally, we look at factors associated with the decision to source a given product from within and find that firm size, physical distance to outside and within firm suppliers, frequency of input requirements, product relationship specificity, volume, R&D requirements and competition both upstream and downstream are important factors. ∗We thank Enghin Atalay, Pol Antras, Dave Donaldson, Edward Glaeser, Nathan Hendren, Michael Kremer, Marc Melitz and Chad Syverson for helpful discussions and comments. We thank the State Government of Karnataka for providing the data to Pulak Ghosh. †Department of Economics, Harvard University; garg@g.harvard.edu ‡Department of Economics, Harvard University; btan@g.harvard.edu",
+    "abstract_source": "Semantic Scholar"
+  },
+  {
+    "order": 42,
+    "group": "Broader",
+    "doi": "10.1016/j.jinteco.2024.103909",
+    "title": "Firm input choice under trade policy uncertainty",
+    "authors": [
+      "Handley, Kyle",
+      "Limão, Nuno",
+      "Ludema, Rodney D.",
+      "Yu, Zhi"
+    ],
+    "year": 2024,
+    "journal": "Journal of International Economics",
+    "volume": "150",
+    "issue": "",
+    "locator": "103909",
+    "doi_url": "https://doi.org/10.1016/j.jinteco.2024.103909",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 43,
+    "group": "Broader",
+    "doi": "10.1016/j.jinteco.2024.103911",
+    "title": "The Laffer curve for rules of origin",
+    "authors": [
+      "Head, Keith",
+      "Mayer, Thierry",
+      "Melitz, Marc"
+    ],
+    "year": 2024,
+    "journal": "Journal of International Economics",
+    "volume": "150",
+    "issue": "",
+    "locator": "103911",
+    "doi_url": "https://doi.org/10.1016/j.jinteco.2024.103911",
+    "semantic_url": "https://www.semanticscholar.org/paper/17e18965306eea2b4c00eefc932c1a7416dff5cd",
+    "abstract": "We analyze how heterogeneous ﬁrms in a regional trade area (RTA) respond to rules of origin (RoO). Firms can source a continuum of inputs from both within and outside the RTA, and choose whether to comply with the RoO or pay a tariff penalty. We show how a Laffer curve for RoOs arises naturally in this setting: stricter content requirements initially expand regional part sourcing, but contract it when set at levels above a threshold. The parameters of the model are ﬁt to data on regional part cost shares for all autos sold in North America. The calibrated model quantiﬁes the impact of stricter RoOs imposed by the 2020 revision to NAFTA (USMCA). The stricter content requirement (62.5% to 75%) would raise employment by only 1.2%, while increasing auto prices assembled in the region by 0.3%. The higher requirement initially proposed by U.S. negotiators (85%) would lead to both higher prices and lower employment.",
+    "abstract_source": "Semantic Scholar"
+  },
+  {
+    "order": 44,
+    "group": "Broader",
+    "doi": "10.1016/j.jinteco.2025.104078",
+    "title": "Regional trade policy uncertainty",
+    "authors": [
+      "Poilly, Céline",
+      "Tripier, Fabien"
+    ],
+    "year": 2025,
+    "journal": "Journal of International Economics",
+    "volume": "155",
+    "issue": "",
+    "locator": "104078",
+    "doi_url": "https://doi.org/10.1016/j.jinteco.2025.104078",
+    "semantic_url": "https://www.semanticscholar.org/paper/bb6d4dbc431083e7f66d3a6690ff0503637abadd",
+    "abstract": "Higher uncertainty about trade policy has recessionary effects on U.S. states. To show this, we first build a novel empirical measure of regional trade policy uncertainty, based on the volatility of national import tariffs at the sectoral level and the sectoral composition of imports in U",
+    "abstract_source": "Semantic Scholar"
+  },
+  {
+    "order": 45,
+    "group": "Broader",
+    "doi": "10.1016/j.worlddev.2023.106371",
+    "title": "Imports, supply chains and firm productivity",
+    "authors": [
+      "Newman, Carol",
+      "Rand, John",
+      "Tarp, Finn"
+    ],
+    "year": 2023,
+    "journal": "World Development",
+    "volume": "172",
+    "issue": "",
+    "locator": "106371",
+    "doi_url": "https://doi.org/10.1016/j.worlddev.2023.106371",
+    "semantic_url": null,
+    "abstract": null,
+    "abstract_source": null
+  },
+  {
+    "order": 46,
+    "group": "Broader",
+    "doi": "10.1111/twec.13468",
+    "title": "How does the reform of rules of origin affect firm performance in importing countries?",
+    "authors": [
+      "Hayakawa, Kazunobu",
+      "Yamanouchi, Kenta"
+    ],
+    "year": 2023,
+    "journal": "The World Economy",
+    "volume": "47",
+    "issue": "2",
+    "locator": "837-856",
+    "doi_url": "https://doi.org/10.1111/twec.13468",
+    "semantic_url": null,
+    "abstract": "Abstract This study empirically examines the economic impact of reforms on Japan's generalised system of preferences regarding firm performance. Specifically, we consider the relaxation of the rules of origin (RoOs) for knitted apparel in 2011 and 2015. We conducted a difference‐in‐differences analysis by defining the knitted apparel industry as the treatment group and the woven apparel industry as the control group. First, we demonstrate that Japan's total imports of knitted apparel products did not experience a greater change than those of woven apparel products. However, imports of knitted apparel products from the least developed countries (LDCs) have increased significantly. Second, on average, the two RoO reforms did not significantly change the sales value of knitted apparel producers. Third, we explore the heterogeneous effects across product price ranges because plants producing relatively low‐price products may be affected largely by the increase in the import values of inexpensive apparel products from LDCs. As a result, we find significant results for knitted apparel producers in the low‐price range. While the first relaxation, in 2011, reduced their production quantity and raised unit prices, the second relaxation, in 2015, reduced sales value by reducing production quantity.",
+    "abstract_source": "Crossref"
+  },
+  {
+    "order": 47,
+    "group": "Broader",
+    "doi": "10.1111/twec.13557",
+    "title": "Negotiating over the rules of origin in regional trade agreements in Asia",
+    "authors": [
+      "Hayakawa, Kazunobu",
+      "Kimura, Fukunari",
+      "Mukunoki, Hiroshi",
+      "Urata, Shujiro"
+    ],
+    "year": 2024,
+    "journal": "The World Economy",
+    "volume": "47",
+    "issue": "7",
+    "locator": "3097-3119",
+    "doi_url": "https://doi.org/10.1111/twec.13557",
+    "semantic_url": null,
+    "abstract": "Abstract In regional trade agreements (RTAs), member countries choose a common rule of origin (RoO) for each product. This study examines the factors that influence RoOs in four ASEAN‐plus‐one RTAs, which are agreements between ASEAN and four individual countries. One unique feature is that ASEAN as a whole negotiates with a plus‐one country, which may dilute the interests of individual ASEAN countries at large. Our findings are summarised as follows. First, the more restrictive RoOs are set in the products where plus‐one countries are less competitive against most ASEAN countries. Second, the more restrictive RoOs are likely to be imposed in products that plus‐one countries protect with higher most favoured nation tariffs. These two results reflect the bargaining power among a plus‐on country and ASEAN countries and indicate that plus‐one's preference influences RoOs more strongly. Third, we find contrasting results between intermediate and final products. RoOs are likely to be less restrictive in intermediate products and more restrictive in final products when plus‐one countries have higher export competitiveness or when the majority of ASEAN countries have higher MFN tariffs.",
+    "abstract_source": "Crossref"
+  },
+  {
+    "order": 48,
+    "group": "Broader",
+    "doi": "10.1257/aer.20211519",
+    "title": "When Tariffs Disrupt Global Supply Chains",
+    "authors": [
+      "Grossman, Gene M.",
+      "Helpman, Elhanan",
+      "Redding, Stephen J."
+    ],
+    "year": 2024,
+    "journal": "American Economic Review",
+    "volume": "114",
+    "issue": "4",
+    "locator": "988-1029",
+    "doi_url": "https://doi.org/10.1257/aer.20211519",
+    "semantic_url": null,
+    "abstract": "We study unanticipated tariffs in a setting with firm-to-firm supply relationships. Firms conduct costly searches and negotiate with potential suppliers that pass a reservation level of match productivity. Global supply chains form in anticipation of free trade. Then, the home government surprises with an input tariff. This can lead to renegotiation with initial suppliers or search for replacements. Calibrating the model’s parameters to match initial import shares and the estimated responses to the US tariffs imposed on China, we find an overall welfare loss of 0.12 percent of GDP, with substantial contributions from changes in input sourcing and search costs. (JEL D72, F13, F14, L14, O19, P33)",
+    "abstract_source": "Crossref"
+  }
+]

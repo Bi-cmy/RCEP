@@ -1,0 +1,11 @@
+rank,experiment,status,decisive_result,recommended_use
+1,05_supplier_customer_asymmetry,INCONCLUSIVE,"Pretrend p=0.1332; estimate=0.00601; country-label p=0.0976","Best current-data formal design; report only as weak or null asymmetry evidence"
+2,09_cross_architecture_landmark,FRAGILE_EXPLORATORY,"Static=-0.0542 and permutation p=0.001; detrended p=0.4694 and permutation p=0.247","Exploratory consolidation pattern only; not a causal headline"
+3,04_regionalization_diversity,FAILED,"Pretrend p=4.38e-08 despite maximum lead 0.00337","Conceptually close but frozen statistical gate failed"
+4,07_fta_novelty,FAILED,"Exposure support passed; balanced firms 2556 below frozen 3000","Theory and measure useful for future data or a separately justified design"
+5,06_disruption_recovery,FAILED,"48 overlap firms below frozen 50","Needs broader relationship coverage"
+6,03_new_link_formation,FAILED,"Only four Asian control countries with pre-policy entries","Needs broader country or transaction data"
+7,08_revenue_dependence,FAILED,"Moderation pretrend p=3.65e-48; maximum lead 0.2685","Do not use revenue_percent as a causal moderator"
+8,02_relationship_survival,FAILED,"Pretrend p=8.73e-14; maximum lead 0.0941","Do not use fixed-2017 survival as the main design"
+9,01_cumulation_readiness,FAILED,"Exposure window mechanically overlaps intended pretrend outcomes","Superseded by non-overlapping architecture design"
+10,10_cross_architecture_detrended,FAILED_SENSITIVITY,"Detrended break=-0.0212; permutation p=0.247","Sensitivity result that downgrades Experiment 09"

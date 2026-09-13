@@ -1,0 +1,66 @@
+{
+  "status": "COMPLETED",
+  "created_on": "2026-07-23",
+  "steps": [
+    "Validate the registered pair-year source.",
+    "Normalize listed tickers and document invalid 000000 and non-listed mappings.",
+    "Freeze firms with at least one active foreign supplier relationship in 2017.",
+    "Cross firms with the 21 frozen candidate countries.",
+    "Exclude country dyads with supplier first_start on or before 2017-12-31.",
+    "Construct first active country year and retain the risk set through entry.",
+    "Evaluate the frozen support gate before any coefficient is estimated."
+  ],
+  "counts": {
+    "experiment_id": "03_new_link_formation",
+    "build_status": "PASSED",
+    "python": "3.12.7",
+    "source_hashes": {
+      "pair_year_sha256": "7717eab45f6d31257d246a937e5aeab8f79ae567919d58f40f534efb81464e28",
+      "firm_year_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+    },
+    "source_pair_year_rows": 630280,
+    "mapped_pair_year_rows": 398792,
+    "frozen_2017_covered_firms": 623,
+    "candidate_country_dyads_before_history_exclusion": 13083,
+    "preexisting_country_dyads_excluded": 552,
+    "eligible_country_dyads": 12531,
+    "risk_set_rows": 86554,
+    "first_country_entries": 398,
+    "support_gate": {
+      "experiment_id": "03_new_link_formation",
+      "gate": "DATA_SUPPORT",
+      "gate_pass": false,
+      "event_count_gate": true,
+      "event_country_gate": false,
+      "within_firm_year_overlap_gate": true,
+      "minimum_events_per_group_period": 30,
+      "minimum_event_countries_per_group_period": 5,
+      "minimum_overlapping_firms_per_year": 100,
+      "event_counts": {
+        "rcep_0_pre": 84,
+        "rcep_1_pre": 129,
+        "rcep_0_post": 86,
+        "rcep_1_post": 99
+      },
+      "event_country_counts": {
+        "rcep_0_pre": 4,
+        "rcep_1_pre": 10,
+        "rcep_0_post": 5,
+        "rcep_1_post": 10
+      },
+      "minimum_observed_overlap_firms": 623
+    },
+    "outputs": [
+      "data/country_entry_risk_set.parquet",
+      "data/support_by_group_period.csv",
+      "data/country_period_support.csv",
+      "data/year_group_support.csv",
+      "data/within_firm_year_overlap.csv",
+      "tables/table1_support_gate.xlsx",
+      "tables/table1_support_gate.docx",
+      "tables/table1_support_gate.tex"
+    ]
+  },
+  "execution_log": "logs/risk_set_build.json",
+  "exclusion_policy": "No exclusion may depend on an estimate, standard error, p-value, or desired sign."
+}

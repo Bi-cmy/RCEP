@@ -1,0 +1,67 @@
+{
+  "experiment_id": "08_revenue_dependence",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "Did RCEP entry change active relationship persistence differentially with a relationship's pre-policy FactSet revenue percentage?",
+  "measurement": {
+    "source": "Relationship episodes beginning no later than 2021-12-31.",
+    "primary_exposure": "Maximum valid revenue_percent among the pair-role's qualifying pre-policy episodes, scaled per 10 percentage points.",
+    "valid_range": "0 < revenue_percent <= 100; zero, negative, above-100, and missing values are reported and excluded.",
+    "interpretation_limit": "The field is a FactSet quantified relationship percentage, not transaction trade value, contract value, or customs flow.",
+    "coverage_limit": "Inference applies only to the selected quantified subset and is not generalized to all relationships."
+  },
+  "population": {
+    "unit": "Verified listed Chinese firm-foreign partner-role by year",
+    "countries": "Fourteen RCEP and seven registered Asian non-RCEP economies.",
+    "years": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    "cohort_rule": "Pair-role must have a valid pre-policy revenue percentage and a first relationship start no later than 2021-12-31.",
+    "balanced_panel": "All eight annual active indicators are retained for every qualifying pair-role."
+  },
+  "treatment": {
+    "preferred": "Country-specific timing: 2022 except Indonesia and the Philippines in 2023; never for controls.",
+    "uniform_2022": "Pre-specified robustness only."
+  },
+  "outcome": {
+    "primary": "Year-end active relationship indicator.",
+    "secondary": ["Absorbing survival among links active in 2021", "Relationship entry among links inactive in 2021"],
+    "selection_rule": "Secondary transitions never replace the full quantified cohort based on significance."
+  },
+  "estimating_equations": {
+    "static": "Active_pt = alpha_p + lambda_ft + beta Treated_ct + theta(Treated_ct x RevenuePercent10_p) + error_pt",
+    "dynamic": "Include cohort-event main effects and their RevenuePercent10 interactions, event time -1 omitted, with the same fixed effects.",
+    "fixed_effects": ["pair-role", "listed-firm-by-year"],
+    "primary_parameter": "theta, the differential RCEP response per 10 percentage points of pre-policy quantified relationship revenue.",
+    "primary_inference": "Partner-country clustered standard errors.",
+    "few_cluster_inference": "9,999-draw wild cluster bootstrap-t, seed 20260723.",
+    "randomization_inference": "9,999 unique country timing-label assignments preserving 12 countries in 2022, two in 2023, and seven controls."
+  },
+  "identifying_assumption": "Conditional on pair-role and firm-year effects and the average country-timing response, high- and low-percentage quantified relationships would not have had different RCEP-versus-control active-status trends absent the policy.",
+  "data_gate": {
+    "pair_support": "At least 500 quantified Asian pair-roles, including at least 150 RCEP and 150 controls.",
+    "country_support": "At least ten countries overall and at least four in each treatment group.",
+    "within_firm_support": "At least 30 listed firms with quantified relationships in both treatment groups.",
+    "outcome_support": "At least 100 pair-roles with within-pair active-status variation in each treatment group.",
+    "exposure_support": "Within each treatment group, at least 50 pair-roles lie below and at least 50 at or above the full-sample median positive percentage.",
+    "failure_rule": "Failure stops before pretrend or treatment-effect estimation."
+  },
+  "identification_gate": {
+    "pretrend": "Joint test of all cohort-specific RevenuePercent10 lead interactions has p >= 0.10.",
+    "economic_threshold": "Maximum absolute aggregated RevenuePercent10 lead <= 0.02 probability points per 10 percentage points.",
+    "main_effect_check": "Cohort-event main effects remain in every dynamic specification; they are not interpreted as a new average RCEP design.",
+    "stop_rule": "Failure stops before static moderation, bootstrap, randomization, robustness, mechanisms, or heterogeneity."
+  },
+  "evidence_gate": {
+    "positive_result": "The interaction has country-label randomization p < 0.05, consistent sign under uniform timing, and no single-country sign reversal.",
+    "inconclusive": "Identification passes but the interaction is ordinary under country assignments or too imprecise for 0.02 probability points.",
+    "integrity": "No median cutoff, invalid-value rule, episode window, role split, seed, or country is changed after results are inspected."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["source audit", "sample construction", "support", "pretrend", "all inference draws if reached"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended to pap/amendments.md before execution."
+}

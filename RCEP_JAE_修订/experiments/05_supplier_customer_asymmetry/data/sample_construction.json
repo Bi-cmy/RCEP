@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETED",
+  "created_on": "2026-07-23",
+  "steps": [
+    "Validate source keys and relationship-role coding.",
+    "Freeze listed firms with any active foreign relationship in 2017.",
+    "Collapse unique partners to ticker-country-role-year counts.",
+    "Create the balanced firm-country-role-year panel.",
+    "Run frozen support gates before any coefficient estimation."
+  ],
+  "counts": {
+    "experiment_id": "05_supplier_customer_asymmetry",
+    "build_status": "PASSED",
+    "python": "3.12.7",
+    "source_hashes": {
+      "pair_year_sha256": "7717eab45f6d31257d246a937e5aeab8f79ae567919d58f40f534efb81464e28",
+      "firm_year_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+    },
+    "frozen_2017_covered_firms": 1141,
+    "panel_rows": 335454,
+    "firm_country_role_cells": 47922,
+    "support_gate": {
+      "experiment_id": "05_supplier_customer_asymmetry",
+      "gate": "DATA_SUPPORT",
+      "gate_pass": true,
+      "active_link_gate": true,
+      "positive_country_gate": true,
+      "positive_firm_both_roles_gate": true,
+      "active_links": {
+        "role_0_rcep_0_pre": 1725,
+        "role_0_rcep_0_post": 1867,
+        "role_0_rcep_1_pre": 3140,
+        "role_0_rcep_1_post": 2843,
+        "role_1_rcep_0_pre": 638,
+        "role_1_rcep_0_post": 734,
+        "role_1_rcep_1_pre": 1574,
+        "role_1_rcep_1_post": 1580
+      },
+      "positive_countries": {
+        "role_0_rcep_0_pre": 7,
+        "role_0_rcep_0_post": 7,
+        "role_0_rcep_1_pre": 14,
+        "role_0_rcep_1_post": 13,
+        "role_1_rcep_0_pre": 5,
+        "role_1_rcep_0_post": 7,
+        "role_1_rcep_1_pre": 11,
+        "role_1_rcep_1_post": 10
+      },
+      "firms_positive_in_both_roles": {
+        "pre": 210,
+        "post": 232
+      }
+    }
+  },
+  "execution_log": "logs/panel_build.json",
+  "exclusion_policy": "No sample or role change may depend on significance or coefficient sign."
+}

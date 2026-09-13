@@ -1,0 +1,996 @@
+   RCEP and Supply Chain Relationships of Chinese
+    Firms: Evidence from Relationship-Pair Data
+                          Anonymous manuscript
+
+
+
+
+Abstract
+We examine how the Regional Comprehensive Economic Partnership
+(RCEP) is associated with the international supply-chain relationships
+of Chinese listed firms. Using FactSet Revere disclosures, we construct
+a balanced panel of 630,280 relationship–year observations for 78,785
+directed customer and supplier pairs involving 5,689 firms over 2017–2024.
+A difference-in-differences specification with firm–partner–direction pair
+fixed effects estimates a 1.36 percentage-point increase in the probability
+that an RCEP relationship is active at year-end relative to relationships
+with other foreign partners. The estimate is similar under member-specific
+implementation dates and several alternative samples, although it is
+sensitive to a restrictive Asian comparison group. Partner-country–year
+evidence is consistent with three policy-linked pathways: tariff relief, a
+larger intermediate-goods share in China’s imports from member economies,
+and a lower partner-country import share. The response is concentrated in
+supplier relationships, for which the estimated differential increase is 2.95
+percentage points; the estimate for customer relationships is statistically
+indistinguishable from zero. The joint Wald test does not reject equality
+of the four pre-treatment coefficients to zero at the 5% level (p = 0.078),
+but does reject at the 10% level. The results point to an economically
+meaningful relationship-level response while also indicating the limits of
+identification over a short post-entry period.
+Keywords: RCEP, supply chains, relationship-pair panel,
+difference-in-differences, trade policy
+1. Introduction
+    Production in Asia is organized through dense cross-border networks in
+which firms repeatedly source inputs from, and sell output to, partners in
+neighboring economies. Recent evidence points to considerable persistence
+in the region’s aggregate trade network even after a large common shock
+(Kiyota, 2022), while new measures of regional value-chain position empha-
+size the importance of tracing production links beyond gross trade flows
+(He et al., 2023). The entry into force of the Regional Comprehensive Eco-
+nomic Partnership (RCEP) on January 1, 2022 began bringing 15 Asia-Pacific
+economies under a common trade framework. Its combination of coordinated
+tariff schedules, regional cumulation of origin, and trade-facilitation commit-
+ments can change both the cost of a cross-border transaction and the set of
+partners with which that transaction is feasible. Whether this institutional
+integration changes relationships between firms, rather than only aggregate
+trade, remains an open empirical question.
+    This paper studies that question using relationship-level data. We convert
+disclosed customer and supplier records in the FactSet Revere database into
+a balanced annual panel of 630,280 observations for 78,785 directed firm–
+partner pairs. The empirical design compares relationships with partners in
+RCEP member economies to relationships with other foreign partners before
+and after the common 2022 treatment date. The specification includes firm–
+partner–direction pair fixed effects and year fixed effects, with standard errors
+clustered by relationship pair.
+    The main estimate is 0.0136 (standard error 0.0040), implying a 1.36
+percentage-point differential increase in the probability that a relationship
+is active at year-end. The estimate is 0.0144 (standard error 0.0041) when
+member-specific entry dates are used and remains positive in several alter-
+native time windows and sample exclusions. Its sign reverses, however, when
+the comparison group is restricted to seven Asian non-members, showing
+that the estimated contrast depends on the choice of non-RCEP counterfac-
+tual. The response is concentrated in supplier relationships, for which the
+estimated increase is 2.95 percentage points; the corresponding estimate for
+customer relationships is small and statistically insignificant. At the partner-
+country–year level, RCEP exposure is associated with tariff relief, a higher
+intermediate-goods share in China’s imports from member economies, and
+a lower partner-country share of China’s imports. These aggregate trade
+patterns, together with the supplier-side relationship response, are consis-
+
+                                       2
+tent with stronger regional production-network integration helping Chinese
+firms maintain or establish disclosed supplier relationships. The joint pre-
+treatment Wald test does not reject at the 5% level but does reject at the
+10% level (p = 0.078). We therefore interpret the estimates as a positive
+relative response while keeping the limitations of both the timing evidence
+and the comparison group explicit.
+    The paper is positioned against several closely related bodies of work.
+Research on trade agreements has established effects on bilateral trade, firm
+outcomes, and third-country adjustment (Baier and Bergstrand, 2007; Sun
+et al., 2022; Lee et al., 2023), while recent RCEP studies evaluate regional
+value chains in a GVC-CGE framework (Sun et al., 2023) or examine how fi-
+nancing constraints relate to manufacturers’ export partnerships with RCEP
+economies (Peng et al., 2025). A second literature studies firms’ use of prefer-
+ences and the sourcing consequences of rules of origin (Hayakawa et al., 2023;
+Tanaka and Fukunishi, 2022; Head et al., 2024). A third analyzes how trade-
+policy changes propagate through supplier search and firm-to-firm production
+links (Garg et al., 2023; Grossman et al., 2024). These studies motivate a
+relationship-level test but do not establish whether RCEP’s entry into force
+altered the annual activity of directed customer and supplier links.
+    Relative to this work, the paper makes three contributions. First, it shifts
+the outcome from aggregate trade or export participation to the annual activ-
+ity of disclosed firm–partner relationships and estimates the policy response
+within the same directed pair over time. Second, it relates partner-country–
+year changes in tariff relief, the composition of intermediate-goods imports,
+and partner-country import shares to relationship activity, while recognizing
+that these aggregate measures do not observe firm-level preference claims,
+certificates of origin, customs transactions, or relationship values. Third, it
+separates supplier from customer links and examines how the initial rela-
+tionship response varies with pre-policy relationship maturity, prior trade-
+agreement coverage, and manufacturing exposure.
+    The remainder of the paper is organized as follows. Section 2 reviews
+the literature and develops the hypotheses. Section 3 describes the sample,
+variables, and empirical design. Section 4 presents the baseline estimates,
+mechanism analysis, and robustness tests. Section 5 examines heterogeneous
+responses. Section 6 provides further evidence on a competing explanation.
+Section 7 concludes with policy implications.
+
+
+
+                                       3
+2. Literature review and hypothesis development
+2.1. Literature review
+    The first strand of related research examines how trade agreements and
+trade institutions affect bilateral trade and firm behavior. Gravity-based evi-
+dence establishes that free-trade agreements increase trade between members
+(Baier and Bergstrand, 2007). Recent JAE studies extend the analysis from
+trade flows to export-product quality and foreign direct investment, examine
+environmental provisions as a determinant of firm-level quality adjustment,
+and estimate employment responses to regional integration (Sun et al., 2022;
+Narayan et al., 2022; Zhu and Sun, 2025; Li et al., 2025). The incidence of an
+agreement nevertheless depends on the institutional details faced by firms.
+Hayakawa et al. (2023), for example, measure the firm-level utilization of
+regional trade agreements from the importer’s perspective, while Ni et al.
+(2022) analyze heterogeneous trade effects across sectors. Other recent work
+examines how tariff costs and trade-policy uncertainty shape cross-border
+organization, export behavior, and input choice (Xie, 2023; Zhou and Wen,
+2022; Handley et al., 2024; Poilly and Tripier, 2025). Firm-level evidence
+on third-country effects further shows why adjustment outside an agreement
+must be part of the comparison (Lee et al., 2023). This literature implies that
+membership and statutory tariff schedules alone are insufficient measures of
+firms’ effective exposure.
+    The second strand studies regional production networks and RCEP more
+directly. Recent work constructs measures of regional dual value chains (He
+et al., 2023), evaluates RCEP through a GVC-CGE model (Sun et al., 2023),
+and examines the reorganization of export-product structures as global value
+chains change (Zhang and Ding, 2024). Complementary JAE studies exam-
+ine domestic value added in exports, GVC upgrading after foreign-capital
+withdrawal, financial and institutional determinants of value-chain partici-
+pation, and risk-related changes in regional trade structure (Du et al., 2023;
+Wu et al., 2023; Xu et al., 2024; Ali et al., 2026; Liu et al., 2026). At
+the firm level, Peng et al. (2025) study financing constraints and export
+partnerships with RCEP economies. Other evidence connects lower cross-
+border mobility costs to bilateral value-chain linkages (Ma et al., 2024b) and
+digital development to economies’ positions in the intermediate-goods trade
+network (Huang et al., 2026). Work on data restrictions and digital-trade
+provisions further illustrates that contemporary regional integration operates
+through non-tariff rules as well as customs duties (Ma et al., 2024a; Li and Li,
+
+                                       4
+2026). These contributions establish the relevance of regional integration for
+production networks, but aggregate value-chain measures, simulations, and
+exporter-country links do not reveal whether a particular disclosed customer
+or supplier relationship remains active after implementation.
+     The third strand concerns rules of origin and the organization of input
+sourcing. Rules of origin determine whether firms can claim preferences
+and can therefore either promote regional sourcing or impose compliance
+costs. Tanaka and Fukunishi (2022) find that relaxing origin requirements
+produced heterogeneous export responses across developing-economy ben-
+eficiaries. Studying reforms in Japan, Hayakawa and Yamanouchi (2023)
+document an increase in imports from least-developed economies but hetero-
+geneous effects on domestic producers. Theoretically, Head et al. (2024) show
+that tighter content requirements initially expand regional parts sourcing but
+reduce it once the requirement passes a threshold. The design of these rules
+is itself endogenous to negotiation and differs between intermediate and final
+products (Hayakawa et al., 2024); overlapping preference regimes add another
+layer to firms’ compliance choices (Hayakawa, 2022). Recent JAE evidence
+also links rules of origin to imported inputs and firm innovation (Zhou and
+Wu, 2025). Taken together, this work makes input sourcing central to the
+expected effect of RCEP’s regional-cumulation provision.
+     A final set of studies highlights that supply chains are networks of durable
+relationships rather than anonymous spot transactions. Administrative ship-
+ment data reveal that ownership boundaries, distance, relationship speci-
+ficity, and input characteristics shape where firms source products (Garg et
+al., 2023). Models of unexpected tariffs similarly predict renegotiation with
+incumbent suppliers or costly search for replacement partners (Grossman et
+al., 2024). Empirical studies connect imported inputs and supply-chain links
+to firm productivity (Newman et al., 2023), show that shocks can propa-
+gate through observed firm networks (Crosignani et al., 2022), and examine
+supply-chain spillovers in corporate innovation (Ou et al., 2026). The present
+paper joins this relationship-based perspective to the RCEP literature. Its
+empirical unit preserves the firm, partner, and relationship direction, allow-
+ing the analysis to distinguish changes in relationship activity from changes
+in trade values or aggregate network position.
+
+2.2. Hypothesis development
+    RCEP was signed on November 15, 2020 and entered into force for the first
+group of members on January 1, 2022. The agreement covers China, Japan,
+
+                                       5
+South Korea, Australia, New Zealand, and the ten ASEAN economies. It
+combines market-access commitments with rules on origin, customs proce-
+dures, services, investment, intellectual property, and electronic commerce
+(Shen and Li, 2020; Ping, 2021). Recent research on digital-trade rules in
+regional agreements underscores the network implications of this broader
+institutional scope (Li and Li, 2026). RCEP’s common origin regime is espe-
+cially relevant in Asia, where firms previously navigated several overlapping
+ASEAN-plus-one agreements whose product-level rules reflected different ne-
+gotiating interests (Hayakawa, 2022; Hayakawa et al., 2024).
+    The tariff schedule is phased. Approximately 65 percent of tariff lines re-
+ceive immediate elimination, while other lines are reduced over five to twenty
+years and a small set is excluded. More than 90 percent of tariff lines are
+scheduled eventually to reach zero, but the timing differs by product and
+member (Liu and Zhen, 2022). The 2022–2024 observation window therefore
+captures the initial institutional response and only the early portion of tariff
+liberalization; it should not be read as an estimate of the agreement’s full
+long-run tariff effect.
+    The value of a supply-chain relationship reflects more than the current
+tariff on a shipment. Establishing a link requires partner search, screening,
+negotiation, and adaptation to relationship-specific production needs. Once
+formed, the link remains active when the expected surplus from continued
+trade exceeds the cost of renegotiation or replacement. This logic is consistent
+with evidence that relationship specificity and input characteristics shape
+firms’ sourcing choices (Garg et al., 2023) and with models in which tariff
+shocks induce renegotiation with incumbent suppliers or costly search for
+alternatives (Grossman et al., 2024).
+    RCEP raises the expected surplus from qualifying intraregional trade
+through phased tariff reductions, common procedures, and regional cumula-
+tion. Value added from any member can count toward the originating status
+of a product, subject to the agreement’s regional-value-content rules. The
+provision broadens the set of production arrangements capable of receiving
+preferential treatment and reduces the need to satisfy separate origin systems
+for each bilateral route. Utilization is not automatic—firms must still find
+compliance worthwhile (Hayakawa et al., 2023)—but the joint reduction in
+trade and coordination costs can both sustain an existing link and make a
+newly disclosed link worthwhile. This reasoning yields the first hypothesis:
+H1. RCEP’s entry into force increases the probability that a disclosed supply-
+chain relationship between a Chinese listed firm and a partner in an RCEP
+
+                                       6
+economy is active.
+     The agreement can sustain relationships through three related channels.
+First, incremental tariff relief raises the net return to transactions with part-
+ners for which RCEP improves on the pre-existing tariff schedule. This mar-
+gin should be strongest where the additional preference is economically mean-
+ingful, but its effect depends on actual utilization rather than the statutory
+rate alone. Second, regional cumulation increases the value of intermediate
+inputs obtained within the agreement because content contributed by one
+member can help a downstream product qualify in another. Evidence that
+origin rules affect export responses (Tanaka and Fukunishi, 2022; Hayakawa
+and Yamanouchi, 2023) and theoretical results linking content requirements
+to regional parts sourcing (Head et al., 2024) support this input-reallocation
+channel. Recent firm-level work that connects origin rules with imported
+inputs provides a closely related motivation (Zhou and Wu, 2025).
+     Third, a common origin regime can change the concentration of eligible
+sourcing. Under separate bilateral agreements, a firm may organize produc-
+tion around a narrow set of partners that satisfy route-specific requirements.
+Cumulation makes inputs from multiple member economies mutually usable
+for origin purposes, widening the feasible regional supplier set and reducing
+dependence on any one partner source. Research on import diversification
+under a regional cooperation initiative provides a related application of this
+sourcing margin (Zhu et al., 2025). This prediction does not require every
+firm to diversify immediately: origin rules may generate nonlinear responses
+(Head et al., 2024), and reforms have produced heterogeneous effects across
+products and firms (Tanaka and Fukunishi, 2022; Hayakawa and Yamanouchi,
+2023). It instead implies that, on average, tariff relief, stronger intermediate-
+goods trade integration among members, and a lower partner-country import
+share are observable implications of the proposed channels. These trade mea-
+sures are evaluated at the partner-country–year level. Their relationship-level
+implication is that deeper regional production integration can make supplier
+ties more valuable to maintain or establish. These arguments yield the second
+hypothesis:
+H2. The relationship response to RCEP is associated with incremental tar-
+iff relief, stronger intermediate-goods trade integration among members, and
+reduced dependence on any one partner-country source.
+     The relevance of these channels should differ by relationship direction. A
+supplier relationship records a foreign partner providing inputs or products
+to the Chinese firm, whereas a customer relationship records sales by the Chi-
+
+                                       7
+nese firm to a foreign partner. Tariff preferences can affect both directions,
+but regional cumulation operates first through the origin, eligibility, and or-
+ganization of inputs. The supplier side is therefore exposed directly to the
+decision margins emphasized by research on imported-input choice (Handley
+et al., 2024), within-firm and external sourcing (Garg et al., 2023), and the
+productivity role of imports transmitted through supply chains (Newman et
+al., 2023). Customer relationships may respond only after changes in input
+composition, production costs, or market access pass through to downstream
+sales. Over the first three years of implementation, this ordering implies a
+larger and more readily detectable response among supplier links. We there-
+fore propose the third hypothesis:
+H3. The increase in relationship activity following RCEP is stronger for
+supplier relationships than for customer relationships.
+
+
+
+
+                          Figure 1: Research framework
+
+
+3. Research design
+3.1. Sample and data
+    The relationship data are from FactSet Revere’s Supply Chain Relation-
+ships database. We retain CUSTOMER and SUPPLIER records involving a
+Chinese listed firm and a foreign partner, and preserve the direction of the
+link. The cleaned source contains 578,142 eligible disclosure records for 2017–
+2024. Multiple disclosure episodes involving the same Chinese firm, partner,
+and direction are consolidated into 78,785 distinct relationship pairs. Ex-
+panding each pair over the eight calendar years yields the balanced panel of
+630,280 relationship–year observations used in the baseline analysis.
+
+                                       8
+    Firm financial information is from the China Stock Market and Account-
+ing Research (CSMAR) database. We retain annual consolidated statements,
+exclude financial firms and ST firms, and winsorize continuous firm variables
+at the first and 99th percentiles. The matched firm-year file contains 35,978
+observations for 5,689 firms (including 3,643 manufacturing firms).
+    Tariff data combine most-favored-nation rates with official additional-
+duty schedules from a major non-RCEP import market. Product-level rates
+are mapped from HS8 products to two-digit national industry categories
+using a 5,724-row concordance. The industry exposure series uses fixed 2016
+Chinese export weights. For the further analysis, firm-level exposure is fixed
+in 2019 and equals the export-weighted average of the applicable additional
+duties. Neither measure uses post-policy trade shares.
+
+3.2. Variable selection and description
+3.2.1. Supply-chain relationship activity
+    The unit of observation is a Chinese firm–foreign partner–direction pair
+observed at the end of each calendar year. Let i index the Chinese firm, j the
+foreign partner, and r the direction (supplier or customer). The outcome,
+Activeijrt , equals one if at least one disclosure episode for pair (i, j, r) has
+started by December 31 of year t and has not ended by that date; it is
+zero otherwise. Thus, the panel records the extensive margin of relationship
+activity among pairs observed at least once in the source data, rather than
+the probability of forming every possible firm combination.
+
+3.2.2. RCEP treatment
+    The treatment is P ost2022t × RCEPj . In the common-date specifica-
+tion, P ost2022t equals one for calendar years 2022–2024 and zero for 2017–
+2021. RCEPj equals one when the partner is located in one of the 14 RCEP
+economies other than China. This specification treats 2022, when the agree-
+ment first entered into force, as the common policy date. A sensitivity spec-
+ification instead assigns 2023 to Indonesia and the Philippines, whose imple-
+mentation dates were later. The relationship-pair fixed effect, αijr , absorbs
+all time-invariant characteristics of a disclosed pair, while year fixed effects
+absorb common annual shocks.
+
+3.2.3. Covariates and auxiliary measures
+    Table 1 reports the variables used in the analysis. The firm covariates
+are the log of total assets (“Size”), book leverage (“Lev”), return on assets
+
+                                       9
+(“ROA”), annual revenue growth (“Growth”), and inventory divided by to-
+tal assets (“InvDensity”). They are defined at the firm-year level; the pre-
+ferred fixed-effects estimate is intentionally identified from the treatment
+interaction and pair and year fixed effects, while these covariates enter the
+high-dimensional nuisance models in the double-machine-learning sensitiv-
+ity analysis. The pre-policy relationship-age measure is the number of years
+from the first disclosed start date to December 31, 2021 for pairs active in
+2021. Pre-policy sourcing breadth counts the distinct RCEP partner coun-
+tries connected to a Chinese firm through supplier links in 2021; the large-
+firm indicator is based on the median of firms’ 2017–2021 mean log assets.
+Manufacturing status is based on the firm’s latest available primary-industry
+classification observed no later than 2021.
+    The policy-linked indicators are defined at the partner-country–year level
+and merged to every relationship involving that country. Incremental tariff
+relief is the 2017–2019 import-weighted scheduled tariff reduction under the
+relevant RCEP schedule. The intermediate-goods share is China’s imports
+of goods classified as intermediate inputs under the strict BEC5 definition
+from partner country j, divided by China’s total imports from that partner
+in year t. It measures the composition of bilateral imports and, across RCEP
+members, the degree of regional intermediate-goods trade integration; it is
+not a measure of firm i’s input purchases. The partner-country import share
+is country j’s share of China’s total imports in year t; a lower value indicates
+less dependence on that individual source. These aggregates describe policy-
+relevant conditions and do not measure a firm’s preference claim, certificate
+of origin, transaction value, or overall firm-level sourcing concentration.
+
+3.3. Model specification
+    The empirical design exploits the common entry-into-force date while al-
+lowing exposure to vary across partner economies. We compare the evolution
+of relationships involving RCEP partners with that of relationships involv-
+ing other foreign partners. Pair fixed effects remove time-invariant differences
+across disclosed firm–partner–direction pairs, and year fixed effects remove
+shocks common to all relationships. Identification therefore comes from the
+differential post-2022 change between the two partner groups. The identi-
+fying condition is that, absent RCEP, their relationship activity would have
+followed parallel trends. It also requires the comparison group not to expe-
+rience differential spillovers from the agreement. That requirement may be
+imperfect because RCEP can redirect sourcing and sales between member
+
+                                      10
+and non-member economies: trade diversion that reduces non-member rela-
+tionships would enlarge the estimated contrast, whereas positive spillovers to
+non-members would attenuate it. The coefficient should therefore be inter-
+preted as the post-entry change for RCEP relationships relative to non-RCEP
+relationships, rather than as an isolated effect against a completely untreated
+counterfactual. We estimate a linear probability model because the outcome
+is an indicator and interpret the coefficient as a percentage-point change.
+    The baseline specification is
+
+               Activeijrt = β(P ost2022t × RCEPj ) + αijr + λt + εijrt ,                                         (1)
+
+where αijr denotes firm–partner–direction pair fixed effects and λt denotes
+year fixed effects. The coefficient β is the differential change in the probability
+that an observed relationship is active for RCEP partners relative to other
+foreign partners. Standard errors are clustered by relationship pair, matching
+the level at which serially correlated relationship outcomes and treatment
+histories are observed.
+
+3.4. Descriptive statistics
+
+                                       Table 1: Summary statistics
+
+Variable                                                  Observations   Mean      S.D.     Min.    Median     Max.
+Relationship–year variables
+Active relationship                                            630,280    0.226    0.418        –        –         –
+RCEP partner                                                   630,280    0.183    0.386        –        –         –
+Post-2022 indicator                                            630,280    0.375    0.484        –        –         –
+RCEP × Post-2022                                               630,280    0.068    0.253        –        –         –
+Foreign supplier relationship                                  630,280    0.413    0.492        –        –         –
+Relationship age in 2021 (years)                               630,280    0.478    1.387    0.000    0.000    18.746
+Pre-policy RCEP sourcing breadth                               630,280    0.512    1.302    0.000    0.000     8.000
+Large-firm indicator                                           362,440    0.501    0.500        –        –         –
+Partner-country–year indicators
+Incremental tariff relief (percentage points)                    1,368    0.157    2.490    0.000    0.000    65.751
+Intermediate-goods share of bilateral imports (percent)          1,355   66.811   28.800    0.000   73.156   100.000
+Partner-country share of China’s imports (percent)               1,376    0.579    1.469    0.000    0.035    10.882
+Firm-year covariates
+Log total assets                                                35,978   22.213    1.426   19.142   22.021    26.588
+Leverage                                                        35,978    0.411    0.206    0.056    0.399     0.924
+Return on assets                                                35,978    0.032    0.074   -0.309    0.036     0.213
+Revenue growth                                                  30,283    0.103    0.329   -0.613    0.067     1.731
+Inventory intensity                                             35,337    0.128    0.111    0.000    0.104     0.609
+       Notes: Statistics cover 2017–2024 and use all available observations; counts
+       vary with missing values. Binary variables report the mean and S.D. only,
+       with – indicating omitted distribution statistics. Percentage measures use
+       the units shown in the variable labels.
+
+
+                                                          11
+                                  Active relationship rate                                           RCEP minus other partners
+                          RCEP partners                                                 3.5
+              40          Other partners                                                3.0
+              35                                                                        2.5
+
+
+
+
+                                                                    Percentage points
+              30                                                                        2.0
+    Percent
+
+
+
+
+              25                                                                        1.5
+              20                                                                        1.0
+
+              15                                                                        0.5
+                                                                                        0.0
+                   2017         2019           2021          2023                             2017   2019         2021           2023
+                                           Year                                                                Year
+
+               Figure 2: Descriptive relationship activity by partner group, 2017–2024
+
+Notes: The left plot reports the share of relationship pairs that are active at each year-
+end, separately for RCEP and other foreign partners. The right plot reports the difference
+between the two rates in percentage points. The vertical line marks the January 2022
+entry into force. The figure is descriptive and does not condition on the fixed effects used
+in the regressions.
+
+
+    Table 1 shows that the balanced relationship–year panel contains 630,280
+observations. The smaller counts for the partner-country–year indicators
+and firm covariates reflect source-file coverage and missing values rather than
+changes to the baseline sample. Figure 2 then traces the unconditional active-
+relationship rates for the two partner groups.
+    Active rates rise for both groups over the sample. The rate for RCEP-
+partner pairs increases from 12.68 percent in 2017 to 43.14 percent in 2024,
+while the corresponding rate for other foreign partners rises from 11.72 to
+39.68 percent. The raw gap therefore moves from 0.95 percentage points in
+2017 to 3.47 percentage points in 2024, with a 1.85-point gap immediately
+before entry into force. These unconditional patterns motivate the difference-
+in-differences comparison but are not themselves evidence of a causal effect.
+
+4. Empirical results and robustness tests
+4.1. RCEP and supply-chain relationship activity
+    Table 2 presents the baseline estimates. The preferred coefficient is
+0.0136 with a standard error of 0.0040 (p = 0.001), corresponding to a 1.36
+percentage-point differential increase in the active-relationship probability.
+Using member-specific entry dates gives 0.0144 (standard error 0.0041), a
+
+
+                                                                    12
+                               Table 2: Baseline results
+
+                         (1) Common 2022 date          (2) Member-specific dates
+                           Pair-clustered S.E.             Pair-clustered S.E.
+ RCEP treatment                  0.0136***                       0.0144***
+                                  (0.0040)                        (0.0041)
+ Observations                     630,280                         630,280
+ Relationship pairs                78,785                          78,785
+ Pair fixed effects                 Yes                             Yes
+ Year fixed effects                 Yes                             Yes
+ Notes: The outcome is an active firm–partner relationship at year-end. All
+columns include pair and year fixed effects. Column (1) uses a common 2022 entry
+date; column (2) uses member-specific entry dates. Standard errors are clustered
+by relationship pair and reported in parentheses. * p < 0.10, ** p < 0.05, ***
+p < 0.01.
+
+
+nearly identical estimate. The stability of the point estimate indicates that
+imposing a common 2022 treatment date is not responsible for the baseline
+result. The positive and statistically significant estimates are consistent with
+H1.
+
+4.2. Mechanism analysis
+    The theoretical discussion identifies three policy-linked channels as-
+sociated with relationship activity: incremental tariff relief, regional
+intermediate-goods trade integration, and reduced dependence on an
+individual partner-country source. Each measure varies at the partner-
+country–year level and is assigned to relationship (i, j, r) according to the
+partner’s country. Denoting the relevant country-level measure by Mjt , we
+estimate
+
+
+            Mjt = a(P ost2022t × RCEPj ) + αijr + λt + uijrt ,                     (2)
+       Activeijrt = c′ (P ost2022t × RCEPj ) + bMjt + αijr + λt + vijrt .          (3)
+
+    Equations (2) and (3) define the two paths. For each indicator, the total
+effect c is re-estimated from Eq. (1) on the same complete-case sample used
+in the two path equations; this is why the reported values of c differ slightly
+
+                                          13
+across rows and from the full-sample estimate in Table 2. The indirect as-
+sociation is ab, and the linear decomposition satisfies c = c′ + ab. Inference
+for ab is based on 2,000 bootstrap samples drawn at the relationship-pair
+level; both path equations are re-estimated in every draw. This procedure
+preserves the panel structure and uses the same fixed effects and clustering
+level as the corresponding regressions.
+    Table 3 reports the estimates. The percentile 95% bootstrap confidence
+intervals exclude zero for all three indirect associations: [0.0087, 0.0209] for
+incremental tariff relief, [0.0002, 0.0004] for the intermediate-goods share of
+bilateral imports, and [0.0240, 0.0307] for the partner-country import share.
+RCEP exposure is associated with a 0.0176 increase in the intermediate-
+goods share, equivalent to 1.76 percentage points. The corresponding indi-
+rect association with relationship activity is 0.0003, or 0.03 percentage points.
+This estimate indicates stronger intermediate-goods trade integration among
+RCEP members, not increased input purchases by any particular firm. Com-
+bined with the supplier-side estimate reported below, the result is consistent
+with regional production-network integration helping Chinese firms maintain
+or establish disclosed supplier relationships. RCEP exposure is also associ-
+ated with a lower partner-country import share, and a lower share is in turn
+associated with more active relationships. In this third decomposition, how-
+ever, the positive indirect association (ab = 0.0274) is offset by a negative
+direct coefficient (c′ = −0.0141); it should not be interpreted as a propor-
+tion of the total effect. Overall, the three patterns are consistent with H2 as
+policy-linked channel evidence, but do not identify firm-level preference use,
+certification, or transaction-level adjustment.
+
+4.3. Robustness tests
+4.3.1. Event-study test
+    Figure 3 plots the event-study coefficients relative to the year before entry
+into force. We test the null hypothesis that the four pre-treatment coefficients
+for 2017–2020 are jointly equal to zero. The Wald statistic is 8.389 with
+four degrees of freedom (p = 0.078). The null is therefore not rejected at
+the 5% level but is rejected at the 10% level. Accordingly, the event study
+provides only marginal support for the parallel-trends assumption rather than
+a definitive validation of it.
+
+
+
+
+                                       14
+                            Table 3: Policy-linked mechanism evidence
+
+                                                                                          Indirect          Bootstrap
+Mechanism measure                          a             b            c             c′   effect (ab)         95% CI
+Incremental tariff relief          0.2186***     0.0688***    0.0133***        -0.0017   0.0150***     [0.0087, 0.0209]
+                                     (0.0021)      (0.0148)     (0.0040)      (0.0050)
+Intermediate-goods import share    0.0176***     0.0181***    0.0151***     0.0148***    0.0003***     [0.0002, 0.0004]
+                                     (0.0006)      (0.0035)     (0.0041)      (0.0041)
+Partner-country import share      -0.0127***    -2.1607***    0.0133***    -0.0141***    0.0274***     [0.0240, 0.0307]
+                                     (0.0001)      (0.1394)     (0.0040)      (0.0043)
+Notes: Each row uses its mechanism-specific complete-case sample. The percentile interval
+for ab is based on 2,000 relationship-pair bootstrap draws. All models include pair and
+year fixed effects; standard errors in parentheses are clustered by pair. *, **, and ***
+denote 10%, 5%, and 1% significance, using the corresponding bootstrap intervals for ab.
+All mechanism measures vary at the partner-country–year level.
+
+
+4.3.2. Alternative treatment timing, samples, and estimator
+    Table 4 shows that the pair-clustered estimate remains positive and sta-
+tistically significant when treatment is assigned using member-specific dates
+(0.0144), 2020–2021 observations are removed (0.0151), the sample begins in
+2019 (0.0107), partners from the largest non-RCEP comparison market are
+excluded (0.0098), or offshore financial centers are excluded (0.0171). The
+two exclusions reduce reliance on comparison markets that may have distinc-
+tive post-2022 dynamics, and their positive estimates indicate that neither
+group alone drives the baseline result. A more restrictive comparison using
+only seven Asian non-members, however, produces an estimate of −0.0124
+(standard error 0.0057, p = 0.028). Because this set is small and includes
+economies closely connected to the same regional production networks, the
+reversal does not identify a clean alternative counterfactual; it does show
+that the estimated relative effect is sensitive to the composition and poten-
+tial exposure of the non-RCEP comparison group.
+    We also implement a double machine-learning sensitivity analysis. The
+outcome is the change in the relationship’s active status between the pre-
+and post-policy periods. Five-fold cross-fitting is grouped by partner coun-
+try. Gradient-boosting regression and classification models estimate the out-
+come and treatment nuisance functions using pre-policy relationship history,
+firm characteristics, and trends. The orthogonalized estimate is 0.0077 (stan-
+dard error 0.0021, p = 0.002; 95 percent confidence interval [0.0034, 0.0116]).
+Because this procedure uses a pre/post change rather than the annual fixed-
+effects outcome, it is a functional-form and high-dimensional-control check
+
+
+                                                       15
+                                                                                                                     
+                                                                                                                                 & R H I I L F L H Q W       & ,              2 P L W W H G  S H U L R G             5 & ( 3  H Q W U \
+        ( V W L P D W H G  H I I H F W  R Q  D F W L Y H  U H O D W L R Q V K L S  S U R E D E L O L W \
+                                                                                                                     
+
+
+                                                                                                                     
+
+
+                                                                                                                     
+
+
+                                                                                                                     
+
+                                                                                                                                                                                                                                   - R L Q W  S U H  W U H Q G  W H V W   : D O G  2             p         
+                                                                                                                     
+                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                            ( Y H Q W  W L P H           R P L W W H G  U H I H U H Q F H  \ H D U 
+
+                                                                                                                      Figure 3: Event-study estimates of the RCEP relationship effect
+
+Notes: Points are event-study coefficients from the relationship-pair fixed-effects model
+with year fixed effects; bars are 95 percent confidence intervals based on relationship-
+pair clustered standard errors. Event time −1 (2021) is the omitted period. The dashed
+vertical line marks RCEP’s entry into force. The joint Wald test evaluates whether all
+four pre-treatment coefficients are zero.
+
+
+rather than a mechanically identical re-estimate of β.
+
+5. Heterogeneity analysis
+    The average estimate can conceal differences in how relationships respond
+to the agreement. We therefore turn first to the supplier–customer asymme-
+try predicted by H3 and then examine whether the response varies with
+pre-policy relationship maturity, prior trade-agreement coverage, and man-
+ufacturing exposure. The pooled specifications in Table 5 estimate group-
+specific treatment coefficients in a common regression and test their equality
+directly.
+
+5.1. Relationship direction
+    Supplier relationships, which correspond to Chinese firms purchasing from
+foreign partners, have an estimated effect of 0.0295 (p < 0.001), while cus-
+tomer relationships have an estimate of -0.0033 (p = 0.531). The difference
+is 0.0327 and is statistically significant at the 1% level. The concentration
+
+
+                                                                                                                                                                                                            16
+                                Table 4: Robustness checks
+
+Specification                                         Estimate           s.e.        p-value
+Member-specific entry dates                           0.0144***       0.0041        < 0.001
+Exclude 2020–2021 observations                        0.0151***       0.0047          0.001
+2019–2024 sample window                                0.0107**       0.0042          0.011
+Exclude the largest non-RCEP comparison market         0.0098**       0.0042          0.019
+Exclude offshore financial centers                    0.0171***       0.0042        < 0.001
+Asian non-member comparison group                     -0.0124**       0.0057          0.028
+Double machine learning                               0.0077***       0.0021          0.002
+
+ Notes: Standard errors are clustered by relationship pair. The Asian comparison com-
+prises seven non-RCEP economies. The double-machine-learning row uses five-fold cross-
+fitting and 999 pair-clustered bootstrap replications. * p < 0.10, ** p < 0.05, *** p < 0.01.
+
+
+of the response in supplier links is consistent with regional cumulation op-
+erating most directly through intermediate-input procurement and supports
+H3.
+
+5.2. Pre-policy relationship maturity
+    The scope for policy-induced adjustment may also depend on relationship-
+specific capital accumulated before implementation. Long-standing links
+have already absorbed search, screening, negotiation, and adaptation costs,
+leaving less room for an institutional change to alter their annual activity. We
+therefore classify a relationship as long-standing when it was active at year-
+end 2021 and had accumulated at least three years of relationship age by that
+date. The three-year threshold corresponds to the complete 2019–2021 pre-
+policy window and is fixed independently of the estimated coefficients. The
+remaining disclosed pairs form the comparison group. Both group-specific
+effects are estimated jointly in the baseline specification. The estimate for
+other relationships is 0.0183 (p < 0.001), whereas the estimate for long-
+standing relationships is -0.0162 and statistically insignificant (p = 0.309).
+The difference is -0.0345 (p = 0.036), indicating that the positive response is
+concentrated among relationships with greater scope for adjustment rather
+than among mature incumbent links.
+
+5.3. Prior trade-agreement coverage
+    RCEP did not provide the same degree of institutional novelty across
+members. China already had free-trade agreements with the ASEAN mem-
+bers, Australia, New Zealand, and Korea, whereas RCEP created the first
+free-trade agreement between China and Japan. We therefore compare Japan
+
+                                                 17
+                                        Table 5: Heterogeneity analysis
+
+Partition                                   Group 1                    Group 2            Difference (Group 2 − Group 1)
+Relationship direction                 Customer: -0.0033         Supplier: 0.0295***                0.0327***
+                                            (0.0052)                   (0.0063)                      (0.0082)
+Pre-policy relationship maturity       Other: 0.0183***         Long-standing: -0.0162              -0.0345**
+                                            (0.0041)                   (0.0160)                      (0.0165)
+Pre-RCEP FTA coverage                Existing FTA: -0.0026        Japan: 0.0378***                  0.0403***
+                                            (0.0050)                   (0.0061)                      (0.0075)
+Firm sector, supplier links        Non-manufacturing: -0.0205   Manufacturing: 0.0274**             0.0479**
+                                            (0.0183)                   (0.0127)                      (0.0223)
+Notes: Group coefficients are estimated jointly. A long-standing relationship is active
+at year-end 2021 and is at least three years old. The sector comparison is restricted to
+supplier links with pre-policy industry data. All models include relationship-pair and year
+fixed effects; relationship-pair clustered standard errors are in parentheses. The difference
+is Group 2 minus Group 1. * p < 0.10, ** p < 0.05, *** p < 0.01.
+
+
+with the RCEP partners covered by an earlier agreement, using the same set
+of non-RCEP relationships as the common comparison group. The coeffi-
+cient for partners with prior agreement coverage is -0.0026 (p = 0.605), while
+the coefficient for Japan is 0.0378 (p < 0.001). Their difference is 0.0403
+(p < 0.001). This pattern is consistent with a larger initial response where
+RCEP introduced genuinely new bilateral market-access rules, although the
+Japan estimate also reflects characteristics specific to a single partner econ-
+omy.
+
+5.4. Manufacturing exposure among supplier links
+    Regional cumulation and origin requirements are most directly relevant
+to firms that organize manufacturing inputs across borders. We classify
+firms using the latest primary-industry code observed no later than 2021
+and restrict this comparison to supplier relationships. The estimated effect
+is 0.0274 for manufacturing firms (p = 0.030), compared with -0.0205 for
+non-manufacturing firms (p = 0.263). The difference is 0.0479 (p = 0.031).
+The supplier-side response is therefore concentrated among manufacturing
+firms, reinforcing the input-sourcing rationale for the directional asymmetry
+in H3.
+
+6. Further analysis
+6.1. Pre-existing external tariff exposure
+    The robustness analysis shows that the estimated contrast is sensitive
+to the composition of the non-RCEP comparison group, a concern related
+
+                                                           18
+to spillovers and trade diversion generated by RCEP itself. A separate al-
+ternative explanation is that the post-2022 pattern reflects firms’ reorienta-
+tion following pre-existing tariff pressure outside the agreement. To assess
+this possibility, we interact RCEP exposure with a firm-level measure of
+additional-duty exposure fixed in 2019 and estimate Eq. (4):
+
+ Activeijrt = β1 (P ost2022t × RCEPj ) + β2 (P ost2022t × T arif f Exposurei )
+               + β3 (P ost2022t × RCEPj × T arif f Exposurei )
+               + αijr + λt + εijrt .
+                                                                            (4)
+The product weights underlying the exposure measure are fixed in 2016, and
+the firm-level measure is fixed before RCEP entered into force. A positive
+β3 would indicate stronger reorientation toward RCEP partners among firms
+with greater pre-existing exposure.
+    Table 6 reports estimates on the subsample for which 2019 firm-level
+tariff exposure can be matched. The first row is therefore a matched-sample
+baseline, rather than a replication of the full-sample estimate in Table 2; the
+restriction leaves 253,184 observations and 31,648 relationship pairs. The
+matched-sample coefficient is 0.0061 (standard error 0.0065, p = 0.346) and
+changes little after adding the post-period tariff-exposure control (0.0063,
+standard error 0.0065, p = 0.331). The triple interaction is 0.0471 (standard
+error 0.0606, p = 0.437). Thus, firms with higher pre-existing tariff exposure
+do not exhibit a statistically larger differential change in RCEP relationships
+after 2022. The evidence does not support this external-tariff reorientation
+explanation, but the matched sample covers only 40.2 percent of relationship
+pairs and the imprecision of the estimates prevents a strict exclusion claim.
+
+            Table 6: Further analysis: Pre-existing external tariff exposure
+
+   Term                                                  Estimate        s.e.   p-value
+   Post2022 × RCEP (matched baseline)                       0.0061    0.0065      0.346
+   Post2022 × RCEP (matched + tariff control)               0.0063    0.0065      0.331
+   Post2022 × RCEP × tariff exposure                        0.0471    0.0606      0.437
+  Notes: The sample is restricted to firm–partner relationships for which the 2019
+ firm-level tariff exposure can be matched (253,184 observations and 31,648 relationship
+ pairs). All models include relationship-pair and year fixed effects, with standard errors
+ clustered by relationship pair. The triple interaction tests whether high-exposure firms
+ experienced an additional change in relationships with RCEP partners.
+
+
+                                            19
+7. Conclusion and policy recommendations
+     This paper examines how RCEP’s entry into force relates to the inter-
+national supply-chain relationships of Chinese listed firms. In a panel of
+630,280 relationship–year observations and 78,785 relationship pairs, the pre-
+ferred specification yields a 0.0136 differential increase in the probability that
+an RCEP relationship is active at year-end. The corresponding estimate is
+0.0144 under member-specific implementation dates. The response is concen-
+trated in supplier relationships, whose estimated increase is 0.0295, compared
+with an insignificant estimate of -0.0033 for customer relationships. It is also
+larger for Japan than for members with prior free-trade-agreement coverage
+(a difference of 0.0403) and, among supplier links, for manufacturing than for
+non-manufacturing firms (a difference of 0.0479). At the partner-country–
+year level, the bootstrap indirect associations are 0.0150 for incremental tar-
+iff relief (95% CI [0.0087, 0.0209]), 0.0003 for the intermediate-goods share
+of bilateral imports (95% CI [0.0002, 0.0004]), and 0.0274 through a lower
+partner-country import share (95% CI [0.0240, 0.0307]). These aggregate
+patterns, together with the supplier-side response, are consistent with RCEP
+strengthening regional production-network integration and thereby support-
+ing the maintenance or formation of disclosed supplier relationships.
+     The findings carry three policy implications. First, implementation ef-
+forts should give firms clear and accessible guidance on regional cumulation,
+tariff schedules, and documentary requirements. The value of a common
+agreement depends not only on formal concessions but also on whether firms
+can apply the rules at reasonable administrative cost. Second, the increase in
+the member-level intermediate-goods share, together with the supplier-side
+relationship response, suggests that trade-facilitation policies should support
+the matching of firms with qualified regional suppliers. Third, policymakers
+should monitor whether the early expansion of regional links reduces depen-
+dence on individual sources while preserving resilience to disruptions. These
+measures would help translate formal integration into durable firm-level re-
+lationships.
+     The evidence should nevertheless be interpreted within the limits of the
+design. The joint Wald test of the four pre-treatment event-study coefficients
+does not reject at the 5% level but is marginal at the 10% level (χ2 (4) = 8.389,
+p = 0.078). The non-RCEP comparison group may itself respond to trade
+diversion or production-network spillovers generated by RCEP and is there-
+fore not guaranteed to provide a completely untreated counterfactual. The
+
+                                       20
+estimate remains positive after excluding the largest non-RCEP comparison
+market and offshore financial centers, but its sign reverses when the com-
+parison group is restricted to seven Asian non-members. This sensitivity
+reinforces the interpretation of the baseline coefficient as a relative change
+between partner groups rather than the agreement’s total effect. FactSet Re-
+vere primarily covers listed and large firms and does not report transaction
+values, customs declarations, certificates of origin, or firms’ actual preference
+utilization. Moreover, the 2022–2024 period captures only the initial phase of
+a tariff schedule extending over several years. Linking product-level customs
+records to firm identifiers and extending the post-entry window would allow
+future research to distinguish relationship formation, survival, and trade-
+value responses more precisely.
+
+References
+Ali, W., Saini, S., Dash, D.P., 2026. Institutional governance and energy
+  security: Unveiling the drivers of global value chain participation in Asian
+  economies. Journal of Asian Economics 103, 102108.
+
+Baier, S.L., Bergstrand, J.H., 2007. Do free trade agreements actually in-
+  crease members’ international trade? Journal of International Economics
+  71(1), 72–95.
+
+Crosignani, M., Macchiavelli, M., Silva, A.F., 2022. Pirates without borders:
+  The propagation of cyberattacks through firms’ supply chains. Journal of
+  Financial Economics 147(2), 432–456.
+
+Du, Y., Yan, J., Cao, F., Li, Y., Zhou, M., 2023. Higher education expansion
+ and domestic value added in exports: Theory and evidence from China.
+ Journal of Asian Economics 87, 101621.
+
+Garg, S., Ghosh, P., Tan, B.J., 2023. Within firm supply chains: Evidence
+ from India. Journal of International Economics 144, 103793.
+
+Grossman, G.M., Helpman, E., Redding, S.J., 2024. When tariffs disrupt
+  global supply chains. American Economic Review 114(4), 988–1029.
+
+Handley, K., Limão, N., Ludema, R.D., Yu, Z., 2024. Firm input choice under
+  trade policy uncertainty. Journal of International Economics 150, 103909.
+
+
+                                       21
+Hayakawa, K., 2022. Multiple preference regimes and rules of origin. Review
+  of World Economics 159(3), 673–696.
+
+Hayakawa, K., Laksanapanyakul, N., Yoshimi, T., 2023. Firm-level utiliza-
+  tion rates of regional trade agreements: Importers’ perspective. Journal of
+  Asian Economics 86, 101610.
+
+Hayakawa, K., Yamanouchi, K., 2023. How does the reform of rules of ori-
+  gin affect firm performance in importing countries? The World Economy
+  47(2), 837–856.
+
+Hayakawa, K., Kimura, F., Mukunoki, H., Urata, S., 2024. Negotiating over
+  the rules of origin in regional trade agreements in Asia. The World Econ-
+  omy 47(7), 3097–3119.
+
+He, Y., Huo, W., Yu, J., 2023. Tracing the regional dual value chains: Mea-
+  surement on the production position and evidence from China. Journal of
+  Asian Economics 85, 101591.
+
+Head, K., Mayer, T., Melitz, M., 2024. The Laffer curve for rules of origin.
+  Journal of International Economics 150, 103911.
+
+Huang, F., Li, J., Shen, J., Wang, H., 2026. Digital economy development
+ and repositioning in the global intermediate goods trade network. Journal
+ of Asian Economics 105, 102218.
+
+Kiyota, K., 2022. The COVID-19 pandemic and the world trade network.
+  Journal of Asian Economics 78, 101419.
+
+Lee, W., Mulabdic, A., Ruta, M., 2023. Third-country effects of regional
+  trade agreements: A firm-level analysis. Journal of International Eco-
+  nomics 140, 103688.
+
+Li, Y., Wan, Y., Xie, S., 2025. The employment effects of regional market in-
+  tegration: Evidence from China. Journal of Asian Economics 101, 102053.
+
+Li, N., Li, R., 2026. A study on the impact of regional trade agreement digital
+  trade rules on global innovation network. Journal of Asian Economics 103,
+  102144.
+
+
+
+
+                                      22
+Liu, Y., Deng, X., Min, J.H., Wang, J., Liu, Y., 2026. Multidimensional risks
+  and the cleaner production-oriented trade transformation in the China–
+  ASEAN. Journal of Asian Economics 103, 102128.
+
+Liu, B., Zhen, Y., 2022. Trade and rule effects of RCEP. World Economy
+  Studies.
+
+Ma, S., Huang, S., Wu, P., 2024a. Data policy restrictions and cross-border e-
+ commerce: Evidence from China. Journal of Asian Economics 95, 101826.
+
+Ma, S., Ren, F., Feng, F., Feng, K., 2024b. Cross-border personnel mobility
+ and bilateral value chain linkages: Evidence from visa liberalization in
+ China. Journal of Asian Economics 95, 101844.
+
+Narayan, P.K., Rath, B.N., Syarifuddin, F., 2022. Understanding the role
+  of trade agreements in Indonesia’s FDI. Journal of Asian Economics 82,
+  101532.
+
+Newman, C., Rand, J., Tarp, F., 2023. Imports, supply chains and firm
+  productivity. World Development 172, 106371.
+
+Ni, S., Bai, X., Li, L., 2022. Behind the heterogeneous trade effects of stan-
+  dards: Multi-sector evidence from China. Journal of Asian Economics 82,
+  101513.
+
+Ou, J., Yang, T., Yao, S., Hu, M., 2026. Digital finance, supply chain
+ spillovers and corporate innovation: Evidence from Chinese listed firms
+ 2011–22. Journal of Asian Economics 104, 102175.
+
+Peng, Q., Chen, Z., Li, J., 2025. Financing constraints and the export part-
+  nerships with RCEP: Evidence from manufacturing firms in China. Journal
+  of Asian Economics 97, 101870.
+
+Ping, L., 2021. Institutional characteristics and economic effects of RCEP.
+  Asia-Pacific Economic Review.
+
+Poilly, C., Tripier, F., 2025. Regional trade policy uncertainty. Journal of
+  International Economics 155, 104078.
+
+Shen, M., Li, T., 2020. RCEP: Institutional framework, rules, and regional
+  effects. International Economic Review.
+
+
+                                     23
+Sun, J., Luo, Y., Zhou, Y., 2022. The impact of regional trade agreements on
+  the quality of export products in China’s manufacturing industry. Journal
+  of Asian Economics 80, 101456.
+
+Sun, K., Xiao, H., Jia, Z., Tang, B., 2023. Estimating the effects of regional
+  value chains of the RCEP in a GVC-CGE model. Journal of Asian Eco-
+  nomics 88, 101647.
+
+Tanaka, K., Fukunishi, T., 2022. Rules of origin and exports in developing
+  economies: The case of garment products. Journal of Asian Economics 82,
+  101514.
+
+Wu, J., Bian, Y., Bai, J., 2023. Global value chain upgrading effect of for-
+ eign capital withdrawal: Evidence from Chinese firms. Journal of Asian
+ Economics 89, 101672.
+
+Xie, D., 2023. Tariff cost and cross-border M&A affiliate sales: Evidence
+  from China. Journal of Asian Economics 87, 101636.
+
+Xu, L., Jing, J., Wu, C., 2024. Impact of financial development on the po-
+ sition in global value chain: An analysis from the perspective of R&D
+ intensity. Journal of Asian Economics 92, 101742.
+
+Zhang, H., Ding, Y., 2024. The impact of global value chain restructuring on
+  the product structure of China–EU exports. Journal of Asian Economics
+  91, 101708.
+
+Zhou, F., Wen, H., 2022. Trade policy uncertainty, development strategy,
+  and export behavior: Evidence from listed industrial companies in China.
+  Journal of Asian Economics 82, 101528.
+
+Zhou, H., Wu, L., 2025. Rules of origin, import of inputs and firm innovation.
+  Journal of Asian Economics 96, 101872.
+
+Zhu, J., Liu, X., Cao, L., 2025. The Belt and Road Initiative and China’s
+  diversifying food imports: A perspective on the “Five-pronged approach.”
+  Journal of Asian Economics 96, 101849.
+
+Zhu, Y., Sun, C., 2025. Environmental provisions in preferential trade agree-
+  ments and export product quality of Chinese firms. Journal of Asian Eco-
+  nomics 101, 102048.
+
+                                     24
+

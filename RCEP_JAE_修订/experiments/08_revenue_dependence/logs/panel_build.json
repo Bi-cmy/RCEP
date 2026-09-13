@@ -1,0 +1,38 @@
+{
+  "experiment_id": "08_revenue_dependence",
+  "build_status": "PASSED",
+  "python": "3.12.7",
+  "source_hashes": {
+    "episode_source_sha256": "e28dc8186523c3493e9a8ec04b904a8b9e3664dea8e13c2a4c9ace29a0f62321",
+    "firm_source_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+  },
+  "source_rows": 578142,
+  "eligible_role_country_listed_rows": 32578,
+  "open_end_markers_recoded": 7103,
+  "invalid_date_rows_excluded": 0,
+  "nonmissing_revenue_rows": 3426,
+  "invalid_nonmissing_revenue_rows": 0,
+  "qualifying_prepolicy_quantified_rows": 2165,
+  "support_gate": {
+    "experiment_id": "08_revenue_dependence",
+    "gate": "DATA_SUPPORT",
+    "gate_pass": true,
+    "pair_support_gate": true,
+    "country_support_gate": true,
+    "within_firm_support_gate": true,
+    "outcome_variation_gate": true,
+    "exposure_support_gate": true,
+    "balanced_panel_gate": true,
+    "quantified_pair_roles": 958,
+    "control_pair_roles": 446,
+    "rcep_pair_roles": 512,
+    "countries": 19,
+    "control_countries": 7,
+    "rcep_countries": 12,
+    "firms_with_both_groups": 96,
+    "control_pairs_with_active_variation": 242,
+    "rcep_pairs_with_active_variation": 286,
+    "median_revenue_percent": 4.325,
+    "minimum_group_by_median_cell": 215
+  }
+}

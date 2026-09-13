@@ -1,0 +1,61 @@
+{
+  "experiment_id": "07_fta_novelty",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "Did post-RCEP supplier-network growth differ with firms' pre-2020 exposure to previously separate regional trade-agreement architectures?",
+  "theory": "RCEP creates a common rules-of-origin and cumulation framework across economies previously connected to China through separate ASEAN, Australia, New Zealand, Korea, or no-prior-FTA architectures. Firms already sourcing across more architectures had greater scope to benefit from institutional unification.",
+  "interpretation_limit": "The measure is cross-agreement institutional readiness, not tariff utilization, certificate use, or a direct measure of value-added cumulation.",
+  "population": {
+    "unit": "Verified Chinese listed firm-year",
+    "outcome_years": [2020, 2021, 2022, 2023, 2024],
+    "coverage": "Firm has at least one valid foreign FactSet relationship episode during 2017-2024 and maps to the verified firm-year panel.",
+    "balanced_primary_panel": "Require all five outcome years to avoid composition changes."
+  },
+  "exposure": {
+    "window": [2017, 2018, 2019],
+    "primary": "Count of distinct pre-RCEP institutional supplier architectures represented by at least one active relationship: ASEAN-China FTA block, Australia-China FTA, New Zealand-China FTA, Korea-China FTA, and Japan with no prior China FTA.",
+    "range": [0, 5],
+    "secondary": "Indicator for at least two represented architectures.",
+    "fixed_over_time": true,
+    "non_overlap": "No 2020-2024 relationship status enters exposure construction."
+  },
+  "outcomes": {
+    "primary": "asinh count of unique active RCEP supplier relationships in each firm-year.",
+    "secondary": ["asinh count of active RCEP supplier countries", "RCEP share of active Asian supplier relationships", "asinh count of new RCEP supplier entries"],
+    "zero_rule": "Counts are zero for covered firm-years with no qualifying active link."
+  },
+  "estimating_equations": {
+    "static": "Y_it = alpha_i + lambda_industry-year + beta(Post2022_t x ArchitectureCount_i) + error_it",
+    "dynamic": "Year interactions with ArchitectureCount, 2021 omitted, using the same fixed effects.",
+    "fixed_effects": ["firm", "industry-by-year"],
+    "primary_inference": "Firm-clustered standard errors.",
+    "randomization_inference": "999 permutations of the frozen exposure vector within pre-policy industry-by-size-tercile strata, seed 20260723; retain all draws."
+  },
+  "identifying_assumption": "Absent RCEP, within industries, 2022-2024 changes in RCEP supplier-link intensity would not differ systematically with frozen 2017-2019 architecture count after firm and industry-year fixed effects.",
+  "data_gate": {
+    "exposure_support": "At least 250 firms with one or more represented architectures and at least 40 firms with two or more.",
+    "panel_support": "At least 3,000 firms with all five outcome years and at least 100 positive primary outcomes in every year.",
+    "strata_support": "At least 15 industry groups and no more than 10 exposed firms in singleton permutation strata.",
+    "failure_rule": "Failure stops before pretrend or treatment-effect estimation."
+  },
+  "identification_gate": {
+    "pretrend": "The 2020 exposure interaction, relative to 2021, has p >= 0.10.",
+    "economic_threshold": "Absolute 2020 interaction <= 0.05 on the asinh-link scale per additional architecture.",
+    "warning": "Only one clean lead is available; passing is necessary but not sufficient and will be disclosed as limited diagnostic power.",
+    "stop_rule": "Failure stops before the post estimate, permutations, robustness, mechanisms, or heterogeneity."
+  },
+  "evidence_gate": {
+    "positive_result": "Stratified randomization p < 0.05, same sign for the multi-architecture indicator and active-country outcome, and no single-industry sign reversal.",
+    "inconclusive": "Identification passes but the observed post interaction is ordinary under stratified exposure assignments.",
+    "integrity": "No outcome, architecture mapping, stratum, seed, industry, or exposure cutoff is selected after estimates are inspected."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["mapping", "sample construction", "support", "pretrend", "all permutation draws if reached"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended to pap/amendments.md before execution."
+}

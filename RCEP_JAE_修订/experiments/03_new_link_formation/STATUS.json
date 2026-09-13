@@ -1,0 +1,12 @@
+{
+  "experiment_id": "03_new_link_formation",
+  "status": "FAILED",
+  "phase": "CLOSED_AT_DATA_SUPPORT_GATE",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": true,
+  "next_gate": null,
+  "support_gate_pass": false,
+  "closed_at": "2026-07-23",
+  "failure_code": "INSUFFICIENT_CONTROL_COUNTRY_EVENT_SUPPORT"
+}

@@ -1,0 +1,8 @@
+numpy>=2.0
+pandas>=3.0
+pyarrow>=20.0
+scipy>=1.15
+linearmodels>=7.0
+matplotlib>=3.10
+scikit-learn>=1.8
+pycountry>=24.6

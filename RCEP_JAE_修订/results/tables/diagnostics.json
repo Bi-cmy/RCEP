@@ -1,0 +1,20 @@
+{
+  "event_study": {
+    "pretrend_wald_stat": 8.38949117071166,
+    "pretrend_df": 4,
+    "pretrend_p_value": 0.07830859319172645,
+    "omitted_period": -1,
+    "cluster": "pair",
+    "observations": 630280
+  },
+  "country_permutation_p_value": 0.774,
+  "country_permutation_draws": 499,
+  "subregion_equality_test": {
+    "joint_equality_wald": 95.97674801830603,
+    "joint_equality_p": 0.0,
+    "observations": 630280,
+    "pairs": 78785
+  },
+  "relationship_age_median_2021": 1.462012320328542,
+  "main_cluster": "pair"
+}

@@ -1,0 +1,99 @@
+{
+  "experiment_id": "01_cumulation_readiness",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "After RCEP, did firms with stronger pre-policy multi-country RCEP sourcing foundations experience different supplier-link exit, entry, and diversification outcomes?",
+  "interpretation_limit": "The exposure is a regional cumulation readiness proxy and must not be described as observed use of RCEP cumulative rules of origin.",
+  "population": {
+    "unit": "Chinese listed firm-year",
+    "years": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    "coverage_rule": "Firm must map by a documented ticker rule between the FactSet relationship source and the verified firm-year panel and have at least one valid foreign customer or supplier relationship episode observed during 2017-2024.",
+    "primary_panel": "Unbalanced panel; all eligible firm-years retained.",
+    "balanced_panel": "Pre-specified robustness only, never a replacement selected by significance."
+  },
+  "policy_timing": {
+    "post": "year >= 2022",
+    "reference_year": 2021,
+    "note": "This is a differential-exposure design, not an estimate of the average RCEP membership effect."
+  },
+  "exposure": {
+    "construction_window": [2017, 2018, 2019],
+    "primary": "Number of distinct foreign RCEP supplier countries with an active relationship at at least one year-end during 2017-2019.",
+    "secondary": "Indicator that the primary exposure is at least two countries.",
+    "fixed_over_time": true,
+    "excluded_from_definition": [2020, 2021, 2022, 2023, 2024],
+    "selection_rule": "Primary and secondary definitions are both reported and neither is selected by significance."
+  },
+  "outcome_family": {
+    "primary": [
+      "Incumbent RCEP supplier-link exit rate among links active in t-1",
+      "Count of first-time RCEP supplier-link entries",
+      "Count of first-time RCEP supplier-country entries",
+      "Shannon entropy of active RCEP supplier countries based on link-count shares",
+      "HHI of active RCEP supplier countries based on link-count shares, conditional on at least one active link",
+      "Net RCEP supplier-link growth: first entries minus exits"
+    ],
+    "zero_and_missing_rules": {
+      "entry_counts": "Zero when no qualifying entry occurs for a covered firm-year.",
+      "exit_rate": "Missing when there is no incumbent RCEP supplier-link risk set in t-1; risk-set counts must be reported.",
+      "entropy": "Zero with zero or one active RCEP supplier country; the active-country count is reported alongside it.",
+      "hhi": "Missing when there is no active RCEP supplier link; conditional sample size is reported."
+    },
+    "multiplicity": "Report raw and Holm-adjusted p-values across the six primary outcomes."
+  },
+  "estimating_equations": {
+    "static": "Y_it = alpha_i + lambda_t + beta(Post_t x Readiness_i) + error_it",
+    "preferred_fixed_effects": ["firm", "year"],
+    "augmented_fixed_effects": "firm plus industry-by-year when the industry mapping is validated and has adequate support",
+    "event_study": "Y_it = alpha_i + lambda_t + sum_{k != 2021} gamma_k(1[year=k] x Readiness_i) + error_it",
+    "primary_inference": "Firm-clustered standard errors",
+    "sensitivity_inference": "Industry-clustered or wild-cluster inference only if the verified industry count and cluster sizes support it",
+    "count_outcome_sensitivity": "Firm and year fixed-effect PPML for entry counts; linear FE remains the common-scale primary specification"
+  },
+  "identifying_assumption": "Absent RCEP, post-2022 changes in the outcomes would not have differed systematically with frozen 2017-2019 regional sourcing breadth after firm and common time effects, and after industry-by-year shocks where supported.",
+  "threats": [
+    "Readiness is selected rather than randomly assigned.",
+    "The exposure window overlaps the pre-trend period and can induce mechanical level and regression-to-the-mean patterns.",
+    "COVID-era disruption may differentially affect firms with broader Asian sourcing networks.",
+    "FactSet relationship coverage and missing end dates may create measurement error.",
+    "RCEP implementation coincides with other 2022 regional and domestic shocks."
+  ],
+  "gates": {
+    "data_gate": [
+      "Ticker mapping is one-to-one or all ambiguous mappings are enumerated and excluded by a rule frozen before outcomes are estimated.",
+      "Every sample exclusion has a row and firm count in sample_construction.json.",
+      "Primary exposure has nonzero mass at zero, one, and two-or-more countries, with no empty post-policy comparison group.",
+      "Outcome risk sets and missingness are reported by year and readiness group."
+    ],
+    "identification_gate": [
+      "Plot 2017-2024 raw and residualized trends for frozen readiness groups.",
+      "Estimate all event-time interactions with 2021 omitted.",
+      "Report a joint Wald test for 2017-2020 interactions and outcome-specific pre-coefficients.",
+      "Flag the design FAILED for an outcome when the joint pre-trend test rejects at 10 percent or economically large pre-trends remain despite low power.",
+      "Run 999 readiness permutations within pre-policy industry-by-size strata using seed 20260723; retain every draw."
+    ],
+    "evidence_gate": [
+      "A positive finding requires the frozen post interaction to be unusual under stratified randomization inference and to survive Holm correction within the outcome family.",
+      "Direction and magnitude must not be driven by one industry in pre-specified leave-one-industry-out diagnostics.",
+      "Passing pre-trends alone is not evidence of an RCEP effect; null post estimates are archived as INCONCLUSIVE, not optimized."
+    ]
+  },
+  "pre_specified_robustness_after_identification": [
+    "Binary readiness exposure at two or more RCEP supplier countries",
+    "Balanced-firm panel",
+    "Exclude 2020-2021 outcomes while retaining the frozen 2017-2019 exposure",
+    "Industry-by-year fixed effects",
+    "PPML for count outcomes",
+    "Alternative exposure using 2017 only, clearly labeled sensitivity",
+    "Winsorization is not applicable to count and rate outcomes; no outcome-driven trimming will be used"
+  ],
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json"],
+    "logs": ["environment", "sample construction", "model and diagnostic run"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze must be appended to pap/amendments.md with timestamp and rationale before the changed analysis is run; original definitions remain in this file."
+}

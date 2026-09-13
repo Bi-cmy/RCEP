@@ -1,0 +1,24 @@
+{
+  "experiment_id": "03_new_link_formation",
+  "gate": "DATA_SUPPORT",
+  "gate_pass": false,
+  "event_count_gate": true,
+  "event_country_gate": false,
+  "within_firm_year_overlap_gate": true,
+  "minimum_events_per_group_period": 30,
+  "minimum_event_countries_per_group_period": 5,
+  "minimum_overlapping_firms_per_year": 100,
+  "event_counts": {
+    "rcep_0_pre": 84,
+    "rcep_1_pre": 129,
+    "rcep_0_post": 86,
+    "rcep_1_post": 99
+  },
+  "event_country_counts": {
+    "rcep_0_pre": 4,
+    "rcep_1_pre": 10,
+    "rcep_0_post": 5,
+    "rcep_1_post": 10
+  },
+  "minimum_observed_overlap_firms": 623
+}

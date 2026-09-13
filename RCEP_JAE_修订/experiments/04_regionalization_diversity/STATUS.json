@@ -1,0 +1,13 @@
+{
+  "experiment_id": "04_regionalization_diversity",
+  "status": "FAILED",
+  "phase": "CLOSED_AT_PRETREND_GATE",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": true,
+  "next_gate": null,
+  "support_gate_pass": true,
+  "pretrend_gate_pass": false,
+  "closed_at": "2026-07-23",
+  "failure_code": "JOINT_PRETREND_REJECTION"
+}

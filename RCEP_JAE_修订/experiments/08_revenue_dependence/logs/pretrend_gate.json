@@ -1,0 +1,19 @@
+{
+  "experiment_id": "08_revenue_dependence",
+  "gate": "REVENUE_MODERATION_PRETREND",
+  "gate_pass": false,
+  "joint_pretrend_wald_stat": 247.33078175873072,
+  "joint_pretrend_df": 9,
+  "joint_pretrend_p_value": 3.6508397493422975e-48,
+  "maximum_absolute_aggregated_pre_coefficient": 0.26846736247244984,
+  "economic_threshold": 0.02,
+  "observations": 7664,
+  "relationships": 958,
+  "firm_year_fixed_effects": 4600,
+  "partner_country_clusters": 19,
+  "cohort_sizes": {
+    "2022": 468,
+    "2023": 44
+  },
+  "estimator": "OLS after pyhdfe residualization on pair-role and firm-year fixed effects; cohort-event main effects retained"
+}

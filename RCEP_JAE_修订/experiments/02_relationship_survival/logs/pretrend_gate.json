@@ -1,0 +1,15 @@
+{
+  "experiment_id": "02_relationship_survival",
+  "gate": "PRETREND",
+  "gate_pass": false,
+  "joint_pretrend_stat": 76.06324228599073,
+  "joint_pretrend_df": 7,
+  "joint_pretrend_p_value": 8.72635297355373e-14,
+  "maximum_absolute_aggregated_pre_coefficient": 0.09405367701843598,
+  "economic_threshold": 0.1,
+  "relationship_count": 550,
+  "partner_country_clusters": 15,
+  "cluster": "partner_country",
+  "estimator": "Cohort-by-event interactions with relationship and year fixed effects",
+  "inference_note": "Intervals use t critical values with G-1 degrees of freedom; wild bootstrap is gated on pretrend passage."
+}

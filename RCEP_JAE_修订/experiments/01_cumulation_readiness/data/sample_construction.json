@@ -1,0 +1,63 @@
+{
+  "status": "COMPLETED",
+  "created_on": "2026-07-23",
+  "source_counts": {
+    "pair_year_rows": 630280,
+    "pair_year_firms": 16651,
+    "firm_year_rows": 35978,
+    "firm_year_firms": 5689
+  },
+  "steps": [
+    {
+      "order": 1,
+      "rule": "Load the verified collapsed pair-year source without modifying it.",
+      "rows_before": 630280,
+      "rows_after": 630280,
+      "firms_after": 16651
+    },
+    {
+      "order": 2,
+      "rule": "Validate foreign partner, supplier direction, binary activity, year range, and unique pair-year keys.",
+      "rows_before": 630280,
+      "rows_after": 630280,
+      "firms_after": 16651
+    },
+    {
+      "order": 3,
+      "rule": "Construct the coverage-qualified firm universe and enumerate all ticker mappings to the firm-year panel.",
+      "rows_before": 16651,
+      "rows_after": 3991,
+      "firms_after": 3991
+    },
+    {
+      "order": 4,
+      "rule": "Create frozen 2017-2019 readiness exposure without using later years.",
+      "rows_before": 3991,
+      "rows_after": 3991,
+      "firms_after": 3991
+    },
+    {
+      "order": 5,
+      "rule": "Construct transition risk sets and the six outcome definitions exactly as registered.",
+      "rows_before": 25550,
+      "rows_after": 25550,
+      "firms_after": 3991
+    },
+    {
+      "order": 6,
+      "rule": "Merge verified pre-policy size and industry fields using an enumerated mapping; retain unmatched counts in the log.",
+      "rows_before": 25550,
+      "rows_after": 25550,
+      "firms_after": 3991
+    },
+    {
+      "order": 7,
+      "rule": "Write firm_year.parquet and validation tables only after all assertions pass.",
+      "rows_before": 25550,
+      "rows_after": 25550,
+      "firms_after": 3991
+    }
+  ],
+  "exclusion_policy": "No exclusion may depend on a coefficient, standard error, p-value, or desired sign.",
+  "execution_log": "logs/panel_build.json"
+}

@@ -1,0 +1,26 @@
+{
+  "experiment_id": "07_fta_novelty",
+  "build_status": "PASSED",
+  "python": "3.12.7",
+  "source_hashes": {
+    "pair_year_sha256": "7717eab45f6d31257d246a937e5aeab8f79ae567919d58f40f534efb81464e28",
+    "firm_year_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+  },
+  "valid_relationship_rows": 398792,
+  "covered_tickers": 4080,
+  "support_gate": {
+    "experiment_id": "07_fta_novelty",
+    "gate": "DATA_SUPPORT",
+    "gate_pass": false,
+    "exposure_gate": true,
+    "panel_gate": false,
+    "strata_gate": true,
+    "firms_with_one_or_more_architectures": 261,
+    "firms_with_two_or_more_architectures": 52,
+    "balanced_panel_firms": 2556,
+    "minimum_annual_positive_primary_outcome": 213,
+    "pre_policy_industries": 18,
+    "permutation_strata": 50,
+    "exposed_firms_in_singleton_strata": 2
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "experiment_id": "04_regionalization_diversity",
+  "build_status": "PASSED",
+  "python": "3.12.7",
+  "source_hashes": {
+    "pair_year_sha256": "7717eab45f6d31257d246a937e5aeab8f79ae567919d58f40f534efb81464e28",
+    "firm_year_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+  },
+  "frozen_2017_covered_firms": 623,
+  "candidate_countries": 21,
+  "analysis_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "panel_rows": 91581,
+  "firm_country_dyads": 13083,
+  "support_gate": {
+    "experiment_id": "04_regionalization_diversity",
+    "gate": "DATA_SUPPORT",
+    "gate_pass": true,
+    "active_link_gate": true,
+    "positive_country_gate": true,
+    "positive_firm_both_groups_gate": true,
+    "active_links": {
+      "rcep_0_pre": 575,
+      "rcep_1_pre": 1436,
+      "rcep_0_post": 617,
+      "rcep_1_post": 1386
+    },
+    "positive_countries": {
+      "rcep_0_pre": 5,
+      "rcep_1_pre": 10,
+      "rcep_0_post": 5,
+      "rcep_1_post": 10
+    },
+    "firms_positive_in_both_groups": {
+      "pre": 86,
+      "post": 87
+    }
+  }
+}

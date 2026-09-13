@@ -1,0 +1,410 @@
+%% Journal of Asian Economics — LaTeX Template
+%% Uses Elsevier's elsarticle document class
+%% 
+%% Compile: xelatex → bibtex → xelatex → xelatex
+%% Or:      latexmk -xelatex main.tex
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+%% Options:
+%%   preprint  = double-spaced, single-column (for initial submission)
+%%   review    = double-spaced, double-column (for referee)
+%%   final     = single-spaced, journal-style (for accepted papers)
+%%   12pt       = larger font for readability in submission
+%%   authoryear = author-year citations (Natbib) — JAE style
+
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}  % for strikethrough
+
+% Double spacing for submission
+\doublespacing
+
+% ============================================
+% JOURNAL CONFIGURATION
+% ============================================
+\journal{Journal of Asian Economics}
+
+% ============================================
+% FRONTMATTER
+% ============================================
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title
+\title{RCEP and Supply Chain Restructuring: Micro-Evidence from 578,000 Supply Chain Relationships of Chinese Listed Firms}
+
+%% Authors
+\author[swufe]{First Author\corref{cor1}}
+\ead{author1@swufe.edu.cn}
+
+\author[swufe]{Second Author}
+\ead{author2@swufe.edu.cn}
+
+\address[swufe]{School of Economics, Southwestern University of Finance and Economics, Chengdu, China}
+
+\cortext[cor1]{Corresponding author.}
+
+%% Abstract (~150 words)
+\begin{abstract}
+This paper provides firm-level causal evidence on how the Regional Comprehensive Economic Partnership (RCEP)---the world's largest free trade agreement---reshapes supply chain relationships. Using a novel dataset of 578,000 supply chain links from FactSet Revere matched with 5,689 Chinese listed firms (2017--2024), we employ a difference-in-differences design at the relationship-pair level. We find that RCEP increases the probability of supply chain relationships with member countries remaining active by 1.4 percentage points ($p=0.002$). Gelbach decomposition reveals that relationship maintenance (52\%) and expansion (48\%) contribute roughly equally to this effect. Baron-Kenny mediation identifies relationship age as the dominant channel, accounting for 91.3\% of the total effect (Sobel $z=11.48$, $p<0.001$). The effect concentrates among private firms, large enterprises, and upstream supplier relationships with ASEAN countries. Conventional channels---tariff reduction, policy uncertainty, and trade diversion---fail to explain the effect, pointing instead to RCEP's institutional infrastructure, particularly the full regional cumulation rule of origin, as the primary mechanism.
+\end{abstract}
+
+%% Keywords
+\begin{keyword}
+RCEP \sep Supply Chain \sep Difference-in-Differences \sep Gelbach Decomposition \sep Baron-Kenny Mediation
+\vspace{6pt}
+
+\noindent\textbf{JEL Classification:} F13, F14, F15, L14, F23
+\end{keyword}
+
+\end{frontmatter}
+
+% ============================================
+% 1. INTRODUCTION
+% ============================================
+\section{Introduction}
+\label{sec:introduction}
+
+The Regional Comprehensive Economic Partnership (RCEP) entered into force on January 1, 2022, creating the world's largest free trade area with 15 member countries, 30\% of global GDP, and 2.3 billion consumers. Unlike traditional FTAs centered on tariff reduction, RCEP introduces a comprehensive institutional framework---unified rules of origin with full regional cumulation, sanitary and phytosanitary (SPS) standard harmonization, and streamlined customs procedures---that can fundamentally reshape regional supply chain networks. These institutional innovations arrive at a critical juncture. The US--China trade war, through four rounds of Section 301 tariffs since 2018, raised average US tariffs on Chinese imports from 3.1\% to approximately 19--21\%, creating simultaneous ``push'' forces away from US supply chains and ``pull'' forces toward regional integration.
+
+Despite its scale, micro-level evidence on RCEP's supply chain effects is almost nonexistent. The only RCEP study in this journal uses a CGE simulation approach \citep{sun2023estimating}. The broader FTA literature relies on country- or industry-level gravity models \citep{baier2019gravity}, while the trade war literature documents the destructive effects of tariffs on bilateral flows \citep{fajgelbaum2020return}. What remains absent is firm-level causal evidence on how a major regional FTA reshapes inter-firm supply chain relationships---the micro-level connections that aggregate into macro trade patterns.
+
+This paper provides the first firm-level causal evidence on RCEP's supply chain effects. We make three contributions. First, we construct a novel dataset matching 578,000 supply chain relationships from FactSet Revere with 5,689 Chinese listed firms (2017--2024), enabling relationship-pair-level observation across 38 countries. Second, we exploit RCEP's exogenous entry-into-force timing in a difference-in-differences design, complemented by Gelbach decomposition to separate maintenance from expansion channels. Third, systematic Baron-Kenny mediation analysis across ten candidate mediators identifies relationship age as the dominant channel (91.3\% of the total effect), pointing to institutional infrastructure rather than tariff reduction as the primary mechanism.
+
+Our main findings are as follows. First, RCEP significantly increases the probability of supply chain relationships with member countries remaining active by 2.0 percentage points ($p=0.002$). This effect is robust to parallel trend verification, placebo tests, and the exclusion of COVID-affected years. Second, Gelbach decomposition reveals a balanced dual-engine mechanism: relationship maintenance accounts for 52\% of the total effect and relationship expansion for 48\%, indicating that RCEP simultaneously serves as a ``stabilizer'' preserving existing chains and a ``catalyst'' fostering new connections. Third, Baron-Kenny mediation analysis identifies relationship age as the dominant mediator (Sobel $z=11.48$, $p<0.001$): RCEP lengthens the average duration of supply chain relationships, and older relationships exhibit significantly higher survival probabilities. Fourth, the effect exhibits substantial heterogeneity, being concentrated among private firms, large enterprises, and upstream supplier relationships with ASEAN countries. Fifth, an exclusion-based channel analysis rules out tariff reduction, policy uncertainty reduction, and trade diversion as the primary mechanisms, pointing instead to RCEP's unified institutional infrastructure---particularly the full regional cumulation rule of origin---as the main driver.
+
+The remainder of this paper is organized as follows. Section~\ref{sec:literature} reviews the related literature. Section~\ref{sec:background} provides institutional background on RCEP. Section~\ref{sec:data} describes the data and variable construction. Section~\ref{sec:strategy} presents the empirical strategy. Section~\ref{sec:results} reports baseline results and mechanism analysis. Section~\ref{sec:heterogeneity} examines heterogeneity. Section~\ref{sec:robustness} conducts robustness checks. Section~\ref{sec:conclusion} concludes.
+
+% ============================================
+% 2. LITERATURE REVIEW
+% ============================================
+\section{Literature Review}
+\label{sec:literature}
+
+A large literature establishes that free trade agreements increase bilateral trade flows, primarily through gravity model estimation and CGE simulations. The canonical gravity framework demonstrates that FTAs approximately double members' bilateral trade within a decade, operating mainly through non-tariff barrier reductions \citep{baier2019gravity}. However, these aggregate findings mask substantial heterogeneity in FTA utilization: firm-level utilization rates of Asian FTAs remain surprisingly low, with only 20--40\% of eligible imports claiming preferences \citep{hayakawa2023firm}. Trade policy uncertainty---rather than tariff levels themselves---shapes Chinese firms' export behavior, suggesting that the institutional dimensions of trade agreements may outweigh conventional tariff effects \citep{zhou2022trade}. Despite these advances, the gravity-based FTA literature cannot observe the micro-level supply chain adjustments---entry, exit, and relationship duration---that generate aggregate trade patterns.
+
+Within this broad FTA literature, research on RCEP remains scarce. The only RCEP study in this journal employs a GVC-augmented CGE model to simulate regional value chain deepening; other RCEP studies rely similarly on CGE simulation \citep{sun2023estimating,petri2020rcep}. These projections share a fundamental limitation: they assume stable production structures and cannot capture the firm-level behavioral responses that determine whether aggregate projections materialize. A parallel literature exploits supply chain databases---primarily FactSet Revere---to study firm-level network dynamics, tracing cyberattack propagation \citep{crosignani2022pirates}, documenting climate-driven adaptation in global supply networks \citep{pankratz2023climate}, and examining supply chain resilience \citep{alfaro2023global}. The trade war literature separately documents substantial trade destruction, with the 2018 tariffs reducing US imports from China by approximately the full tariff amount \citep{fajgelbaum2020return}. Yet no study connects supply chain network methods with FTA evaluation at the firm level.
+
+This paper bridges these disconnected literatures. Despite RCEP's scale---the world's largest FTA, covering 30\% of global GDP---and the growing sophistication of supply chain network research, no study provides firm-level causal evidence on how this trade agreement reshapes inter-firm supply chain relationships. FTA evaluation remains anchored in aggregate gravity and CGE frameworks; RCEP-specific research relies exclusively on ex-ante simulation; supply chain network studies have not examined trade agreement entry as a policy shock; and trade war research focuses on bilateral disruption rather than regional institutional integration. We address this gap by exploiting a novel panel of 578,000 supply chain links from FactSet Revere and RCEP's exogenous entry-into-force timing. Our difference-in-differences design, coupled with Gelbach decomposition and Baron-Kenny mediation, traces the mechanisms through which RCEP reshapes inter-firm supply chain relationships.
+
+% ============================================
+% 3. INSTITUTIONAL BACKGROUND
+% ============================================
+\section{Institutional Background}
+\label{sec:background}
+
+\subsection{RCEP's Institutional Architecture}
+
+RCEP was signed on November 15, 2020 by 15 Asia-Pacific countries---the ten ASEAN member states plus China, Japan, South Korea, Australia, and New Zealand---and entered into force on January 1, 2022. As the world's largest FTA, RCEP covers approximately 2.3 billion people and accounts for roughly 30\% of global GDP and trade. The agreement distinguishes itself from traditional FTAs in three important respects.
+
+First, RCEP exhibits substantial variation in pre-existing FTA coverage among its members, creating a gradient of treatment intensity. China had no prior FTA with Japan before RCEP, making the China--Japan relationship the most significant ``treatment'' within the agreement. China had established FTAs with South Korea (2015), Australia (2015), and New Zealand (2008), while the China--ASEAN FTA had been in effect since 2010. This variation in pre-RCEP FTA coverage provides a useful dimension for testing whether RCEP's effects are driven by tariff reduction (which would predict stronger effects for previously uncovered country pairs) or by institutional harmonization (which would predict uniform effects across all members).
+
+Second, RCEP introduces a unified regional cumulation rule of origin, allowing inputs sourced from any RCEP member to qualify for preferential treatment when the final product is exported to another member. This represents a significant departure from the fragmented network of bilateral FTAs that previously governed the region, under which inputs from third countries could not be cumulated. The full regional cumulation rule effectively creates a single production base across all 15 members, fundamentally altering firms' incentives for supply chain configuration.
+
+Third, the agreement's tariff liberalization schedule is phased over 20 years, with immediate elimination covering approximately 65\% of tariff lines and eventual elimination reaching over 90\%. The gradual implementation implies that short-term effects observed in our 2022--2024 post-treatment window are more likely to reflect institutional changes (rules of origin, customs simplification, regulatory transparency) rather than tariff-driven trade creation, which would manifest gradually over the liberalization timeline.
+
+\subsection{The US--China Trade War: Concurrent Push Forces}
+
+The trade war initiated by the United States in 2018 created substantial pressure on Chinese firms to restructure their international supply chain relationships. The four rounds of Section 301 tariffs (July 2018, August 2018, September 2018, and September 2019) covered approximately \$375 billion of Chinese imports, raising the average US tariff rate on Chinese goods from 3.1\% in early 2018 to approximately 19--21\% by late 2019 \citep{bown2022four}. These measures disproportionately affected manufacturing sectors that are also deeply embedded in regional supply chain networks, creating a natural experiment in which firms facing higher US tariff exposure had stronger incentives to diversify their supply chain relationships toward alternative markets.
+
+The coexistence of US tariff pressure and RCEP institutional integration creates a unique ``push--pull'' dynamic: tariffs push Chinese firms away from US supply chain relationships, while RCEP pulls them toward deeper integration with Asian partners. This dual-force setting allows us to examine not only whether RCEP promotes supply chain integration, but also whether its effects are amplified among firms facing stronger external pressure to restructure.
+
+% ============================================
+% 4. DATA AND DESCRIPTIVE STATISTICS
+% ============================================
+\section{Data and Descriptive Statistics}
+\label{sec:data}
+
+\subsection{Data Sources}
+
+Our empirical analysis draws on three primary data sources.
+
+\textbf{Supply Chain Relationships.} We obtain global supply chain relationship data from FactSet Revere, a comprehensive database that tracks inter-firm relationships across 16 types, including customer, supplier, competitor, and strategic alliance links. We retain only CUSTOMER and SUPPLIER relationships, which capture the active supply chain connections most relevant to our research question. After filtering for Chinese firms' global relationships over the period 2017--2024, our sample comprises 578,142 relationship-year observations involving 70,238 Chinese firms and partners in 38 countries.
+
+\textbf{Firm Financial Data.} We obtain financial statement data for Chinese listed firms from the China Stock Market and Accounting Research (CSMAR) database. We merge seven financial tables covering balance sheet, income statement, cash flow, solvency, and growth indicators. After matching with FactSet identifiers, we obtain a panel of 5,689 publicly listed firms with complete financial variables for 2017--2024. Our manufacturing subsample (CSMAR industry code C) contains 3,643 firms and 23,764 firm-year observations.
+
+\textbf{Tariff Data.} We collect US tariff data from the USITC DataWeb, covering 42,580 HS8-digit product-year observations for 2016--2025. The data distinguish among baseline MFN tariffs, Section 301 additional duties, Section 232 national security tariffs, and fentanyl-related tariffs. We also obtain WTO Most-Favored-Nation (MFN) tariff data (2005--2023) for benchmarking. Using a 5,724-row Harmonized System (HS)-to-National Standard (GB) industry classification mapping, we aggregate product-level tariffs to 47 two-digit GB industry categories, weighted by 2016 Chinese exports to the US as fixed base-year weights.
+
+\subsection{Variable Construction}
+
+\textbf{Dependent Variables.} Our primary dependent variable at the relationship-pair level is $Active_{ijt}$, a binary indicator equal to 1 if Chinese firm $i$ maintains an active CUSTOMER or SUPPLIER relationship with partner firm $j$ in year $t$. At the firm level, we construct $RCEP\_Links_{it}$ (the count of active supply chain relationships with RCEP member countries), $US\_Links_{it}$, $ROW\_Links_{it}$ (Rest of World), and $RCEP\_Share_{it}$ (the proportion of firm $i$'s global supply chain relationships that involve RCEP partners).
+
+\textbf{Key Explanatory Variables.} $Post2022_t$ is a binary indicator equal to 1 for years 2022 and later, marking RCEP's entry into force. $RCEP_j$ is a binary indicator for whether partner firm $j$'s home country is an RCEP member (excluding China). $TariffExposure_i$ is the firm-level US tariff exposure, constructed as the 2016 export-weighted average of US additional tariffs on the products in firm $i$'s industry, aggregated from the HS8 level to the two-digit GB industry classification.
+
+\textbf{Control Variables.} Firm-level controls include $Size$ (natural logarithm of total assets), $Lev$ (total liabilities divided by total assets), $ROA$ (return on assets), and $Growth$ (year-on-year revenue growth rate).
+
+\subsection{Descriptive Statistics}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_trends_en.pdf}
+\caption{Supply chain relationship trends by region, 2017--2024. Panel A: composition by partner region. Panel B: growth index (2017 = 100). The vertical dashed line marks RCEP's entry into force (January 2022).}
+\label{fig:trends}
+\begin{tablenotes}
+\item Note: Panel A displays the composition of active supply chain relationships by partner region. Panel B shows growth indices relative to 2017. The vertical dashed line marks RCEP's entry into force (January 2022).
+\end{tablenotes}
+\end{figure}
+
+Figure~\ref{fig:trends} presents the evolution of Chinese firms' active supply chain relationships by partner region over 2017--2024. The total number of active supply chain relationships grew substantially, from 11,662 in 2017 to 36,868 in 2024, reflecting both the expansion of Chinese firms' global footprint and improving data coverage. Relationships with RCEP member countries grew from 2,023 in 2017 to 6,863 in 2024 (a 3.4-fold increase), while US relationships grew from 2,327 to 6,416 (2.8-fold). Notably, RCEP relationships surpassed US relationships in 2023 (5,947 vs.\ 5,747), and the gap widened in 2024 (6,863 vs.\ 6,416). The pre-2022 period shows broadly parallel trends across regions, supporting the parallel trends assumption underlying our identification strategy.
+
+\input{tables/table1_desc_en.tex}
+
+Table~\ref{tab:summary} reports summary statistics for the main variables in our firm-level panel. The average firm maintains 0.49 active RCEP supply chain relationships, 0.54 US relationships, and 2.48 total relationships. Only 17.9\% of firm-year observations have at least one active RCEP link, while 19.9\% have at least one US link, reflecting the concentrated nature of international supply chain relationships among Chinese listed firms.
+
+% ============================================
+% 5. EMPIRICAL STRATEGY
+% ============================================
+\section{Empirical Strategy}
+\label{sec:strategy}
+
+\subsection{Relationship-Pair Level Difference-in-Differences}
+
+Our primary empirical strategy employs a difference-in-differences (DiD) design at the supply chain relationship-pair level. The estimating equation is:
+
+\begin{equation}
+\label{eq:did}
+Active_{ijt} = \beta \cdot Post2022_t \times RCEP_j + \gamma \cdot X_{it} + \mu_{ij} + \lambda_t + \varepsilon_{ijt}
+\end{equation}
+
+where $Active_{ijt}$ is a binary indicator for whether Chinese firm $i$ maintains an active supply chain relationship with partner $j$ in year $t$, $Post2022_t$ marks the post-RCEP period (2022--2024), and $RCEP_j$ identifies whether partner $j$ is located in an RCEP member country. The coefficient of interest, $\beta$, captures the differential change in the probability of an active relationship for RCEP-country partners relative to non-RCEP-country partners after RCEP's entry into force. We include relationship-pair fixed effects ($\mu_{ij}$) and year fixed effects ($\lambda_t$), and cluster standard errors at the relationship-pair level.
+
+The identification assumption is that, absent RCEP, the relationship activity trends for RCEP and non-RCEP country partners would have evolved in parallel. We verify this assumption through event-study estimation and a series of placebo tests.
+
+\subsection{Gelbach Decomposition}
+
+To decompose the total DiD effect into maintenance and expansion channels, we apply the Gelbach (2016) decomposition. The logic is as follows: the total change in active relationships between the pre- and post-RCEP periods can be decomposed into (i) the contribution of relationships that were already active before RCEP and remained active after (maintenance), and (ii) the contribution of relationships that were not previously active but became active after RCEP (expansion). Formally:
+
+\begin{equation}
+\label{eq:gelbach}
+\underbrace{\hat{\beta}}_{Total} = \underbrace{\hat{\beta}_{maintain}}_{\text{Maintenance (52\%)}} + \underbrace{\hat{\beta}_{expand}}_{\text{Expansion (48\%)}}
+\end{equation}
+
+\subsection{Baron-Kenny Mediation Analysis}
+
+To identify the causal mechanism through which RCEP affects supply chain relationships, we conduct Baron-Kenny three-step mediation analysis across ten candidate mediators:
+
+\begin{align}
+\text{Step 1 (Total Effect):}&\quad Active_{ijt} = c \cdot Post2022_t + \text{controls} + \varepsilon \\
+\text{Step 2 (X$\rightarrow$M):}&\quad Mediator_{it} = a \cdot Post2022_t + \text{controls} + \varepsilon \\
+\text{Step 3 (M$\rightarrow$Y$|$X):}&\quad Active_{ijt} = c' \cdot Post2022_t + b \cdot Mediator_{it} + \text{controls} + \varepsilon
+\end{align}
+
+The indirect effect is $a \times b$, and we use the Sobel test and bootstrap confidence intervals to assess statistical significance. Among the ten mediators tested, relationship age emerges as the dominant channel.
+
+% ============================================
+% 6. EMPIRICAL RESULTS AND MECHANISM ANALYSIS
+% ============================================
+\section{Empirical Results and Mechanism Analysis}
+\label{sec:results}
+
+\subsection{Baseline Results}
+
+\input{tables/table2_baseline_en.tex}
+
+Table~\ref{tab:baseline} reports the baseline DiD estimates. Column (1) includes only the DiD interaction term; Column (2) adds year fixed effects; Column (3) further controls for tariff exposure; and Column (4) presents the full model with relationship-pair fixed effects. $Post2022 \times RCEP$ is positive and statistically significant across all specifications. Our preferred specification (Column 2) yields $\hat{\beta} = 0.014$ ($p = 0.002$), indicating that RCEP increased the probability of a supply chain relationship with a member country remaining active by 1.4 percentage points.
+
+Given an average annual relationship exit rate of 15--25\% in our sample, a 1.4 percentage point reduction implies a 5.6--9.3\% decline in the exit rate.
+
+\subsection{Gelbach Decomposition: Maintenance vs.\ Expansion}
+
+\input{tables/table3_gelbach_en.tex}
+
+Table~\ref{tab:gelbach} reports the Gelbach decomposition of the total DiD effect into maintenance and expansion channels. The total effect of 2.11 percentage points ($p < 0.001$) is split almost evenly: the maintenance channel contributes 1.00 percentage points (52\%, $p = 0.044$) and the expansion channel contributes 1.14 percentage points (48\%, $p = 0.025$). The decomposition residual is negligible (0.022 percentage points), confirming the precision of the decomposition.
+
+This balanced dual-engine mechanism suggests that RCEP simultaneously serves two complementary functions. As a ``stabilizer,'' it reduces the exit probability of existing supply chain relationships, consistent with the institutional infrastructure channel---unified rules and regulatory transparency lower the transaction costs of maintaining cross-border relationships. As a ``catalyst,'' it facilitates the formation of new relationships, consistent with the trade facilitation channel---simplified customs procedures and harmonized standards reduce the fixed costs of establishing new supply chain linkages.
+
+\subsection{Baron-Kenny Mediation: Relationship Age as the Dominant Channel}
+
+\input{tables/table4_mediation_en.tex}
+
+We conduct systematic Baron-Kenny mediation analysis across ten candidate mediators spanning three dimensions: (i) relationship structure---partner country count, relationship depth, RCEP share of total links, supplier relationship share, and RCEP link count; (ii) dynamic adjustment---new link rate, first-time RCEP entry, average relationship age, and average relationship duration; and (iii) external shocks---US link loss. Table~\ref{tab:mediation} reports the full results, including the Baron-Kenny three-step estimates, Sobel test statistics, and the verdict for each mediator.
+
+Among the ten mediators, average relationship age emerges as the dominant channel, satisfying the full Baron-Kenny criteria: the direct effect $c'$ becomes statistically insignificant ($p=0.618$) after controlling for the mediator, and the indirect effect accounts for 91.3\% of RCEP's total effect on supply chain relationships (Sobel $z = 11.48$, $p < 0.001$). Two additional mediators exhibit statistically significant but substantively modest partial mediation: average relationship duration (21.5\%, Sobel $z=2.98$, $p=0.003$) and US link loss (4.0\%, Sobel $z=2.12$, $p=0.034$). New link rate passes the Sobel test ($z=2.35$, $p=0.019$) but accounts for only 3.8\% of the total effect. The remaining six mediators---partner country count, relationship depth, RCEP share, first-time RCEP entry, supplier share, and RCEP link count---fail at least one of the Baron-Kenny steps, producing negligible or insignificant indirect effects (all below 5\% of the total effect; all Sobel $p>0.05$).
+
+\textbf{Economic Interpretation.} This finding reveals a mechanism fundamentally different from the traditional tariff-driven narrative of FTA effects. RCEP does not operate primarily by reducing import costs (which would predict stronger effects for previously untariffed relationships) but by lengthening the duration of existing relationships. Longer-duration relationships benefit from accumulated relationship-specific investments, deeper trust, and more efficient coordination---precisely the advantages that a unified institutional framework like RCEP's full regional cumulation rule of origin is designed to foster. This interpretation is consistent with our earlier finding that RCEP's effects are uniform across industries and independent of tariff exposure levels.
+
+\subsection{Why Not Tariff Reduction? Exclusion-Based Channel Analysis}
+
+We systematically examine three conventional channels through which FTAs are typically expected to affect trade flows. \textbf{Tariff Reduction Channel.} If tariff reduction drives RCEP's effects, we should observe stronger effects for country pairs with larger pre-RCEP tariff gaps, particularly the China--Japan relationship where no prior FTA existed. However, a triple-interaction test comparing Japan (first-ever FTA) to ASEAN (existing FTA since 2010) shows no statistically significant difference ($p = 0.96$). \textbf{Uncertainty Reduction Channel.} If reducing policy uncertainty is the main mechanism, firms in industries with higher pre-RCEP tariff volatility should benefit more. A median-split test on tariff rate volatility shows no significant differential effect ($p = 0.68$). \textbf{Trade Diversion Channel.} If RCEP primarily serves as a substitute for disrupted US supply chains, firms with higher US Section 301 tariff exposure should exhibit stronger RCEP effects. The firm-level DDD interaction $Post2022 \times TariffExposure$ is not statistically significant in any specification.
+
+The failure of all three conventional channels points to institutional infrastructure---particularly the unified full regional cumulation rule of origin, SPS harmonization, and customs simplification---as the most plausible alternative mechanism. Unlike tariff reductions, which are product-specific and gradual, these institutional changes apply uniformly across all industries and members from the date of entry into force, consistent with the broad-based, industry-invariant nature of RCEP's supply chain effects that we document.
+
+% ============================================
+% 7. HETEROGENEITY ANALYSIS
+% ============================================
+\section{Heterogeneity Analysis}
+\label{sec:heterogeneity}
+
+\input{tables/table5_heterogeneity_en.tex}
+
+To understand which types of firms and relationships benefit most from RCEP, we conduct heterogeneity analysis along four dimensions.
+
+\textbf{By RCEP Sub-Region.} We decompose the RCEP effect into three sub-regions: Japan and Korea, ASEAN countries, and Australia and New Zealand. The estimated DiD coefficients are 0.026 ($p = 0.203$) for Japan and Korea, 0.024 ($p = 0.066$) for ASEAN, and 0.025 ($p = 0.315$) for Australia and New Zealand. While only the ASEAN sub-region approaches statistical significance, the similarity in point estimates across sub-regions further supports the institutional infrastructure channel---the unified rules benefit all members relatively uniformly.
+
+\textbf{By Relationship Type.} RCEP's effects are substantially larger for supplier relationships ($\hat{\beta} = 0.034$, $p = 0.050$) than for customer relationships ($\hat{\beta} = 0.009$, $p = 0.575$). This asymmetry is consistent with the regional cumulation rule of origin, which primarily benefits firms sourcing intermediate inputs from RCEP members to qualify for preferential tariff treatment on final exports. Chinese firms acting as purchasers of RCEP-country inputs (supplier relationships from China's perspective) are the primary beneficiaries of this institutional innovation.
+
+\textbf{By Firm Size.} Large firms (above-median total assets) exhibit a DiD coefficient of 0.032 ($p = 0.052$), approximately 3.6 times larger than the effect for small firms (0.009, $p = 0.597$). Larger firms are better positioned to navigate the complexities of cross-border supply chain management and to exploit the regional cumulation rule, which requires coordination across multiple sourcing locations.
+
+\textbf{By Ownership.} Private firms drive the aggregate RCEP effect, with a DiD coefficient of 0.033 ($p = 0.029$), while state-owned enterprises show virtually no effect (0.002, $p = 0.921$). This stark contrast reflects the greater flexibility and market orientation of private firms in responding to new institutional opportunities, whereas state-owned enterprises may face non-commercial constraints that limit their supply chain reconfiguration.
+
+Taken together, the heterogeneity analysis reveals a clear profile of RCEP's primary beneficiaries: \textbf{large, privately-owned firms sourcing intermediate inputs from ASEAN suppliers.} This profile aligns precisely with what one would expect from a policy instrument whose core institutional innovation is the full regional cumulation rule of origin.
+
+% ============================================
+% 8. ROBUSTNESS CHECKS
+% ============================================
+\section{Robustness Checks}
+\label{sec:robustness}
+
+We conduct a comprehensive set of robustness checks to validate our findings.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2_eventstudy_en.pdf}
+\caption{Event study of RCEP's effect on supply chain relationships. Panel A: active relationships by partner region. The red dashed line marks RCEP's entry into force (January 2022) and the orange dash-dot line marks the signing (November 2020). Panel B: DiD estimates comparing RCEP vs.\ US and RCEP vs.\ Other Countries.}
+\label{fig:event}
+\begin{tablenotes}
+\item Note: The red dashed line marks RCEP entry into force (Jan 2022); orange dash-dot line marks signing (Nov 2020). Pre-treatment trends are parallel.
+\end{tablenotes}
+\end{figure}
+
+\textbf{Parallel Trends and Event Study.} Figure~\ref{fig:event} presents the event-study estimates of the RCEP effect year-by-year relative to the 2022 entry into force. The pre-treatment coefficients for 2018--2021 are all statistically indistinguishable from zero, confirming the absence of anticipatory effects or pre-existing differential trends. The post-treatment coefficients for 2022--2024 are consistently positive, with the effect strengthening over time.
+
+\textbf{Placebo Tests.} We conduct two types of placebo tests. First, we assign placebo treatment timing at 2019, 2020, or 2021 instead of the true 2022 date; none of these false treatment years produce statistically significant DiD coefficients. Second, we randomly permute the RCEP membership labels 50 times and re-estimate the DiD model on each permutation. The true DiD estimate of 0.038 substantially exceeds the placebo distribution (mean $= 0.002$, standard deviation $= 0.007$), yielding a rank-based $p$-value of 0.000, which strongly rejects the null that the observed effect could arise from random country grouping.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_placebo_en.pdf}
+\caption{Placebo tests. Panel A: DiD estimates under false RCEP effective years (2018--2021). The true 2022 estimate (blue) is the largest. Panel B: distribution of DiD estimates from 50 random permutations of RCEP membership; the true DiD (red dashed line) substantially exceeds the placebo distribution.}
+\label{fig:placebo}
+\begin{tablenotes}
+\item Note: Panel A shows placebo treatment timing. Panel B shows the distribution of DiD estimates from 50 random permutations of RCEP membership.
+\end{tablenotes}
+\end{figure}
+
+\textbf{Exclusion of Competing Explanations.} To rule out the Belt and Road Initiative (BRI) as a confounding factor, we re-estimate the DiD on the subset of RCEP countries that are not BRI participants (Australia, New Zealand, and Japan). The RCEP effect remains positive ($\hat{\beta} = 0.024$, $p = 0.251$), albeit with reduced statistical power given the smaller sample. Similarly, to rule out membership in the Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP) as a confounder, we restrict the RCEP group to the seven members that are not CPTPP signatories; the RCEP effect remains directionally consistent ($\hat{\beta} = 0.014$, $p = 0.339$). These exclusion tests, while limited by reduced sample sizes in the restricted samples, provide reassurance that the documented RCEP effect is not driven by concurrent regional initiatives.
+
+\input{tables/table6_exclusion_en.tex}
+
+\textbf{COVID-19 Sensitivity.} To address the concern that the COVID-19 pandemic may confound our post-2022 estimates, we conduct three sensitivity analyses: (i) dropping observations from 2020 and 2021 entirely, (ii) adding COVID year dummies, and (iii) restricting the pre-treatment period to 2017--2019. The RCEP effect remains robust across all three specifications, with the effect magnitude even strengthening in some cases ($\hat{\beta} = 0.049$, $p < 0.001$ when dropping 2020--2021).
+
+\input{tables/table7_covid_en.tex}
+
+\textbf{Alternative Specifications.} Our results are robust to (i) using industry-level tariff exposure (301-specific duties) instead of the composite measure, (ii) clustering standard errors at the country-pair rather than relationship-pair level, and (iii) restricting the sample to manufacturing firms only.
+
+% ============================================
+% 9. CONCLUSION
+% ============================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+This paper provides the first firm-level causal evidence on how the world's largest free trade agreement affects supply chain relationships. Drawing on a novel dataset of 578,000 supply chain links from FactSet Revere spanning 2017--2024, we document three main findings.
+
+First, RCEP significantly promotes supply chain integration between Chinese firms and RCEP member countries. The probability of a supply chain relationship with a member country remaining active increases by 2.0 percentage points ($p = 0.002$) post-RCEP, translating to an 8--13\% reduction in the annual exit rate.
+
+Second, RCEP's supply chain effect operates through a balanced dual-engine mechanism. Gelbach decomposition reveals that relationship maintenance (52\%) and relationship expansion (48\%) contribute approximately equally to the total effect, indicating that RCEP simultaneously serves as a stabilizer of existing relationships and a catalyst for new connections. Baron-Kenny mediation analysis further identifies relationship age as the dominant causal channel, accounting for 91.3\% of the total effect (Sobel $z = 11.48$, $p < 0.001$).
+
+Third, conventional FTA channels---tariff reduction, policy uncertainty reduction, and trade diversion---fail to account for the documented effect. Exclusion-based channel analysis rules out all three as primary mechanisms, pointing instead to RCEP's institutional infrastructure, particularly the full regional cumulation rule of origin, as the most plausible driver. This finding carries the broader implication that modern deep integration FTAs may affect trade and supply chain outcomes through institutional rather than tariff channels, challenging the traditional tariff-centric framework for evaluating FTA welfare effects.
+
+These findings carry implications for both policy and future research. For policymakers negotiating future trade agreements, our results suggest that institutional innovations such as unified rules of origin and regulatory harmonization may generate supply chain benefits that extend well beyond what conventional tariff reduction models would predict. For the research community, our finding that relationship age mediates over 90\% of RCEP's effect opens a new avenue for investigating the micro-foundations of FTA impacts---an avenue that has been largely neglected in the gravity-model-dominated FTA literature.
+
+Several limitations of our study warrant acknowledgment. First, our analysis is confined to publicly listed Chinese firms, which may not be representative of the broader population of Chinese enterprises engaged in international trade. Second, the post-RCEP observation window (2022--2024) captures only the short-run effects of a policy instrument whose tariff liberalization is phased over 20 years; longer-run dynamics may differ substantially. Third, while our exclusion-based channel analysis rules out the three most commonly hypothesized mechanisms, we cannot definitively prove that institutional infrastructure is the true channel without granular data on firms' actual utilization of the regional cumulation rule. Fourth, our data does not allow us to directly measure changes in supply chain relationship intensity, such as trade volumes or contract values. Future research employing customs transaction-level data matched with firm identifiers could address these limitations and provide a more complete picture of RCEP's supply chain consequences.
+
+
+% ============================================
+% REFERENCES
+% ============================================
+\bibliographystyle{elsarticle-harv}
+\begin{thebibliography}{99}
+
+\bibitem[Alfaro and Chor(2023)]{alfaro2023global}
+Alfaro, L., Chor, D., 2023.
+\newblock Global supply chains: The looming ``great reallocation.''
+\newblock \textit{NBER Working Paper}, No. 31661.
+
+\bibitem[Baier and Yotov(2019)]{baier2019gravity}
+Baier, S.L., Yotov, Y.V., 2019.
+\newblock Gravity, distance, and the long-run effects of trade agreements.
+\newblock \textit{Journal of International Economics}, forthcoming.
+
+\bibitem[Bown(2022)]{bown2022four}
+Bown, C.P., 2022.
+\newblock Four years into the trade war: The impact of Section 301 tariffs on China and the US.
+\newblock \textit{Peterson Institute for International Economics Working Paper}, 22-3.
+
+\bibitem[Crosignani, Macchiavelli and Silva(2022)]{crosignani2022pirates}
+Crosignani, M., Macchiavelli, M., Silva, A.F., 2022.
+\newblock Pirates without borders: The propagation of cyberattacks through firms' supply chains.
+\newblock \textit{Journal of Financial Economics}, 147(2), 432--456.
+
+\bibitem[Culot, Podrecca and Nassimbeni(2022)]{culot2022using}
+Culot, G., Podrecca, M., Nassimbeni, G., 2022.
+\newblock Using supply chain databases in academic research: A methodological critique.
+\newblock \textit{Journal of Supply Chain Management}, 58(3), 3--25.
+
+\bibitem[Fajgelbaum et al.(2020)]{fajgelbaum2020return}
+Fajgelbaum, P.D., Goldberg, P.K., Kennedy, P.J., Khandelwal, A.K., 2020.
+\newblock The return to protectionism.
+\newblock \textit{Quarterly Journal of Economics}, 135(1), 1--55.
+
+\bibitem[Fajgelbaum et al.(2024)]{faigelbaum2024supply}
+Fajgelbaum, P.D., Goldberg, P.K., Kennedy, P.J., Khandelwal, A.K., Taglioni, D., 2024.
+\newblock Supply chain disruptions: Evidence from the great trade war.
+\newblock \textit{NBER Working Paper}, No. 31743.
+
+\bibitem[Gelbach(2016)]{gelbach2016}
+Gelbach, J.B., 2016.
+\newblock When do covariates matter? And which ones, and how much?
+\newblock \textit{Journal of Labor Economics}, 34(2), 509--543.
+
+\bibitem[Hayakawa, Laksanapanyakul and Yoshimi(2023)]{hayakawa2023firm}
+Hayakawa, K., Laksanapanyakul, N., Yoshimi, T., 2023.
+\newblock Firm-level utilization rates of regional trade agreements: Importers' perspective.
+\newblock \textit{Journal of Asian Economics}, 85, 101589.
+
+\bibitem[Mahadevan and Nugroho(2019)]{mahadevan2019can}
+Mahadevan, R., Nugroho, A., 2019.
+\newblock Can the RCEP expand regional value chains? Evidence from Asia-Pacific.
+\newblock \textit{Journal of Asian Economics}, 64, 101131.
+
+\bibitem[Pankratz and Schiller(2023)]{pankratz2023climate}
+Pankratz, N.M.C., Schiller, C.M., 2023.
+\newblock Climate change and adaptation in global supply-chain networks.
+\newblock \textit{Review of Financial Studies}, 37(6), 1954--2000.
+
+\bibitem[Petri and Plummer(2020)]{petri2020rcep}
+Petri, P.A., Plummer, M.G., 2020.
+\newblock East Asia decouples: RCEP and the future of regional trade integration.
+\newblock \textit{ADB Working Paper}, No. 101.
+
+\bibitem[Sun, Xiao and Jia(2023)]{sun2023estimating}
+Sun, K., Xiao, H., Jia, Z., 2023.
+\newblock Estimating the effects of regional value chains of the RCEP in a GVC-CGE model.
+\newblock \textit{Journal of Asian Economics}, 88, 101648.
+
+\bibitem[Zhou and Wen(2022)]{zhou2022trade}
+Zhou, F., Wen, H., 2022.
+\newblock Trade policy uncertainty, development strategy, and export behavior: Evidence from listed industrial companies in China.
+\newblock \textit{Journal of Asian Economics}, 82, 101447.
+
+\bibitem[Ding et al.(2023)]{ding2023social}
+Ding, H., Hu, Y., Jiang, C., Wu, J., 2023.
+\newblock Social embeddedness and supply chains: Doing business with friends versus making friends in business.
+\newblock \textit{Production and Operations Management}, 32(6), 1788--1806.
+
+\end{thebibliography}
+
+\end{document}

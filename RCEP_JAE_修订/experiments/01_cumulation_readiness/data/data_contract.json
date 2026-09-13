@@ -1,0 +1,39 @@
+{
+  "contract_version": "1.0.0",
+  "created_on": "2026-07-23",
+  "read_only_sources": [
+    {
+      "path": "RCEP_JAE_修订/data/derived/pair_year.parquet",
+      "unit": "directed Chinese-firm/foreign-partner/relationship-role/year",
+      "required_fields": ["cn_id", "partner_id", "partner_country", "supplier_link", "pair_id", "year", "active", "cn_ticker"]
+    },
+    {
+      "path": "../关税冲击对供应链的影响/data/cleaned/ddd_panel.parquet",
+      "unit": "listed firm-year",
+      "required_fields": ["Stkcd", "year", "Size", "Indcat"],
+      "industry_field": "Indcat; modal 2017-2019 value with lexicographic tie-breaking"
+    }
+  ],
+  "derived_dataset": {
+    "path": "data/firm_year.parquet",
+    "key": ["cn_id", "year"],
+    "unique_key_required": true,
+    "year_min": 2017,
+    "year_max": 2024
+  },
+  "validation": [
+    "No duplicate cn_id-year keys",
+    "All active indicators are binary",
+    "Partner country uses valid two-letter codes and excludes CN and XZ",
+    "Readiness uses supplier links and foreign RCEP countries only",
+    "Exposure is constant within firm and uses 2017-2019 only",
+    "Transition outcomes agree with pair-level active histories",
+    "All missing outcomes follow the frozen zero/missing rules"
+  ],
+  "known_limitations": [
+    "Relationship intensity is unavailable for most links.",
+    "FactSet coverage is not a census of private supply-chain relationships.",
+    "Observed relationship records may contain overlapping episodes already collapsed in the pair-year source.",
+    "No direct measure of certificates of origin or RCEP preference utilization is available."
+  ]
+}

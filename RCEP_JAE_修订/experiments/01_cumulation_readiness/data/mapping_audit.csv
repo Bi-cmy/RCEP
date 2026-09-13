@@ -1,0 +1,7 @@
+metric,count
+pair_year_unique_cn_ids,16651
+cn_ids_with_valid_six_digit_ticker,16634
+one_to_one_cn_id_ticker_mappings,4341
+mappings_found_in_firm_panel,3991
+invalid_firm_year_ticker_rows,0
+duplicate_firm_year_keys,0

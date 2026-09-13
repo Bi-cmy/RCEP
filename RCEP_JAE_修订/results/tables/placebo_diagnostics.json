@@ -1,0 +1,107 @@
+{
+  "timing_placebo": [
+    {
+      "specification": "False policy year 2019",
+      "term": "fake_2019",
+      "coefficient": 0.007384270803434236,
+      "std_error": 0.01034371059607496,
+      "t_stat": 0.7138899271056832,
+      "p_value": 0.4752957751855811,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "entity_fe": true,
+      "time_fe": true,
+      "cluster": "partner_country"
+    },
+    {
+      "specification": "False policy year 2020",
+      "term": "fake_2020",
+      "coefficient": 0.003737670832645978,
+      "std_error": 0.011820519289591913,
+      "t_stat": 0.31620191474473,
+      "p_value": 0.7518494639211462,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "entity_fe": true,
+      "time_fe": true,
+      "cluster": "partner_country"
+    },
+    {
+      "specification": "False policy year 2021",
+      "term": "fake_2021",
+      "coefficient": 0.005149423463451694,
+      "std_error": 0.011506932831792532,
+      "t_stat": 0.44750617203781184,
+      "p_value": 0.65450994009956,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "entity_fe": true,
+      "time_fe": true,
+      "cluster": "partner_country"
+    },
+    {
+      "specification": "True policy 2022 (reference, full sample)",
+      "term": "treat",
+      "coefficient": 0.013629218237613379,
+      "std_error": 0.020334769201186646,
+      "t_stat": 0.670242091403626,
+      "p_value": 0.5027037563144066,
+      "observations": 630280,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "entity_fe": true,
+      "time_fe": true,
+      "cluster": "partner_country"
+    }
+  ],
+  "event_study_pretrend_wald_p": 0.1767826292449225,
+  "event_study_pretrend_wald_stat": 4.9328250487206065,
+  "false_group_placebo": [
+    {
+      "specification": "False non-RCEP group, policy 2019",
+      "term": "fake_treat",
+      "coefficient": 0.004896392157908588,
+      "std_error": 0.009457338694175966,
+      "t_stat": 0.5177346731722628,
+      "p_value": 0.6046437663618498,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "entity_fe": true,
+      "time_fe": true,
+      "cluster": "partner_country"
+    },
+    {
+      "specification": "False non-RCEP group, policy 2020",
+      "term": "fake_treat",
+      "coefficient": 0.009979711046344653,
+      "std_error": 0.009343782900217827,
+      "t_stat": 1.0680589599435149,
+      "p_value": 0.2854947349410888,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "entity_fe": true,
+      "time_fe": true,
+      "cluster": "partner_country"
+    },
+    {
+      "specification": "False non-RCEP group, policy 2021",
+      "term": "fake_treat",
+      "coefficient": 0.006809095435468346,
+      "std_error": 0.010315072834155772,
+      "t_stat": 0.6601112318782411,
+      "p_value": 0.5091829338509319,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "entity_fe": true,
+      "time_fe": true,
+      "cluster": "partner_country"
+    }
+  ],
+  "note": "All estimates use partner-country clustered SE. Timing placebos use pre-2022 data only. The event-study omitted period is 2021 (rel_time=-1)."
+}

@@ -1,0 +1,61 @@
+{
+  "experiment_id": "09_cross_architecture_landmark",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "design_status": "Support-informed exploratory follow-up; not represented as a fully outcome-blind confirmatory design.",
+  "known_before_freeze": {
+    "balanced_firms": 2556,
+    "firms_with_one_or_more_architectures": 261,
+    "firms_with_two_or_more_architectures": 52,
+    "minimum_annual_positive_primary_outcome": 213,
+    "pre_policy_industries": 18,
+    "outcome_coefficients_inspected": false
+  },
+  "research_question": "Did post-2022 RCEP supplier-link intensity change differentially with firms' frozen 2017-2019 exposure to previously separate China-Asia trade-agreement architectures?",
+  "theory": "RCEP's common rules-of-origin and cumulation framework spans the prior ASEAN, Australia, New Zealand, Korea, and Japan architectures. A firm sourcing across more architectures had greater potential gains from institutional unification.",
+  "interpretation_limit": "Architecture count is a readiness proxy, not observed certificate use, tariff utilization, or value-added cumulation.",
+  "sample": {
+    "unit": "Verified listed firm-year",
+    "years": [2020, 2021, 2022, 2023, 2024],
+    "rule": "Use the complete five-year panel with valid 2017-2019 frozen industry and average size created under Experiment 07; no new row or firm exclusion is permitted."
+  },
+  "exposure": {
+    "primary": "Count from zero to five of ASEAN, Australia, New Zealand, Korea, and Japan supplier architectures active at least once in 2017-2019.",
+    "secondary": "Indicator for two or more architectures.",
+    "outcome_overlap": "None; outcomes begin in 2020."
+  },
+  "outcomes": {
+    "primary": "asinh count of unique active RCEP supplier relationships.",
+    "secondary": ["asinh count of active RCEP supplier countries", "RCEP share of active Asian supplier relationships"]
+  },
+  "estimating_equations": {
+    "dynamic": "Y_it = alpha_i + lambda_industry-year + sum(year != 2021) gamma_year(ArchitectureCount_i x Year) + error_it",
+    "static": "Y_it = alpha_i + lambda_industry-year + beta(Post2022_t x ArchitectureCount_i) + error_it",
+    "fixed_effects": ["firm", "frozen-industry-by-year"],
+    "primary_inference": "Firm-clustered standard errors.",
+    "randomization_inference": "999 permutations of architecture count within frozen industry-by-size-tercile strata, seed 20260723; all draws retained."
+  },
+  "support_replication_gate": {
+    "requirements": "Exactly reproduce the 2,556-firm candidate panel and its source hash; require at least 2,000 firms, 250 with one or more architectures, 40 with two or more, and 100 annual positive outcomes.",
+    "disclosure": "These thresholds are support-informed and cannot serve as independent design validation."
+  },
+  "identification_gate": {
+    "pretrend": "The 2020 ArchitectureCount interaction relative to 2021 has p >= 0.10.",
+    "economic_threshold": "Absolute 2020 interaction <= 0.05 on the asinh-link scale per architecture.",
+    "limited_power": "Only one non-overlapping pre-policy interaction is available; this limitation is mandatory in interpretation.",
+    "stop_rule": "Failure stops before the static post interaction, permutations, secondary outcomes, robustness, mechanisms, or heterogeneity."
+  },
+  "evidence_gate": {
+    "positive_exploratory_result": "Static interaction has stratified-randomization p < 0.05, same sign for the multi-architecture and active-country outcomes, and no single-industry sign reversal.",
+    "inconclusive": "Identification passes but the post interaction is ordinary under stratified assignments.",
+    "integrity": "No sample, threshold, exposure mapping, outcome, stratum, seed, or industry is changed after coefficient inspection."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["source hashes", "support replication", "pretrend", "all permutation draws if reached"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended to pap/amendments.md before execution."
+}

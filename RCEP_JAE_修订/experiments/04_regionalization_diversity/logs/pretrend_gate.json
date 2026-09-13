@@ -1,0 +1,15 @@
+{
+  "experiment_id": "04_regionalization_diversity",
+  "gate": "PRETREND",
+  "gate_pass": false,
+  "joint_pretrend_wald_stat": 47.53839715593388,
+  "joint_pretrend_df": 7,
+  "joint_pretrend_p_value": 4.3824258349109326e-08,
+  "maximum_absolute_aggregated_pre_coefficient": 0.0033647344108747794,
+  "economic_threshold": 0.05,
+  "observations": 91581,
+  "firm_country_fixed_effects": 13083,
+  "firm_year_fixed_effects": 4361,
+  "partner_country_clusters": 21,
+  "estimator": "OLS after pyhdfe residualization on firm-country and firm-year fixed effects"
+}

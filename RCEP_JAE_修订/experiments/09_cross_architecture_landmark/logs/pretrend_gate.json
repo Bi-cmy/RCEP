@@ -1,0 +1,16 @@
+{
+  "experiment_id": "09_cross_architecture_landmark",
+  "gate": "ONE_LEAD_PRETREND",
+  "gate_pass": true,
+  "lead_year": 2020,
+  "reference_year": 2021,
+  "lead_estimate_per_architecture": 0.026776896557033317,
+  "lead_std_error": 0.023747036713555252,
+  "lead_p_value": 0.25959942708698,
+  "economic_threshold": 0.05,
+  "observations": 12780,
+  "firms": 2556,
+  "industry_year_fixed_effects": 90,
+  "estimator": "OLS after pyhdfe residualization on firm and frozen-industry-year fixed effects",
+  "diagnostic_limit": "Only one clean non-overlapping pre-policy interaction is available."
+}

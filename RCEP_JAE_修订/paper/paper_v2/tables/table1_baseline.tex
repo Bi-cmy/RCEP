@@ -1,0 +1,28 @@
+\begin{table}[H]
+\centering
+\caption{Baseline results}
+\label{tab:baseline}
+\small
+\begin{threeparttable}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcc}
+\toprule
+ & (1) Common 2022 date & (2) Member-specific dates \\
+ & Pair-clustered S.E. & Pair-clustered S.E. \\
+\midrule
+RCEP treatment & 0.0136*** & 0.0144*** \\
+ & (0.0040) & (0.0041) \\
+\midrule
+Observations & 630,280 & 630,280 \\
+Relationship pairs & 78,785 & 78,785 \\
+Pair fixed effects & Yes & Yes \\
+Year fixed effects & Yes & Yes \\
+\bottomrule
+\end{tabular}
+}
+\begin{tablenotes}[flushleft]
+\item
+\footnotesize \textit{Notes}: The outcome is an active firm--partner relationship at year-end. All columns include pair and year fixed effects. Column (1) uses a common 2022 entry date; column (2) uses member-specific entry dates. Standard errors are clustered by relationship pair and reported in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

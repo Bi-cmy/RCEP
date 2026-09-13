@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\caption{Placebo tests}
+\label{tab:placebo}
+\scriptsize
+\setlength{\TPTminimum}{0pt}
+\begin{threeparttable}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
+                >{\raggedright\arraybackslash}p{0.34\textwidth}
+                r r r@{}}
+\toprule
+Placebo design & Setting & Estimate/mean & S.E./S.D. & Reference $p$ \\
+\midrule
+Fixed false timing & 2020 pre-entry cutoff & 0.0037 & 0.0037 & 0.310 \\
+Fixed false timing & 2021 pre-entry cutoff & 0.0051 & 0.0040 & 0.199 \\
+Country-label permutation & 14 placebo countries, 499 draws & $-0.0103$ & 0.0350 & 0.774 \\
+Mixed country--date permutation & 14 placebo countries, 499 draws & $-0.0056$ & 0.0160 & 0.407 \\
+\bottomrule
+\end{tabular}
+}
+\begin{tablenotes}[flushleft]
+\item
+\footnotesize \textit{Notes}: Timing rows report pair-clustered standard errors. Spatial and mixed rows summarize 499 permutations; the reference $p$ is the two-sided share of placebo coefficients at least as large in absolute value as the observed estimate. All models include relationship-pair and year fixed effects. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

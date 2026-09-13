@@ -1,0 +1,32 @@
+{
+  "experiment_id": "05_supplier_customer_asymmetry",
+  "gate": "DATA_SUPPORT",
+  "gate_pass": true,
+  "active_link_gate": true,
+  "positive_country_gate": true,
+  "positive_firm_both_roles_gate": true,
+  "active_links": {
+    "role_0_rcep_0_pre": 1725,
+    "role_0_rcep_0_post": 1867,
+    "role_0_rcep_1_pre": 3140,
+    "role_0_rcep_1_post": 2843,
+    "role_1_rcep_0_pre": 638,
+    "role_1_rcep_0_post": 734,
+    "role_1_rcep_1_pre": 1574,
+    "role_1_rcep_1_post": 1580
+  },
+  "positive_countries": {
+    "role_0_rcep_0_pre": 7,
+    "role_0_rcep_0_post": 7,
+    "role_0_rcep_1_pre": 14,
+    "role_0_rcep_1_post": 13,
+    "role_1_rcep_0_pre": 5,
+    "role_1_rcep_0_post": 7,
+    "role_1_rcep_1_pre": 11,
+    "role_1_rcep_1_post": 10
+  },
+  "firms_positive_in_both_roles": {
+    "pre": 210,
+    "post": 232
+  }
+}

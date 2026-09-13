@@ -1,0 +1,9 @@
+{
+  "episode_source": "verified legacy data/cleaned/cn_global_links.parquet",
+  "firm_source": "verified legacy data/cleaned/ddd_panel.parquet",
+  "episode_required": ["source_company_id", "target_company_id", "SOURCE_ticker", "TARGET_ticker", "cn_side", "rel_type", "partner_country", "start_dt", "end_dt", "revenue_percent"],
+  "episode_key_after_collapse": ["listed_ticker", "partner_id", "partner_country", "supplier_role"],
+  "analysis_years": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "final_key": ["relationship_id", "year"],
+  "missing_policy": "Exclude invalid listed tickers, non-registered countries, missing or invalid dates, and revenue percentages outside (0,100]; report every exclusion."
+}

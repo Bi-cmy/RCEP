@@ -1,0 +1,67 @@
+{
+  "experiment_id": "04_regionalization_diversity",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "Did RCEP entry reallocate active supplier relationships within covered Chinese firms toward RCEP rather than Asian non-RCEP countries?",
+  "population": {
+    "firm_universe": "Valid listed tickers with at least one foreign supplier relationship active at year-end 2017.",
+    "candidate_panel": "Balanced cross of frozen firms, 21 registered Asian countries, and years 2018-2024.",
+    "rcep": ["JP", "KR", "AU", "NZ", "ID", "MY", "PH", "SG", "TH", "VN", "BN", "KH", "LA", "MM"],
+    "asian_non_rcep": ["HK", "TW", "IN", "PK", "BD", "LK", "MN"],
+    "ticker_rule": "Aggregate all valid FactSet cn_ids sharing a listed ticker; exclude 000000 and non-listed tickers."
+  },
+  "treatment": {
+    "preferred": "Country-specific timing: 2022 except Indonesia and the Philippines in 2023; never for controls.",
+    "uniform_2022": "Pre-specified robustness only.",
+    "assignment_level": "Partner-country-year"
+  },
+  "outcomes": {
+    "primary": "Inverse-hyperbolic-sine of the number of active supplier relationships from the firm to the candidate country at year-end.",
+    "secondary": [
+      "Indicator for at least one active supplier relationship to the candidate country",
+      "Raw active supplier-link count estimated with fixed-effect Poisson"
+    ],
+    "descriptive_network_measures": [
+      "Firm-year RCEP share of active Asian supplier links",
+      "Firm-year supplier-country Shannon entropy",
+      "Firm-year supplier-country HHI"
+    ],
+    "interpretation": "The coefficient is within-firm geographic reallocation, not a change in total sourcing or verified rules-of-origin use."
+  },
+  "estimand": "Within a listed firm-year, the differential post-entry change in active supplier-link intensity for RCEP versus Asian non-RCEP candidate countries.",
+  "estimating_equations": {
+    "static": "asinh(Links_fct) = alpha_fc + lambda_ft + beta TreatedCountryTime_ct + error_fct",
+    "dynamic": "Cohort-by-event interactions with event time -1 omitted, firm-country and firm-year fixed effects.",
+    "primary_inference": "Partner-country clustered standard errors.",
+    "few_cluster_inference": "9,999-draw wild cluster bootstrap-t, seed 20260723.",
+    "randomization_inference": "Exact or 9,999 assignments preserving 14 treated and 7 control country labels."
+  },
+  "identifying_assumption": "Absent RCEP, the within-firm geographic distribution of active supplier links across RCEP and Asian non-RCEP candidate countries would have evolved similarly after fixed firm-country differences and all firm-year shocks are removed.",
+  "data_gate": {
+    "link_support": "At least 100 active links in every treatment-group by pre/post cell.",
+    "country_support": "At least five countries in every group-period cell must have at least one positive active-link observation.",
+    "firm_support": "At least 50 firms must have positive links in both country groups during the pre period and at least 50 during the post period.",
+    "balanced_panel": "Every eligible firm-country dyad must have seven rows for 2018-2024.",
+    "failure_rule": "Failure of any condition closes the experiment before coefficient estimation."
+  },
+  "identification_gate": {
+    "pretrend": "Joint cohort-specific lead test p >= 0.10.",
+    "economic_threshold": "Maximum absolute aggregated lead <= 0.05 on the asinh link-count scale.",
+    "placebo": "Positive evidence requires country-label randomization p < 0.05.",
+    "stop_rule": "Pretrend failure stops before static effects, robustness, mechanisms, and heterogeneity."
+  },
+  "evidence_gate": {
+    "positive_result": "Preferred staged estimate passes randomization inference, retains sign under uniform timing and secondary outcomes, and is not driven by one country.",
+    "inconclusive": "Identification passes but the observed estimate is ordinary under label assignments or too imprecise for the frozen 0.05 scale.",
+    "integrity": "No country or firm deletion is chosen using coefficient signs or significance."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["sample construction", "support", "pretrend", "permutations if reached"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended to pap/amendments.md before execution."
+}

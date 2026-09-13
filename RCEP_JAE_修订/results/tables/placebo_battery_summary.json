@@ -1,0 +1,467 @@
+{
+  "seed": 20260904,
+  "draws_per_permutation": 499,
+  "main_cluster": "pair",
+  "policy_date": "2022-01-01",
+  "real_beta": 0.013629218237596542,
+  "treated_pair_units": 14385,
+  "spatial_country": [
+    {
+      "placebo_type": "country_label",
+      "k_countries": 5,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.017908072550438553,
+      "dist_sd": 0.05220108854539993,
+      "dist_min": -0.20434561661688358,
+      "dist_max": 0.20502263011434232,
+      "rank_p_vs_real": 0.84,
+      "two_sided_p_vs_zero": 0.8396793587174348,
+      "frac_positive": 0.342685370741483
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 8,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.017493798479498276,
+      "dist_sd": 0.04280998715596115,
+      "dist_min": -0.14478628718789555,
+      "dist_max": 0.12045125721756918,
+      "rank_p_vs_real": 0.83,
+      "two_sided_p_vs_zero": 0.8296593186372746,
+      "frac_positive": 0.3346693386773547
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 10,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.014957586154399204,
+      "dist_sd": 0.03877827586283414,
+      "dist_min": -0.17777628692894318,
+      "dist_max": 0.06994968226450532,
+      "rank_p_vs_real": 0.828,
+      "two_sided_p_vs_zero": 0.8276553106212425,
+      "frac_positive": 0.3627254509018036
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 12,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.015391942124938846,
+      "dist_sd": 0.03525018568394214,
+      "dist_min": -0.10504746460537127,
+      "dist_max": 0.06393941672374623,
+      "rank_p_vs_real": 0.78,
+      "two_sided_p_vs_zero": 0.779559118236473,
+      "frac_positive": 0.32665330661322645
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 14,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.010276125577470258,
+      "dist_sd": 0.03495245423613596,
+      "dist_min": -0.09726494060391007,
+      "dist_max": 0.06463691237263405,
+      "rank_p_vs_real": 0.774,
+      "two_sided_p_vs_zero": 0.7735470941883767,
+      "frac_positive": 0.4148296593186373
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 16,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.011058065343127768,
+      "dist_sd": 0.03317123997139202,
+      "dist_min": -0.09007420870219575,
+      "dist_max": 0.062478978472561356,
+      "rank_p_vs_real": 0.808,
+      "two_sided_p_vs_zero": 0.8076152304609219,
+      "frac_positive": 0.3967935871743487
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 18,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.011799324496838239,
+      "dist_sd": 0.03285145763612153,
+      "dist_min": -0.0944322170330668,
+      "dist_max": 0.060664176965857276,
+      "rank_p_vs_real": 0.76,
+      "two_sided_p_vs_zero": 0.7595190380761523,
+      "frac_positive": 0.3807615230460922
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 21,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.008571010439031499,
+      "dist_sd": 0.032159865395172585,
+      "dist_min": -0.09774051851963801,
+      "dist_max": 0.056366770108582126,
+      "rank_p_vs_real": 0.792,
+      "two_sided_p_vs_zero": 0.7915831663326653,
+      "frac_positive": 0.40681362725450904
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 25,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.008206092328970155,
+      "dist_sd": 0.030651719207911605,
+      "dist_min": -0.08558930231751805,
+      "dist_max": 0.05639166248512071,
+      "rank_p_vs_real": 0.742,
+      "two_sided_p_vs_zero": 0.7414829659318637,
+      "frac_positive": 0.4248496993987976
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 30,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.0071046644370402765,
+      "dist_sd": 0.029002452508568092,
+      "dist_min": -0.08308377806553502,
+      "dist_max": 0.05773348625634433,
+      "rank_p_vs_real": 0.71,
+      "two_sided_p_vs_zero": 0.7094188376753507,
+      "frac_positive": 0.4408817635270541
+    },
+    {
+      "placebo_type": "country_label",
+      "k_countries": 40,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.004047817919031169,
+      "dist_sd": 0.025326909961302487,
+      "dist_min": -0.07057242962726606,
+      "dist_max": 0.05456861451015698,
+      "rank_p_vs_real": 0.65,
+      "two_sided_p_vs_zero": 0.6492985971943888,
+      "frac_positive": 0.48096192384769537
+    }
+  ],
+  "spatial_pair_random": {
+    "placebo_type": "pair_level_random",
+    "draws": 499,
+    "real_beta": 0.013629218237596542,
+    "dist_mean": -6.685896514330476e-05,
+    "dist_sd": 0.003675723151973791,
+    "rank_p_vs_real": 0.002,
+    "two_sided_p_vs_zero": 0.0
+  },
+  "temporal_fixed_year": [
+    {
+      "specification": "False policy year 2018",
+      "term": "fake_2018",
+      "coefficient": 0.006041609995317451,
+      "std_error": 0.0036616818066206587,
+      "t_stat": 1.649954942669694,
+      "p_value": 0.0989531485806514,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "cluster": "pair",
+      "pair_fe": true,
+      "year_fe": true
+    },
+    {
+      "specification": "False policy year 2019",
+      "term": "fake_2019",
+      "coefficient": 0.007384270803434236,
+      "std_error": 0.003581267371134785,
+      "t_stat": 2.061915528271324,
+      "p_value": 0.039216596852397645,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "cluster": "pair",
+      "pair_fe": true,
+      "year_fe": true
+    },
+    {
+      "specification": "False policy year 2020",
+      "term": "fake_2020",
+      "coefficient": 0.003737670832645978,
+      "std_error": 0.0036818709225387167,
+      "t_stat": 1.0151553140458238,
+      "p_value": 0.31003257717355837,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "cluster": "pair",
+      "pair_fe": true,
+      "year_fe": true
+    },
+    {
+      "specification": "False policy year 2021",
+      "term": "fake_2021",
+      "coefficient": 0.005149423463451694,
+      "std_error": 0.004013022669344939,
+      "t_stat": 1.2831782643012715,
+      "p_value": 0.1994305727876029,
+      "observations": 393925,
+      "pairs": 78785,
+      "partner_countries": 181,
+      "cluster": "pair",
+      "pair_fe": true,
+      "year_fe": true
+    }
+  ],
+  "temporal_fixed_leads": [
+    {
+      "lead_years": 1.0,
+      "false_date": "2021-01-01",
+      "annual_cutoff_year": 2021,
+      "coefficient": 0.005149423463450771,
+      "identifiable_at_annual_resolution": true,
+      "resolution_note": "Fractional leads within 2021 use the 2021 year-end observation."
+    },
+    {
+      "lead_years": 0.6666666666666666,
+      "false_date": "2021-05-02",
+      "annual_cutoff_year": 2021,
+      "coefficient": 0.005149423463450771,
+      "identifiable_at_annual_resolution": false,
+      "resolution_note": "Fractional leads within 2021 use the 2021 year-end observation."
+    },
+    {
+      "lead_years": 0.5,
+      "false_date": "2021-07-02",
+      "annual_cutoff_year": 2021,
+      "coefficient": 0.005149423463450771,
+      "identifiable_at_annual_resolution": false,
+      "resolution_note": "Fractional leads within 2021 use the 2021 year-end observation."
+    },
+    {
+      "lead_years": 0.3333333333333333,
+      "false_date": "2021-09-01",
+      "annual_cutoff_year": 2021,
+      "coefficient": 0.005149423463450771,
+      "identifiable_at_annual_resolution": false,
+      "resolution_note": "Fractional leads within 2021 use the 2021 year-end observation."
+    }
+  ],
+  "temporal_random_dates": {
+    "draws": 999,
+    "dist_mean": 0.005585288803182595,
+    "dist_sd": 0.0013270329871940356,
+    "rank_p_vs_real": 0.001,
+    "two_sided_p_vs_zero": 0.0
+  },
+  "mixed": [
+    {
+      "placebo_type": "country_and_date",
+      "k_countries": 10,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.006906127364680528,
+      "dist_sd": 0.01949189132042512,
+      "rank_p_vs_real": 0.448,
+      "two_sided_p_vs_zero": 0.4468937875751503
+    },
+    {
+      "placebo_type": "country_and_date",
+      "k_countries": 14,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.005581519539896764,
+      "dist_sd": 0.01596414799433914,
+      "rank_p_vs_real": 0.408,
+      "two_sided_p_vs_zero": 0.40681362725450904
+    },
+    {
+      "placebo_type": "country_and_date",
+      "k_countries": 18,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.0035606895843647082,
+      "dist_sd": 0.013898895033547352,
+      "rank_p_vs_real": 0.346,
+      "two_sided_p_vs_zero": 0.34468937875751504
+    },
+    {
+      "placebo_type": "country_and_date",
+      "k_countries": 21,
+      "draws": 499,
+      "real_beta": 0.013629218237596542,
+      "dist_mean": -0.002270524092193242,
+      "dist_sd": 0.013157767287986476,
+      "rank_p_vs_real": 0.318,
+      "two_sided_p_vs_zero": 0.3166332665330661
+    }
+  ],
+  "event_study_lead_windows": [
+    {
+      "lead_window_years": 1,
+      "pre_terms": 0,
+      "wald_stat": NaN,
+      "wald_p_value": NaN,
+      "cluster": "pair",
+      "observations": 630280,
+      "pairs": 78785
+    },
+    {
+      "lead_window_years": 2,
+      "pre_terms": 1,
+      "wald_stat": 0.02191960223184034,
+      "wald_p_value": 0.8823011772124099,
+      "cluster": "pair",
+      "observations": 630280,
+      "pairs": 78785
+    },
+    {
+      "lead_window_years": 3,
+      "pre_terms": 2,
+      "wald_stat": 3.6649329641260904,
+      "wald_p_value": 0.16001839812734597,
+      "cluster": "pair",
+      "observations": 630280,
+      "pairs": 78785
+    },
+    {
+      "lead_window_years": 4,
+      "pre_terms": 3,
+      "wald_stat": 6.240312127847598,
+      "wald_p_value": 0.1004862277283185,
+      "cluster": "pair",
+      "observations": 630280,
+      "pairs": 78785
+    },
+    {
+      "lead_window_years": 5,
+      "pre_terms": 4,
+      "wald_stat": 8.38949117071166,
+      "wald_p_value": 0.07830859319172645,
+      "cluster": "pair",
+      "observations": 630280,
+      "pairs": 78785
+    }
+  ],
+  "event_study_coefficients": {
+    "1": {
+      "coefficient": {
+        "event_p0": 0.005493138988378608,
+        "event_p1": 0.015123566214792487,
+        "event_p2": 0.02027094950963093
+      },
+      "std_error": {
+        "event_p0": 0.0042520437012197295,
+        "event_p1": 0.00517608479477899,
+        "event_p2": 0.005688742083727789
+      },
+      "p_value": {
+        "event_p0": 0.19639853177193478,
+        "event_p1": 0.003480114229087228,
+        "event_p2": 0.00036619009706506667
+      }
+    },
+    "2": {
+      "coefficient": {
+        "event_m2": 0.0004570827855078899,
+        "event_p0": 0.005584555545476801,
+        "event_p1": 0.01521498277190722,
+        "event_p2": 0.020362366066734014
+      },
+      "std_error": {
+        "event_m2": 0.00308729785308785,
+        "event_p0": 0.004334613278033109,
+        "event_p1": 0.005213091323901284,
+        "event_p2": 0.005701204378557789
+      },
+      "p_value": {
+        "event_m2": 0.882301231340205,
+        "event_p0": 0.19762015831881707,
+        "event_p1": 0.0035160950559827153,
+        "event_p2": 0.00035485039407823216
+      }
+    },
+    "3": {
+      "coefficient": {
+        "event_m3": 0.005956448696058549,
+        "event_m2": 0.0019461949595276562,
+        "event_p0": 0.007073667719504089,
+        "event_p1": 0.016704094945939035,
+        "event_p2": 0.0218514782407558
+      },
+      "std_error": {
+        "event_m3": 0.0031231083820464274,
+        "event_m2": 0.0033058239931088745,
+        "event_p0": 0.004301135335180646,
+        "event_p1": 0.005213324735953644,
+        "event_p2": 0.005713448828157205
+      },
+      "p_value": {
+        "event_m3": 0.056492875317128544,
+        "event_m2": 0.5560513374220482,
+        "event_p0": 0.1000519110255087,
+        "event_p1": 0.0013548578410862433,
+        "event_p2": 0.00013101555690475664
+      }
+    },
+    "4": {
+      "coefficient": {
+        "event_m4": -0.003670962355126302,
+        "event_m3": 0.004732794577672566,
+        "event_m2": 0.0007225408411415176,
+        "event_p0": 0.0058500136011155465,
+        "event_p1": 0.015480440827524014,
+        "event_p2": 0.020627824122367924
+      },
+      "std_error": {
+        "event_m4": 0.0032693683607960553,
+        "event_m3": 0.003491665364897782,
+        "event_m2": 0.003293825649467103,
+        "event_p0": 0.00410139011014345,
+        "event_p1": 0.005167622583795924,
+        "event_p2": 0.005727169284889976
+      },
+      "p_value": {
+        "event_m4": 0.2615079193669132,
+        "event_m3": 0.17527325542928884,
+        "event_m2": 0.8263679940787427,
+        "event_p0": 0.15376819894406668,
+        "event_p1": 0.0027386365654087363,
+        "event_p2": 0.0003161116687564469
+      }
+    },
+    "5": {
+      "coefficient": {
+        "event_m5": -0.008952826767032289,
+        "event_m4": -0.008147375738645782,
+        "event_m3": 0.0002563811941569427,
+        "event_m2": -0.0037538725423743474,
+        "event_p0": 0.0013736002175998583,
+        "event_p1": 0.011004027444014144,
+        "event_p2": 0.016151410738846073
+      },
+      "std_error": {
+        "event_m5": 0.005020693270184442,
+        "event_m4": 0.004833704669704852,
+        "event_m3": 0.004473913914331915,
+        "event_m2": 0.003633083994603743,
+        "event_p0": 0.004001565211393875,
+        "event_p1": 0.005465895520081613,
+        "event_p2": 0.006198541761531077
+      },
+      "p_value": {
+        "event_m5": 0.07455668364285284,
+        "event_m4": 0.09188606987424874,
+        "event_m3": 0.9543016248650893,
+        "event_m2": 0.30148885287804017,
+        "event_p0": 0.7313986879252685,
+        "event_p1": 0.04409241242944839,
+        "event_p2": 0.009169478414395416
+      }
+    }
+  }
+}

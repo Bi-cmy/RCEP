@@ -1,0 +1,96 @@
+{
+  "exposure_source": "C:\\Users\\97328\\Desktop\\学习\\论文、项目\\供应链冲击\\中美供应链STGNN\\预处理数据_非供应链\\04_模型输入\\firm_tariff_exposure.parquet",
+  "exposure_year": 2019,
+  "matched_firm_share": 0.5363002922004945,
+  "matched_pair_share": 0.40170083137653106,
+  "matched_nonzero_share": 0.9192366026289182,
+  "observations": 253184,
+  "pairs": 31648,
+  "countries": 154,
+  "pair_cluster": [
+    {
+      "specification": "baseline",
+      "term": "post_rcep",
+      "coefficient": 0.006108605320849716,
+      "std_error": 0.006480470780710761,
+      "p_value": 0.34587760108699594,
+      "observations": 253184,
+      "pairs": 31648,
+      "partner_countries": 154,
+      "cluster": "pair"
+    },
+    {
+      "specification": "post_tariff_control",
+      "term": "post_rcep",
+      "coefficient": 0.006301909773283747,
+      "std_error": 0.006483317404896156,
+      "p_value": 0.3310419986372093,
+      "observations": 253184,
+      "pairs": 31648,
+      "partner_countries": 154,
+      "cluster": "pair"
+    },
+    {
+      "specification": "post_tariff_control",
+      "term": "post_tariff",
+      "coefficient": -0.03297410451931845,
+      "std_error": 0.023620945742608153,
+      "p_value": 0.1627252739312821,
+      "observations": 253184,
+      "pairs": 31648,
+      "partner_countries": 154,
+      "cluster": "pair"
+    },
+    {
+      "specification": "full_triple_interaction",
+      "term": "post_rcep",
+      "coefficient": -0.0030681494610680276,
+      "std_error": 0.01369558273894553,
+      "p_value": 0.8227382536715453,
+      "observations": 253184,
+      "pairs": 31648,
+      "partner_countries": 154,
+      "cluster": "pair"
+    },
+    {
+      "specification": "full_triple_interaction",
+      "term": "post_tariff",
+      "coefficient": -0.041732785714097276,
+      "std_error": 0.026202901738850298,
+      "p_value": 0.11123386717475459,
+      "observations": 253184,
+      "pairs": 31648,
+      "partner_countries": 154,
+      "cluster": "pair"
+    },
+    {
+      "specification": "full_triple_interaction",
+      "term": "triple",
+      "coefficient": 0.04705355661074229,
+      "std_error": 0.060562105314504934,
+      "p_value": 0.43719076685931935,
+      "observations": 253184,
+      "pairs": 31648,
+      "partner_countries": 154,
+      "cluster": "pair"
+    }
+  ],
+  "country_cluster_sensitivity": {
+    "post_rcep": {
+      "coefficient": -0.0030681494610680276,
+      "std_error": 0.022911693982844327,
+      "p_value": 0.8934723277650287
+    },
+    "post_tariff": {
+      "coefficient": -0.041732785714097276,
+      "std_error": 0.038641184033520924,
+      "p_value": 0.28013981857902004
+    },
+    "triple": {
+      "coefficient": 0.04705355661074229,
+      "std_error": 0.10728796528072765,
+      "p_value": 0.6609717176480046
+    }
+  },
+  "interpretation": "The triple interaction tests differential RCEP effects by predetermined US tariff exposure; failure to reject is evidence against, not proof of, a tariff-driven explanation."
+}

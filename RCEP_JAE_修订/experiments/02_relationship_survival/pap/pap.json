@@ -1,0 +1,76 @@
+{
+  "experiment_id": "02_relationship_survival",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "Did RCEP entry change the survival path of supplier relationships already active at year-end 2017?",
+  "population": {
+    "unit": "Listed Chinese ticker-foreign partner supplier relationship by year",
+    "cohort_rule": "Relationship must be active on 2017-12-31, be a foreign supplier link, and have a partner in a registered RCEP or Asian non-RCEP economy.",
+    "follow_up_years": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    "rcep_countries": ["JP", "KR", "AU", "NZ", "ID", "MY", "PH", "SG", "TH", "VN", "BN", "KH", "LA", "MM"],
+    "asian_non_rcep_controls": ["HK", "TW", "IN", "PK", "BD", "LK", "MN"],
+    "ticker_rule": "Aggregate multiple valid FactSet cn_ids sharing one listed six-digit ticker. Exclude ticker 000000 and identifiers that cannot map to the verified listed-firm panel."
+  },
+  "treatment": {
+    "preferred": "Country-specific annual timing: 2022 for RCEP members except Indonesia and the Philippines; 2023 for Indonesia and the Philippines; never for controls.",
+    "uniform_2022": "Pre-specified sensitivity only.",
+    "assignment_level": "Foreign partner country-year"
+  },
+  "outcomes": {
+    "primary": "Absorbing survival indicator equal to one until the first year-end absence after 2017 and zero thereafter.",
+    "secondary": [
+      "First-exit discrete-time hazard among relationships still at risk at the start of year t",
+      "Current FactSet active indicator allowing later reactivation",
+      "Absorbing survival with failure defined as two consecutive year-end absences"
+    ],
+    "selection_rule": "The primary outcome is fixed. Secondary definitions are reported as robustness and never replace it based on significance."
+  },
+  "estimand": "Differential post-entry change in survival probability for the fixed RCEP-link cohort relative to the fixed Asian non-RCEP cohort.",
+  "estimating_equations": {
+    "static": "Survival_pt = alpha_p + lambda_t + beta TreatedCountryTime_ct + error_pt",
+    "dynamic": "Interaction-weighted event-time effects with 2021 or event time -1 omitted and never-treated Asian countries as controls.",
+    "fixed_effects": ["relationship pair", "year"],
+    "augmented": "Chinese listed-firm-by-year fixed effects, if within-firm treated/control support passes the data gate.",
+    "primary_inference": "Partner-country clustered standard errors",
+    "few_cluster_inference": "9,999-draw wild cluster bootstrap-t with seed 20260723",
+    "randomization_inference": "Exact enumeration when feasible, otherwise 9,999 country-label assignments preserving 14 RCEP and 7 Asian-control labels; retain all draws."
+  },
+  "identifying_assumption": "Absent RCEP, the survival path of the fixed 2017 RCEP supplier-link cohort would have evolved in parallel with the fixed Asian non-RCEP cohort, conditional on relationship and common year effects.",
+  "threats": [
+    "RCEP membership is not randomly assigned and member economies differ structurally from Asian controls.",
+    "Only 21 partner-country clusters are available before support exclusions.",
+    "The fixed 2017 cohort represents established relationships and does not identify effects on new links.",
+    "COVID disruptions occur during the pre-policy follow-up and may differ by country.",
+    "Year-end absence may reflect FactSet measurement rather than economic termination."
+  ],
+  "gates": {
+    "data_gate": [
+      "Report pair and country counts by treatment group and year.",
+      "Require all seven registered control-country labels to be checked; absent countries are reported rather than replaced.",
+      "Report the number of relationships and survivors in every partner country and follow-up year.",
+      "Report within-Chinese-firm treated/control overlap before using firm-by-year fixed effects.",
+      "Every ticker and relationship collapse is validated and counted."
+    ],
+    "identification_gate": [
+      "Plot raw survival curves and event-time estimates with 95 percent intervals.",
+      "Jointly test all available pre-treatment event coefficients.",
+      "Flag FAILED if the pre-trend test rejects at 10 percent or economically large pre-differences remain despite low power.",
+      "Run the frozen country-label randomization inference and wild cluster bootstrap.",
+      "Run leave-one-partner-country-out estimates without selecting exclusions."
+    ],
+    "evidence_gate": [
+      "A positive result requires consistent sign under staged and uniform timing, a randomization-inference p-value below 0.05, and no single-country dependence.",
+      "If identification passes but the effect is ordinary under country-label assignments, mark INCONCLUSIVE.",
+      "No alternative clustering level may replace partner-country inference because it produces significance."
+    ]
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json"],
+    "logs": ["environment", "sample construction", "diagnostics", "full permutation draws"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any post-freeze change is appended to pap/amendments.md before the changed analysis is executed."
+}

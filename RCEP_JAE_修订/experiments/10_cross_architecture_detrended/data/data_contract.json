@@ -1,0 +1,7 @@
+{
+  "source": "../09_cross_architecture_landmark/data/architecture_landmark_panel.parquet",
+  "expected_rows": 12780,
+  "expected_firms": 2556,
+  "final_key": ["listed_ticker", "year"],
+  "mutation_rule": "Exact clone; only deterministic time, exposure-time, and exposure-post terms may be added."
+}

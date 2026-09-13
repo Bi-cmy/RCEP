@@ -1,0 +1,15 @@
+{
+  "experiment_id": "09_cross_architecture_landmark",
+  "status": "FRAGILE_EXPLORATORY",
+  "phase": "COMPLETED",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "support_information_known": true,
+  "outcome_coefficients_inspected_at_freeze": false,
+  "closed_at": "2026-07-23",
+  "next_gate": null,
+  "support_replication_pass": true,
+  "pretrend_gate_pass": true,
+  "positive_exploratory_result": true,
+  "decision": "Passed its own frozen exploratory gates but failed the separately frozen differential-trend sensitivity in Experiment 10."
+}

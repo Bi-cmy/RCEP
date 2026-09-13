@@ -1,0 +1,10 @@
+{
+  "feasibility": "DATA_PIPELINE_OK",
+  "rows": 553294,
+  "post_x_cut": -0.09596886619243875,
+  "post_x_cut_se": 0.017931800416236758,
+  "post_x_cut_p": 8.708361187714786e-08,
+  "cut": NaN,
+  "cut_p": NaN,
+  "note": "Feasibility gate: two-way FE (partner x hs6 entity + year) on Japan-led cut. Check Japan dominance."
+}

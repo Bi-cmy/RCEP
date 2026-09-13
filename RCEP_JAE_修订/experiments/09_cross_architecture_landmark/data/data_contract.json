@@ -1,0 +1,9 @@
+{
+  "derived_source": "../07_fta_novelty/data/architecture_firm_year.parquet",
+  "derivation_code": "../07_fta_novelty/code/01_build_architecture_panel.py",
+  "required_columns": ["listed_ticker", "year", "architecture_count", "multi_architecture", "asinh_active_rcep_supplier_links", "asinh_active_rcep_supplier_countries", "rcep_asian_supplier_share", "pre_industry", "size_tercile", "permutation_stratum", "firm_id", "industry_year_id"],
+  "expected_firms": 2556,
+  "expected_rows": 12780,
+  "final_key": ["listed_ticker", "year"],
+  "mutation_rule": "Clone all rows and required values exactly; no filtering, recoding, winsorizing, or imputation."
+}

@@ -1,0 +1,63 @@
+{
+  "experiment_id": "03_new_link_formation",
+  "version": "1.0.0",
+  "frozen_on": "2026-07-23",
+  "results_inspected_at_freeze": false,
+  "research_question": "Did RCEP entry raise the probability that a covered Chinese listed firm first entered a previously unconnected RCEP supplier country relative to an Asian non-RCEP candidate country?",
+  "population": {
+    "firm_universe": "Valid listed six-digit tickers with at least one foreign supplier relationship active at year-end 2017.",
+    "candidate_countries": {
+      "rcep": ["JP", "KR", "AU", "NZ", "ID", "MY", "PH", "SG", "TH", "VN", "BN", "KH", "LA", "MM"],
+      "asian_non_rcep": ["HK", "TW", "IN", "PK", "BD", "LK", "MN"]
+    },
+    "risk_set_rule": "Cross the frozen firms with all 21 candidate countries. Exclude a firm-country dyad if any supplier relationship to that country had first_start on or before 2017-12-31. Retain each remaining dyad through its first active year-end or through 2024 if it never enters.",
+    "analysis_years": [2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    "ticker_rule": "Aggregate multiple FactSet cn_ids sharing one listed ticker; exclude 000000 and tickers absent from the verified listed-firm panel."
+  },
+  "treatment": {
+    "preferred": "Country-specific timing: 2022 for RCEP members except Indonesia and the Philippines, 2023 for Indonesia and the Philippines, never for Asian controls.",
+    "uniform_2022": "Pre-specified robustness only.",
+    "assignment_level": "Candidate partner-country-year"
+  },
+  "outcomes": {
+    "primary": "Indicator equal to one in the first year-end at which at least one supplier relationship to the candidate country is active, zero while still at risk, and absent after first entry.",
+    "secondary": "Count of first-time foreign supplier partner links in the candidate country-year while the country dyad is at risk.",
+    "measurement_note": "First country entry is first observed active year-end after a clean pre-2018 history, not customs-recorded import entry."
+  },
+  "estimand": "Within a listed firm-year, the differential post-entry change in first supplier-country entry probability for RCEP candidate countries relative to Asian non-RCEP candidates.",
+  "estimating_equations": {
+    "static": "Entry_fct = alpha_fc + lambda_ft + beta TreatedCountryTime_ct + error_fct",
+    "dynamic": "Cohort-by-event interactions with event time -1 omitted, firm-country and firm-year fixed effects.",
+    "primary_model": "Linear probability model on the discrete-time risk set.",
+    "robustness": ["Fixed-effect Poisson for entry counts", "Uniform 2022 timing"],
+    "primary_inference": "Partner-country clustered standard errors",
+    "few_cluster_inference": "9,999-draw wild cluster bootstrap-t with seed 20260723",
+    "randomization_inference": "Exact or 9,999 country-label assignments preserving 14 treated and 7 control countries; all draws retained."
+  },
+  "identifying_assumption": "Absent RCEP, the relative probability that the same firm entered an unconnected RCEP rather than Asian non-RCEP supplier country would have evolved similarly after controlling for firm-country fixed differences and all firm-year shocks.",
+  "data_gate": {
+    "minimum_events": "At least 30 first-entry events in each treatment group during 2018-2021 and at least 30 in each group during 2022-2024.",
+    "country_support": "At least five RCEP and five Asian-control countries must record one or more events in both the pre and post periods.",
+    "overlap": "At least 100 firms must contribute candidate dyads to both groups in every analysis year.",
+    "failure_rule": "If any condition fails, archive as FAILED before estimating event-study or post-treatment coefficients."
+  },
+  "identification_gate": {
+    "pretrend": "Joint test of all cohort-specific leads must have p >= 0.10.",
+    "economic_threshold": "Maximum absolute aggregated lead must not exceed max(0.0025, 0.5 times the 2018-2021 Asian-control entry rate), computed before coefficient estimation.",
+    "placebo": "Observed post estimate must be unusual under the frozen country-label randomization distribution for positive evidence.",
+    "stop_rule": "Failure of pretrend or economic threshold stops the run before headline, robustness, mechanism, or heterogeneity analysis."
+  },
+  "evidence_gate": {
+    "positive_result": "Preferred staged effect has randomization-inference p < 0.05, the same sign under uniform timing, and is not driven by one country in leave-one-country-out estimates.",
+    "null_result": "If identification passes but the observed effect is ordinary under country labels, mark INCONCLUSIVE.",
+    "integrity": "No country, firm, year, seed, outcome, or clustering level is selected based on significance."
+  },
+  "required_outputs": {
+    "tables": ["xlsx", "docx", "tex"],
+    "figures": ["pdf", "png_300dpi"],
+    "machine_readable": ["csv", "json", "parquet"],
+    "logs": ["sample construction", "support gate", "pretrend", "permutation draws if reached"]
+  },
+  "random_seed": 20260723,
+  "amendment_rule": "Any change after freeze is appended to pap/amendments.md before the changed analysis is run."
+}

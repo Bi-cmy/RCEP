@@ -1,0 +1,12 @@
+{
+  "experiment_id": "07_fta_novelty",
+  "status": "FAILED",
+  "phase": "ARCHIVED",
+  "opened_at": "2026-07-23",
+  "pap_version": "1.0.0",
+  "results_inspected": true,
+  "closed_at": "2026-07-23",
+  "next_gate": null,
+  "support_gate_pass": false,
+  "decision": "Only 2,556 firms met the frozen five-year balanced-panel rule; the PAP required 3,000."
+}

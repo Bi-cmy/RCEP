@@ -1,0 +1,41 @@
+{
+  "experiment_id": "05_supplier_customer_asymmetry",
+  "gate": "STATIC_EFFECT_AND_RANDOMIZATION",
+  "preferred_result": {
+    "specification": "Preferred staged timing",
+    "outcome": "asinh_active_links",
+    "timing": "triple_staged",
+    "estimate": 0.006007625777371595,
+    "std_error": 0.004011992553143338,
+    "t_stat": 1.4974169811618188,
+    "p_value_t20": 0.14990148098018782,
+    "ci_low": -0.0023612440391881477,
+    "ci_high": 0.014376495593931338,
+    "observations": 335454,
+    "clusters": 21,
+    "fixed_effects": "firm-country-role; firm-year-role; country-year",
+    "wild_cluster_bootstrap_p": 0.0971,
+    "country_label_randomization_p": 0.0976
+  },
+  "wild_cluster_bootstrap": {
+    "draws": 9999,
+    "seed": 20260723,
+    "weights": "Rademacher",
+    "method": "restricted bootstrap-t on the FWL-transformed regression",
+    "p_value": 0.0971,
+    "draw_file": "data/wild_cluster_bootstrap_draws.parquet"
+  },
+  "country_label_randomization": {
+    "draws": 9999,
+    "seed": 20260723,
+    "assignment_counts": {
+      "2022": 12,
+      "2023": 2,
+      "control": 7
+    },
+    "two_sided_p_value": 0.0976,
+    "draw_file": "data/country_label_randomization_draws.parquet",
+    "collapsed_full_residualization_max_difference": 5.551115123125783e-17
+  },
+  "positive_evidence_randomization_gate": false
+}

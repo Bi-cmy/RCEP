@@ -1,0 +1,30 @@
+{
+  "experiment_id": "06_disruption_recovery",
+  "build_status": "PASSED",
+  "python": "3.12.7",
+  "source_hashes": {
+    "pair_year_sha256": "7717eab45f6d31257d246a937e5aeab8f79ae567919d58f40f534efb81464e28",
+    "firm_year_sha256": "82f11cff1c89892f762c30b3afc826e55e21cbbbeca7f10188d3ef541c5df4d6"
+  },
+  "source_rows": 630280,
+  "invalid_or_zero_ticker_rows": 195816,
+  "nonlisted_ticker_rows": 35672,
+  "eligible_rows": 31192,
+  "collapsed_rows": 31192,
+  "support_gate": {
+    "experiment_id": "06_disruption_recovery",
+    "gate": "DATA_SUPPORT",
+    "gate_pass": false,
+    "cohort_size_gate": true,
+    "country_support_gate": true,
+    "within_firm_support_gate": false,
+    "balanced_panel_gate": true,
+    "total_relationships": 636,
+    "control_relationships": 168,
+    "rcep_relationships": 468,
+    "control_countries": 6,
+    "rcep_countries": 10,
+    "country_clusters": 16,
+    "firms_with_both_groups": 48
+  }
+}

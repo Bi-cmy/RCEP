@@ -1,0 +1,4 @@
+specification,term,coefficient,std_error,t_stat,p_value,observations,pairs,partner_countries,entity_fe,time_fe,cluster
+"False non-RCEP group, policy 2019",fake_treat,0.004896392157908588,0.009457338694175966,0.5177346731722628,0.6046437663618498,393925,78785,181,True,True,partner_country
+"False non-RCEP group, policy 2020",fake_treat,0.009979711046344653,0.009343782900217827,1.0680589599435149,0.2854947349410888,393925,78785,181,True,True,partner_country
+"False non-RCEP group, policy 2021",fake_treat,0.006809095435468346,0.010315072834155772,0.6601112318782411,0.5091829338509319,393925,78785,181,True,True,partner_country
